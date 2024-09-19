@@ -11,25 +11,23 @@ import SwiftUI
 import FSCalendar
 
 struct FSCalendarView: UIViewRepresentable {
-    @Binding var isSelectedWeekdays: Bool
+    @ObservedObject var viewModel: CalendarViewModel
+    
+    @Binding var fsCalendar: FSCalendar
     
     func makeCoordinator() -> Coordinator {
         return Coordinator(self)
     }
     
     func makeUIView(context: Context) -> some UIView {
-        let calendar = FSCalendar()
-        calendar.delegate = context.coordinator
-        calendar.appearance.selectionColor = .systemPink
-        calendar.today = Date()
-        calendar.locale = Locale(identifier: "ko_KR")
-        calendar.headerHeight = 0
-        return calendar
+        fsCalendar.delegate = context.coordinator
+        fsCalendar.dataSource = context.coordinator
+        return fsCalendar
     }
     
     func updateUIView(_ uiView: UIViewType, context: Context) {
         let calendar = uiView as! FSCalendar
-        if isSelectedWeekdays {
+        if viewModel.isSelectedScope {
             calendar.scope = .week
         } else {
             calendar.scope = .month
@@ -50,13 +48,19 @@ struct FSCalendarView: UIViewRepresentable {
         ) {
             print(date, "clicked date at calendar")
             print("여기서 데이터 찾아서 넘기나?")
+            
+            calendar.today = nil
         }
         
         func calendar(
             _ calendar: FSCalendar,
             numberOfEventsFor date: Date
         ) -> Int {
-            1
+            if date.formattedString(dateFormat: .yearMonthDay) == Date().formattedString(dateFormat: .yearMonthDay) {
+                return 1
+            } else {
+                return 0
+            }
         }
     }
 }

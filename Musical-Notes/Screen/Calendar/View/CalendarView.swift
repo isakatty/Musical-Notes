@@ -7,31 +7,55 @@
 
 import SwiftUI
 
+import FSCalendar
+
 struct CalendarView: View {
     @StateObject var viewModel = CalendarViewModel()
+    @State private var fsCalendar: FSCalendar = {
+        let calendar = FSCalendar()
+        calendar.today = Date()
+        calendar.locale = Locale(identifier: "ko_KR")
+        calendar.headerHeight = 0
+        calendar.appearance.selectionColor = .systemPink
+        calendar.appearance.weekdayTextColor = .black
+        calendar.appearance.eventDefaultColor = UIColor.black
+        calendar.appearance.eventSelectionColor = UIColor.black
+        return calendar
+    }()
     
     var body: some View {
         VStack {
             topMonthView
-            FSCalendarView(isSelectedWeekdays: $viewModel.isSelectedScope)
+            FSCalendarView(
+                viewModel: viewModel,
+                fsCalendar: $fsCalendar
+            )
                 .frame(height: 400)
         }
     }
-    
+}
+
+extension CalendarView {
     private var topMonthView: some View {
         HStack {
-            Text(viewModel.today.formattedString(dateFormat: .yearMonth))
+            Text(fsCalendar.currentPage.formattedString(dateFormat: .yearMonth))
                 .font(.title3)
                 .bold()
             Spacer()
             Button(action: {
-                print("Action left btn")
+                if let prevMonth = viewModel.prevCurrentPage() {
+                    print(prevMonth)
+                    fsCalendar.setCurrentPage(prevMonth, animated: true)
+                }
             }, label: {
                 Image(systemName: "chevron.left")
             })
             
             Button(action: {
-                print("Action right btn")
+                if let nextMonth = viewModel.nextCurrentPage() {
+                    print(nextMonth)
+                    fsCalendar.setCurrentPage(nextMonth, animated: true)
+                }
             }, label: {
                 Image(systemName: "chevron.forward")
             })
@@ -50,7 +74,6 @@ struct CalendarView: View {
         .padding(.horizontal)
     }
 }
-
 #Preview {
     ContentView()
 }
