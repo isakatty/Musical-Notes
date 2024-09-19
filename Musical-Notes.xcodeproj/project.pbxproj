@@ -11,6 +11,7 @@
 		C904FA482C9C226B00D1C2DB /* Date+.swift in Sources */ = {isa = PBXBuildFile; fileRef = C904FA472C9C226B00D1C2DB /* Date+.swift */; };
 		C904FA4A2C9C44F000D1C2DB /* TopMonthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C904FA492C9C44F000D1C2DB /* TopMonthView.swift */; };
 		C904FA4C2C9C4AEE00D1C2DB /* ButtonActionModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = C904FA4B2C9C4AEE00D1C2DB /* ButtonActionModifier.swift */; };
+		C904FA4E2C9C575100D1C2DB /* LessonCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C904FA4D2C9C575100D1C2DB /* LessonCardView.swift */; };
 		C96BC6B82C9BD53400C5B5AE /* Musical_NotesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96BC6B72C9BD53400C5B5AE /* Musical_NotesApp.swift */; };
 		C96BC6BA2C9BD53400C5B5AE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96BC6B92C9BD53400C5B5AE /* ContentView.swift */; };
 		C96BC6BC2C9BD53500C5B5AE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C96BC6BB2C9BD53500C5B5AE /* Assets.xcassets */; };
@@ -34,6 +35,7 @@
 		C904FA472C9C226B00D1C2DB /* Date+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+.swift"; sourceTree = "<group>"; };
 		C904FA492C9C44F000D1C2DB /* TopMonthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopMonthView.swift; sourceTree = "<group>"; };
 		C904FA4B2C9C4AEE00D1C2DB /* ButtonActionModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonActionModifier.swift; sourceTree = "<group>"; };
+		C904FA4D2C9C575100D1C2DB /* LessonCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonCardView.swift; sourceTree = "<group>"; };
 		C96BC6B42C9BD53400C5B5AE /* Musical-Notes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Musical-Notes.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C96BC6B72C9BD53400C5B5AE /* Musical_NotesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Musical_NotesApp.swift; sourceTree = "<group>"; };
 		C96BC6B92C9BD53400C5B5AE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -206,6 +208,7 @@
 				C9CB20122C9BF7C1005DECF7 /* CalendarView.swift */,
 				C9CB202A2C9C0149005DECF7 /* FSCalendarView.swift */,
 				C904FA492C9C44F000D1C2DB /* TopMonthView.swift */,
+				C904FA4D2C9C575100D1C2DB /* LessonCardView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -310,6 +313,7 @@
 				C9CB20152C9BF7CE005DECF7 /* FeedView.swift in Sources */,
 				C904FA482C9C226B00D1C2DB /* Date+.swift in Sources */,
 				C9CB20242C9BFEAA005DECF7 /* LazyNavigationView.swift in Sources */,
+				C904FA4E2C9C575100D1C2DB /* LessonCardView.swift in Sources */,
 				C96BC6B82C9BD53400C5B5AE /* Musical_NotesApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

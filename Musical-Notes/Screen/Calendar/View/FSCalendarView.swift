@@ -12,7 +12,6 @@ import FSCalendar
 
 struct FSCalendarView: UIViewRepresentable {
     @ObservedObject var viewModel: CalendarViewModel
-    
     @Binding var fsCalendar: FSCalendar
     
     func makeCoordinator() -> Coordinator {
@@ -46,9 +45,7 @@ struct FSCalendarView: UIViewRepresentable {
             didSelect date: Date,
             at monthPosition: FSCalendarMonthPosition
         ) {
-            print(date, "clicked date at calendar")
-            print("여기서 데이터 찾아서 넘기나?")
-            
+            parent.viewModel.selectedDate = date
             calendar.today = nil
         }
         

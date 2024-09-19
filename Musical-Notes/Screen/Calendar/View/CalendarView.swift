@@ -24,10 +24,37 @@ struct CalendarView: View {
     }()
     
     var body: some View {
-        VStack {
-            TopMonthView(viewModel: viewModel, fsCalendar: $fsCalendar)
-            FSCalendarView(viewModel: viewModel, fsCalendar: $fsCalendar)
-                .frame(height: 400)
+        ScrollView {
+            VStack {
+                TopMonthView(viewModel: viewModel, fsCalendar: $fsCalendar)
+                FSCalendarView(viewModel: viewModel, fsCalendar: $fsCalendar)
+                    .frame(height: viewModel.isSelectedScope ? 100 : 400)
+                
+                HStack(alignment: .top) {
+                    dateLabel
+                    Spacer()
+                    VStack(alignment: .leading) {
+                        LessonCardView()
+                        LessonCardView()
+                    }
+                }
+            }
+            .padding(.horizontal)
+        }
+    }
+    
+    private var dateLabel: some View {
+        HStack(alignment: .top) {
+            Text(
+                viewModel.selectedDate?.formattedString(dateFormat: .monthDate)
+                ?? viewModel.today.formattedString(dateFormat: .monthDate)
+            )
+            .font(.title2)
+            .fontWeight(.semibold)
+            .padding(.top)
+            
+            Rectangle()
+                .frame(width: 2)
         }
     }
 }

@@ -10,6 +10,7 @@ import Foundation
 final class CalendarViewModel: ObservableObject {
     @Published var isSelectedScope: Bool = false
     @Published var currentPage: Date?
+    @Published var selectedDate: Date?
     
     var today = Date()
     
