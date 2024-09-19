@@ -15,27 +15,29 @@ struct NotesTabView: View {
     }
     
     var body: some View {
-        TabView(selection: $currentTab) {
-            CalendarView()
-                .tag(TabModel.calendar)
-                .tabItem {
-                    Image(systemName: "house")
-                    Text("Home")
-                }
-            
-            FeedView()
-                .tag(TabModel.feed)
-                .tabItem {
-                    Image(systemName: "list.clipboard")
-                    Text("Feed")
-                }
-            
-            MyPageView()
-                .tag(TabModel.myPage)
-                .tabItem {
-                    Image(systemName: "person")
-                    Text("My")
-                }
+        NavigationStack {
+            TabView(selection: $currentTab) {
+                CalendarView()
+                    .tag(TabModel.calendar)
+                    .tabItem {
+                        Image(systemName: "house")
+                        Text("Home")
+                    }
+                
+                FeedView()
+                    .tag(TabModel.feed)
+                    .tabItem {
+                        Image(systemName: "list.clipboard")
+                        Text("Feed")
+                    }
+                
+                MyPageView()
+                    .tag(TabModel.myPage)
+                    .tabItem {
+                        Image(systemName: "person")
+                        Text("My")
+                    }
+            }
         }
     }
 }

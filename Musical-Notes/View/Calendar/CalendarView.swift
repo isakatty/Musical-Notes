@@ -9,10 +9,12 @@ import SwiftUI
 
 struct CalendarView: View {
     var body: some View {
-        Text("CalendarView")
+        Text("Calendar View")
     }
 }
 
 #Preview {
-    CalendarView()
+    NavigationStack {
+        CalendarView()
+    }
 }

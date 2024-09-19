@@ -19,6 +19,8 @@
 		C9CB20192C9BF909005DECF7 /* TabBarAccess.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9CB20182C9BF909005DECF7 /* TabBarAccess.swift */; };
 		C9CB201B2C9BF929005DECF7 /* TabBarButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9CB201A2C9BF929005DECF7 /* TabBarButtonStyle.swift */; };
 		C9CB201E2C9BFC1B005DECF7 /* NotesTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9CB201D2C9BFC1B005DECF7 /* NotesTabView.swift */; };
+		C9CB20242C9BFEAA005DECF7 /* LazyNavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9CB20232C9BFEAA005DECF7 /* LazyNavigationView.swift */; };
+		C9CB20292C9C00A6005DECF7 /* FSCalendar in Frameworks */ = {isa = PBXBuildFile; productRef = C9CB20282C9C00A6005DECF7 /* FSCalendar */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +37,7 @@
 		C9CB20182C9BF909005DECF7 /* TabBarAccess.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarAccess.swift; sourceTree = "<group>"; };
 		C9CB201A2C9BF929005DECF7 /* TabBarButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarButtonStyle.swift; sourceTree = "<group>"; };
 		C9CB201D2C9BFC1B005DECF7 /* NotesTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesTabView.swift; sourceTree = "<group>"; };
+		C9CB20232C9BFEAA005DECF7 /* LazyNavigationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LazyNavigationView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,6 +45,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C9CB20292C9C00A6005DECF7 /* FSCalendar in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -141,6 +145,7 @@
 		C9CB201C2C9BFBC3005DECF7 /* CustomView */ = {
 			isa = PBXGroup;
 			children = (
+				C9CB20232C9BFEAA005DECF7 /* LazyNavigationView.swift */,
 			);
 			path = CustomView;
 			sourceTree = "<group>";
@@ -179,6 +184,9 @@
 			dependencies = (
 			);
 			name = "Musical-Notes";
+			packageProductDependencies = (
+				C9CB20282C9C00A6005DECF7 /* FSCalendar */,
+			);
 			productName = "Musical-Notes";
 			productReference = C96BC6B42C9BD53400C5B5AE /* Musical-Notes.app */;
 			productType = "com.apple.product-type.application";
@@ -207,6 +215,9 @@
 				Base,
 			);
 			mainGroup = C96BC6AB2C9BD53400C5B5AE;
+			packageReferences = (
+				C9CB20272C9C00A6005DECF7 /* XCRemoteSwiftPackageReference "FSCalendar" */,
+			);
 			productRefGroup = C96BC6B52C9BD53400C5B5AE /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -242,6 +253,7 @@
 				C9CB201B2C9BF929005DECF7 /* TabBarButtonStyle.swift in Sources */,
 				C96BC6BA2C9BD53400C5B5AE /* ContentView.swift in Sources */,
 				C9CB20152C9BF7CE005DECF7 /* FeedView.swift in Sources */,
+				C9CB20242C9BFEAA005DECF7 /* LazyNavigationView.swift in Sources */,
 				C96BC6B82C9BD53400C5B5AE /* Musical_NotesApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -458,6 +470,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		C9CB20272C9C00A6005DECF7 /* XCRemoteSwiftPackageReference "FSCalendar" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/WenchaoD/FSCalendar.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.8.4;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		C9CB20282C9C00A6005DECF7 /* FSCalendar */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C9CB20272C9C00A6005DECF7 /* XCRemoteSwiftPackageReference "FSCalendar" */;
+			productName = FSCalendar;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = C96BC6AC2C9BD53400C5B5AE /* Project object */;
 }
