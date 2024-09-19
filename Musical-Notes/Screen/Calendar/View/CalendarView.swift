@@ -8,19 +8,19 @@
 import SwiftUI
 
 struct CalendarView: View {
-    @State private var isSelectedWeekdays = false
+    @StateObject var viewModel = CalendarViewModel()
     
     var body: some View {
         VStack {
             topMonthView
-            FSCalendarView(isSelectedWeekdays: $isSelectedWeekdays)
+            FSCalendarView(isSelectedWeekdays: $viewModel.isSelectedScope)
                 .frame(height: 400)
         }
     }
     
     private var topMonthView: some View {
         HStack {
-            Text("2024년 9월")
+            Text(viewModel.today.formattedString(dateFormat: .yearMonth))
                 .font(.title3)
                 .bold()
             Spacer()
@@ -37,9 +37,9 @@ struct CalendarView: View {
             })
             
             Button(action: {
-                isSelectedWeekdays.toggle()
+                viewModel.isSelectedScope.toggle()
             }, label: {
-                Text(isSelectedWeekdays ? "주" : "월")
+                Text(viewModel.isSelectedScope ? "주" : "월")
                     .padding()
                     .background(Color.gray.opacity(0.3))
                     .frame(height: 30)

@@ -36,7 +36,7 @@ struct FSCalendarView: UIViewRepresentable {
         }
     }
     
-    class Coordinator: NSObject, FSCalendarDelegate, FSCalendarDelegateAppearance {
+    class Coordinator: NSObject, FSCalendarDelegate, FSCalendarDelegateAppearance, FSCalendarDataSource {
         var parent: FSCalendarView
         
         init(_ parent: FSCalendarView) {
@@ -48,7 +48,15 @@ struct FSCalendarView: UIViewRepresentable {
             didSelect date: Date,
             at monthPosition: FSCalendarMonthPosition
         ) {
-            
+            print(date, "clicked date at calendar")
+            print("여기서 데이터 찾아서 넘기나?")
+        }
+        
+        func calendar(
+            _ calendar: FSCalendar,
+            numberOfEventsFor date: Date
+        ) -> Int {
+            1
         }
     }
 }
