@@ -21,6 +21,7 @@
 		C9CB201E2C9BFC1B005DECF7 /* NotesTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9CB201D2C9BFC1B005DECF7 /* NotesTabView.swift */; };
 		C9CB20242C9BFEAA005DECF7 /* LazyNavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9CB20232C9BFEAA005DECF7 /* LazyNavigationView.swift */; };
 		C9CB20292C9C00A6005DECF7 /* FSCalendar in Frameworks */ = {isa = PBXBuildFile; productRef = C9CB20282C9C00A6005DECF7 /* FSCalendar */; };
+		C9CB202B2C9C0149005DECF7 /* FSCalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9CB202A2C9C0149005DECF7 /* FSCalendarView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		C9CB201A2C9BF929005DECF7 /* TabBarButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarButtonStyle.swift; sourceTree = "<group>"; };
 		C9CB201D2C9BFC1B005DECF7 /* NotesTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesTabView.swift; sourceTree = "<group>"; };
 		C9CB20232C9BFEAA005DECF7 /* LazyNavigationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LazyNavigationView.swift; sourceTree = "<group>"; };
+		C9CB202A2C9C0149005DECF7 /* FSCalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FSCalendarView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,7 +76,7 @@
 				C9CB201F2C9BFD71005DECF7 /* Legacy */,
 				C9CB201C2C9BFBC3005DECF7 /* CustomView */,
 				C9CB200D2C9BF701005DECF7 /* ViewModifier */,
-				C9CB20082C9BE3F7005DECF7 /* View */,
+				C9CB20082C9BE3F7005DECF7 /* Screen */,
 				C96BC6B72C9BD53400C5B5AE /* Musical_NotesApp.swift */,
 				C96BC6B92C9BD53400C5B5AE /* ContentView.swift */,
 				C96BC6BB2C9BD53500C5B5AE /* Assets.xcassets */,
@@ -91,7 +93,7 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		C9CB20082C9BE3F7005DECF7 /* View */ = {
+		C9CB20082C9BE3F7005DECF7 /* Screen */ = {
 			isa = PBXGroup;
 			children = (
 				C9CB200C2C9BE417005DECF7 /* MyPage */,
@@ -99,7 +101,7 @@
 				C9CB200A2C9BE409005DECF7 /* Calendar */,
 				C9CB20092C9BE403005DECF7 /* Tab */,
 			);
-			path = View;
+			path = Screen;
 			sourceTree = "<group>";
 		};
 		C9CB20092C9BE403005DECF7 /* Tab */ = {
@@ -115,6 +117,7 @@
 			isa = PBXGroup;
 			children = (
 				C9CB20122C9BF7C1005DECF7 /* CalendarView.swift */,
+				C9CB202A2C9C0149005DECF7 /* FSCalendarView.swift */,
 			);
 			path = Calendar;
 			sourceTree = "<group>";
@@ -245,6 +248,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C9CB20172C9BF7DB005DECF7 /* MyPageView.swift in Sources */,
+				C9CB202B2C9C0149005DECF7 /* FSCalendarView.swift in Sources */,
 				C9CB20132C9BF7C1005DECF7 /* CalendarView.swift in Sources */,
 				C9CB200F2C9BF718005DECF7 /* CustomTabView.swift in Sources */,
 				C9CB20192C9BF909005DECF7 /* TabBarAccess.swift in Sources */,
