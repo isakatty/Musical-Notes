@@ -25,53 +25,10 @@ struct CalendarView: View {
     
     var body: some View {
         VStack {
-            topMonthView
-            FSCalendarView(
-                viewModel: viewModel,
-                fsCalendar: $fsCalendar
-            )
+            TopMonthView(viewModel: viewModel, fsCalendar: $fsCalendar)
+            FSCalendarView(viewModel: viewModel, fsCalendar: $fsCalendar)
                 .frame(height: 400)
         }
-    }
-}
-
-extension CalendarView {
-    private var topMonthView: some View {
-        HStack {
-            Text(fsCalendar.currentPage.formattedString(dateFormat: .yearMonth))
-                .font(.title3)
-                .bold()
-            Spacer()
-            Button(action: {
-                if let prevMonth = viewModel.prevCurrentPage() {
-                    print(prevMonth)
-                    fsCalendar.setCurrentPage(prevMonth, animated: true)
-                }
-            }, label: {
-                Image(systemName: "chevron.left")
-            })
-            
-            Button(action: {
-                if let nextMonth = viewModel.nextCurrentPage() {
-                    print(nextMonth)
-                    fsCalendar.setCurrentPage(nextMonth, animated: true)
-                }
-            }, label: {
-                Image(systemName: "chevron.forward")
-            })
-            
-            Button(action: {
-                viewModel.isSelectedScope.toggle()
-            }, label: {
-                Text(viewModel.isSelectedScope ? "주" : "월")
-                    .padding()
-                    .background(Color.gray.opacity(0.3))
-                    .frame(height: 30)
-                    .clipShape(Capsule())
-                    
-            })
-        }
-        .padding(.horizontal)
     }
 }
 #Preview {

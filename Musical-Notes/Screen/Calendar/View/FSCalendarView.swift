@@ -62,5 +62,10 @@ struct FSCalendarView: UIViewRepresentable {
                 return 0
             }
         }
+        
+        func calendarCurrentPageDidChange(_ calendar: FSCalendar) {
+            parent.viewModel.currentPage = calendar.currentPage
+            print(calendar.currentPage, #function)
+        }
     }
 }
