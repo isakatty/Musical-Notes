@@ -1,5 +1,5 @@
 //
-//  ContentView.swift
+//  FeedView.swift
 //  Musical-Notes
 //
 //  Created by Jisoo Ham on 9/19/24.
@@ -7,12 +7,12 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct FeedView: View {
     var body: some View {
-        NotesTabView()
+        Text("FeedView")
     }
 }
 
 #Preview {
-    ContentView()
+    FeedView()
 }

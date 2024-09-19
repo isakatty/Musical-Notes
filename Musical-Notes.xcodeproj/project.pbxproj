@@ -11,6 +11,14 @@
 		C96BC6BA2C9BD53400C5B5AE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96BC6B92C9BD53400C5B5AE /* ContentView.swift */; };
 		C96BC6BC2C9BD53500C5B5AE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C96BC6BB2C9BD53500C5B5AE /* Assets.xcassets */; };
 		C96BC6BF2C9BD53500C5B5AE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C96BC6BE2C9BD53500C5B5AE /* Preview Assets.xcassets */; };
+		C9CB200F2C9BF718005DECF7 /* CustomTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9CB200E2C9BF718005DECF7 /* CustomTabView.swift */; };
+		C9CB20112C9BF739005DECF7 /* TabModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9CB20102C9BF739005DECF7 /* TabModel.swift */; };
+		C9CB20132C9BF7C1005DECF7 /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9CB20122C9BF7C1005DECF7 /* CalendarView.swift */; };
+		C9CB20152C9BF7CE005DECF7 /* FeedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9CB20142C9BF7CE005DECF7 /* FeedView.swift */; };
+		C9CB20172C9BF7DB005DECF7 /* MyPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9CB20162C9BF7DB005DECF7 /* MyPageView.swift */; };
+		C9CB20192C9BF909005DECF7 /* TabBarAccess.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9CB20182C9BF909005DECF7 /* TabBarAccess.swift */; };
+		C9CB201B2C9BF929005DECF7 /* TabBarButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9CB201A2C9BF929005DECF7 /* TabBarButtonStyle.swift */; };
+		C9CB201E2C9BFC1B005DECF7 /* NotesTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9CB201D2C9BFC1B005DECF7 /* NotesTabView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +27,14 @@
 		C96BC6B92C9BD53400C5B5AE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		C96BC6BB2C9BD53500C5B5AE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C96BC6BE2C9BD53500C5B5AE /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		C9CB200E2C9BF718005DECF7 /* CustomTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabView.swift; sourceTree = "<group>"; };
+		C9CB20102C9BF739005DECF7 /* TabModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabModel.swift; sourceTree = "<group>"; };
+		C9CB20122C9BF7C1005DECF7 /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
+		C9CB20142C9BF7CE005DECF7 /* FeedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedView.swift; sourceTree = "<group>"; };
+		C9CB20162C9BF7DB005DECF7 /* MyPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageView.swift; sourceTree = "<group>"; };
+		C9CB20182C9BF909005DECF7 /* TabBarAccess.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarAccess.swift; sourceTree = "<group>"; };
+		C9CB201A2C9BF929005DECF7 /* TabBarButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarButtonStyle.swift; sourceTree = "<group>"; };
+		C9CB201D2C9BFC1B005DECF7 /* NotesTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesTabView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +67,10 @@
 		C96BC6B62C9BD53400C5B5AE /* Musical-Notes */ = {
 			isa = PBXGroup;
 			children = (
+				C9CB201F2C9BFD71005DECF7 /* Legacy */,
+				C9CB201C2C9BFBC3005DECF7 /* CustomView */,
+				C9CB200D2C9BF701005DECF7 /* ViewModifier */,
+				C9CB20082C9BE3F7005DECF7 /* View */,
 				C96BC6B72C9BD53400C5B5AE /* Musical_NotesApp.swift */,
 				C96BC6B92C9BD53400C5B5AE /* ContentView.swift */,
 				C96BC6BB2C9BD53500C5B5AE /* Assets.xcassets */,
@@ -65,6 +85,82 @@
 				C96BC6BE2C9BD53500C5B5AE /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		C9CB20082C9BE3F7005DECF7 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C9CB200C2C9BE417005DECF7 /* MyPage */,
+				C9CB200B2C9BE410005DECF7 /* Feed */,
+				C9CB200A2C9BE409005DECF7 /* Calendar */,
+				C9CB20092C9BE403005DECF7 /* Tab */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		C9CB20092C9BE403005DECF7 /* Tab */ = {
+			isa = PBXGroup;
+			children = (
+				C9CB20102C9BF739005DECF7 /* TabModel.swift */,
+				C9CB201D2C9BFC1B005DECF7 /* NotesTabView.swift */,
+			);
+			path = Tab;
+			sourceTree = "<group>";
+		};
+		C9CB200A2C9BE409005DECF7 /* Calendar */ = {
+			isa = PBXGroup;
+			children = (
+				C9CB20122C9BF7C1005DECF7 /* CalendarView.swift */,
+			);
+			path = Calendar;
+			sourceTree = "<group>";
+		};
+		C9CB200B2C9BE410005DECF7 /* Feed */ = {
+			isa = PBXGroup;
+			children = (
+				C9CB20142C9BF7CE005DECF7 /* FeedView.swift */,
+			);
+			path = Feed;
+			sourceTree = "<group>";
+		};
+		C9CB200C2C9BE417005DECF7 /* MyPage */ = {
+			isa = PBXGroup;
+			children = (
+				C9CB20162C9BF7DB005DECF7 /* MyPageView.swift */,
+			);
+			path = MyPage;
+			sourceTree = "<group>";
+		};
+		C9CB200D2C9BF701005DECF7 /* ViewModifier */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModifier;
+			sourceTree = "<group>";
+		};
+		C9CB201C2C9BFBC3005DECF7 /* CustomView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = CustomView;
+			sourceTree = "<group>";
+		};
+		C9CB201F2C9BFD71005DECF7 /* Legacy */ = {
+			isa = PBXGroup;
+			children = (
+				C9CB20202C9BFD7E005DECF7 /* customTab */,
+			);
+			path = Legacy;
+			sourceTree = "<group>";
+		};
+		C9CB20202C9BFD7E005DECF7 /* customTab */ = {
+			isa = PBXGroup;
+			children = (
+				C9CB200E2C9BF718005DECF7 /* CustomTabView.swift */,
+				C9CB20182C9BF909005DECF7 /* TabBarAccess.swift */,
+				C9CB201A2C9BF929005DECF7 /* TabBarButtonStyle.swift */,
+			);
+			path = customTab;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,7 +233,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C9CB20172C9BF7DB005DECF7 /* MyPageView.swift in Sources */,
+				C9CB20132C9BF7C1005DECF7 /* CalendarView.swift in Sources */,
+				C9CB200F2C9BF718005DECF7 /* CustomTabView.swift in Sources */,
+				C9CB20192C9BF909005DECF7 /* TabBarAccess.swift in Sources */,
+				C9CB201E2C9BFC1B005DECF7 /* NotesTabView.swift in Sources */,
+				C9CB20112C9BF739005DECF7 /* TabModel.swift in Sources */,
+				C9CB201B2C9BF929005DECF7 /* TabBarButtonStyle.swift in Sources */,
 				C96BC6BA2C9BD53400C5B5AE /* ContentView.swift in Sources */,
+				C9CB20152C9BF7CE005DECF7 /* FeedView.swift in Sources */,
 				C96BC6B82C9BD53400C5B5AE /* Musical_NotesApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
