@@ -61,7 +61,7 @@
 		C989B86A2C9D08C3004FD90D /* Pretendard-Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Black.otf"; sourceTree = "<group>"; };
 		C989B86B2C9D08C3004FD90D /* Pretendard-ExtraBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-ExtraBold.otf"; sourceTree = "<group>"; };
 		C989B86C2C9D08C3004FD90D /* Pretendard-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Light.otf"; sourceTree = "<group>"; };
-		C989B8762C9D08EA004FD90D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		C989B8762C9D08EA004FD90D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C989B8782C9D09B1004FD90D /* PretendardFontType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PretendardFontType.swift; sourceTree = "<group>"; };
 		C989B87A2C9D0DB2004FD90D /* CustomFontModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomFontModifier.swift; sourceTree = "<group>"; };
 		C9CB200E2C9BF718005DECF7 /* CustomTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabView.swift; sourceTree = "<group>"; };
@@ -124,19 +124,10 @@
 		C96BC6B62C9BD53400C5B5AE /* Musical-Notes */ = {
 			isa = PBXGroup;
 			children = (
-				C989B8772C9D09A0004FD90D /* Enum */,
-				C989B8762C9D08EA004FD90D /* Info.plist */,
-				C989B8632C9D089F004FD90D /* Fonts */,
-				C904FA462C9C226400D1C2DB /* Extenstion+ */,
-				C904FA432C9C20B300D1C2DB /* Helper */,
+				C989B87E2C9D15A0004FD90D /* Utils */,
+				C989B87D2C9D1581004FD90D /* Foreground */,
+				C989B87C2C9D14C6004FD90D /* Resources */,
 				C9CB201F2C9BFD71005DECF7 /* Legacy */,
-				C9CB201C2C9BFBC3005DECF7 /* CustomView */,
-				C9CB200D2C9BF701005DECF7 /* ViewModifier */,
-				C9CB20082C9BE3F7005DECF7 /* Screen */,
-				C96BC6B72C9BD53400C5B5AE /* Musical_NotesApp.swift */,
-				C96BC6B92C9BD53400C5B5AE /* ContentView.swift */,
-				C96BC6BB2C9BD53500C5B5AE /* Assets.xcassets */,
-				C96BC6BD2C9BD53500C5B5AE /* Preview Content */,
 			);
 			path = "Musical-Notes";
 			sourceTree = "<group>";
@@ -173,9 +164,50 @@
 			path = Enum;
 			sourceTree = "<group>";
 		};
+		C989B87C2C9D14C6004FD90D /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				C989B8762C9D08EA004FD90D /* Info.plist */,
+				C989B8632C9D089F004FD90D /* Fonts */,
+				C96BC6BB2C9BD53500C5B5AE /* Assets.xcassets */,
+				C96BC6BD2C9BD53500C5B5AE /* Preview Content */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		C989B87D2C9D1581004FD90D /* Foreground */ = {
+			isa = PBXGroup;
+			children = (
+				C9CB201C2C9BFBC3005DECF7 /* CustomView */,
+				C9CB200D2C9BF701005DECF7 /* ViewModifier */,
+				C9CB20082C9BE3F7005DECF7 /* Screen */,
+			);
+			path = Foreground;
+			sourceTree = "<group>";
+		};
+		C989B87E2C9D15A0004FD90D /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				C904FA462C9C226400D1C2DB /* Extenstion+ */,
+				C904FA432C9C20B300D1C2DB /* Helper */,
+				C989B8772C9D09A0004FD90D /* Enum */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		C989B87F2C9D15B8004FD90D /* App */ = {
+			isa = PBXGroup;
+			children = (
+				C96BC6B72C9BD53400C5B5AE /* Musical_NotesApp.swift */,
+				C96BC6B92C9BD53400C5B5AE /* ContentView.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
 		C9CB20082C9BE3F7005DECF7 /* Screen */ = {
 			isa = PBXGroup;
 			children = (
+				C989B87F2C9D15B8004FD90D /* App */,
 				C9CB200C2C9BE417005DECF7 /* MyPage */,
 				C9CB200B2C9BE410005DECF7 /* Feed */,
 				C9CB200A2C9BE409005DECF7 /* Calendar */,
@@ -509,11 +541,11 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"Musical-Notes/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"Musical-Notes/Resources/Preview Content\"";
 				DEVELOPMENT_TEAM = T4W7695R5C;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Musical-Notes/Info.plist";
+				INFOPLIST_FILE = "Musical-Notes/Resources/Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -545,11 +577,11 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"Musical-Notes/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"Musical-Notes/Resources/Preview Content\"";
 				DEVELOPMENT_TEAM = T4W7695R5C;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Musical-Notes/Info.plist";
+				INFOPLIST_FILE = "Musical-Notes/Resources/Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
