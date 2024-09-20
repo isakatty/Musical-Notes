@@ -15,8 +15,7 @@ struct TopMonthView: View {
     var body: some View {
         HStack {
             Text(viewModel.currentPage?.formattedString(dateFormat: .yearMonth) ?? viewModel.today.formattedString(dateFormat: .yearMonth))
-                .font(.title3)
-                .bold()
+                .customFont(font: .bold, fontSize: 17)
             Spacer()
             Image(systemName: "chevron.left")
                 .wrapToButton {
@@ -33,8 +32,10 @@ struct TopMonthView: View {
                     }
                 }
                 .buttonStyle(.plain)
+                .padding(.trailing, 10)
             
             Text(viewModel.isSelectedScope ? "주" : "월")
+                .customFont()
                 .padding()
                 .background(Color.gray.opacity(0.3))
                 .frame(height: 30)

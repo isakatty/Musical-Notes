@@ -16,30 +16,41 @@ struct CalendarView: View {
         calendar.today = Date()
         calendar.locale = Locale(identifier: "ko_KR")
         calendar.headerHeight = 0
+        calendar.appearance.todayColor = .yellow
+        calendar.appearance.titleTodayColor = .black
         calendar.appearance.selectionColor = .systemPink
         calendar.appearance.weekdayTextColor = .black
-        calendar.appearance.eventDefaultColor = UIColor.black
+        calendar.appearance.eventDefaultColor = UIColor.green // 하단에 찍히는 점
         calendar.appearance.eventSelectionColor = UIColor.black
+        calendar.scrollEnabled = false
         return calendar
     }()
     
     var body: some View {
         ScrollView {
-            VStack {
+            VStack(alignment: .leading) {
                 TopMonthView(viewModel: viewModel, fsCalendar: $fsCalendar)
                 FSCalendarView(viewModel: viewModel, fsCalendar: $fsCalendar)
                     .frame(height: viewModel.isSelectedScope ? 100 : 400)
                 
                 HStack(alignment: .top) {
                     dateLabel
-                    Spacer()
+                        .frame(minWidth: 60, maxWidth: 60, alignment: .leading)
+                    Spacer(minLength: 12)
+                    // MARK: Realm
                     VStack(alignment: .leading) {
-                        LessonCardView()
+                        NavigationLink {
+                            LazyNavigationView(LessonDetailView())
+                        } label: {
+                            LessonCardView()
+                        }
+                        .buttonStyle(.plain)
                         LessonCardView()
                     }
                 }
+                .padding(.horizontal, 8)
             }
-            .padding(.horizontal)
+            .frame(maxWidth: .infinity)
         }
     }
     
@@ -49,12 +60,11 @@ struct CalendarView: View {
                 viewModel.selectedDate?.formattedString(dateFormat: .monthDate)
                 ?? viewModel.today.formattedString(dateFormat: .monthDate)
             )
-            .font(.title2)
-            .fontWeight(.semibold)
-            .padding(.top)
+            .customFont(font: .semiBold, fontSize: 17)
             
+            Spacer(minLength: 0)
             Rectangle()
-                .frame(width: 2)
+                .frame(width: 1.5)
         }
     }
 }

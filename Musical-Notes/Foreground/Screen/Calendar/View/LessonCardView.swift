@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct LessonCardView: View {
+    // MARK: Memo 받아야함
     let testImgStr: String = "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/c8/3c/3b/c83c3b28-0d78-bc48-5ae5-d523f07ef5d8/888272138375.jpg/150x150bb.jpg"
     var body: some View {
         VStack {
@@ -24,22 +25,20 @@ struct LessonCardView: View {
                 }
                 
                 VStack(alignment: .leading) {
-                    Text("Lesson | Amber-Simone ")
-                        .font(.callout)
+                    Text("Lesson")
+                        .customFont(font: .thin, fontSize: 13)
+                        .foregroundStyle(Color(uiColor: .darkGray))
+                    Text("Amber-Simone | Black, no Sugar")
+                        .customFont(font: .regular, fontSize: 14)
                         .foregroundStyle(Color(uiColor: .darkGray))
                     Text("Potential")
-                        .font(.title3)
+                        .customFont(font: .semiBold, fontSize: 17)
                 }
-                .fontWeight(.bold)
                 .frame(maxWidth: .infinity, alignment: .leading)
             }
             Rectangle()
                 .frame(height: 2)
             memo(category: "레슨시간", memoDetail: "01:12:50")
-//            memo(category: "메모", memoDetail: """
-//로렘픽섬 어쩌구 저쩌구
-//이것 저것
-//""")
         }
         .padding()
         .background(
@@ -54,9 +53,11 @@ struct LessonCardView: View {
                 .frame(width: 5, height: 5)
             Text(category)
                 .frame(width: 80, alignment: .leading)
+                .customFont(font: .semiBold)
             
             Text(memoDetail)
                 .frame(maxWidth: .infinity, alignment: .leading)
+                .customFont()
         }
     }
 }

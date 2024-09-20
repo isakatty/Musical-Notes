@@ -27,6 +27,8 @@
 		C989B8752C9D08C3004FD90D /* Pretendard-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = C989B86C2C9D08C3004FD90D /* Pretendard-Light.otf */; };
 		C989B8792C9D09B1004FD90D /* PretendardFontType.swift in Sources */ = {isa = PBXBuildFile; fileRef = C989B8782C9D09B1004FD90D /* PretendardFontType.swift */; };
 		C989B87B2C9D0DB2004FD90D /* CustomFontModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = C989B87A2C9D0DB2004FD90D /* CustomFontModifier.swift */; };
+		C989B8832C9D1A72004FD90D /* Color+.swift in Sources */ = {isa = PBXBuildFile; fileRef = C989B8822C9D1A72004FD90D /* Color+.swift */; };
+		C989B8872C9D5383004FD90D /* LessonDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C989B8862C9D5383004FD90D /* LessonDetailView.swift */; };
 		C9CB200F2C9BF718005DECF7 /* CustomTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9CB200E2C9BF718005DECF7 /* CustomTabView.swift */; };
 		C9CB20112C9BF739005DECF7 /* TabModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9CB20102C9BF739005DECF7 /* TabModel.swift */; };
 		C9CB20132C9BF7C1005DECF7 /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9CB20122C9BF7C1005DECF7 /* CalendarView.swift */; };
@@ -39,6 +41,7 @@
 		C9CB20292C9C00A6005DECF7 /* FSCalendar in Frameworks */ = {isa = PBXBuildFile; productRef = C9CB20282C9C00A6005DECF7 /* FSCalendar */; };
 		C9CB202B2C9C0149005DECF7 /* FSCalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9CB202A2C9C0149005DECF7 /* FSCalendarView.swift */; };
 		C9CB202F2C9C1DEB005DECF7 /* CalendarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9CB202E2C9C1DEB005DECF7 /* CalendarViewModel.swift */; };
+		C9FF89122C9DB82E004AF325 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9FF89112C9DB82E004AF325 /* Constant.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -64,6 +67,8 @@
 		C989B8762C9D08EA004FD90D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C989B8782C9D09B1004FD90D /* PretendardFontType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PretendardFontType.swift; sourceTree = "<group>"; };
 		C989B87A2C9D0DB2004FD90D /* CustomFontModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomFontModifier.swift; sourceTree = "<group>"; };
+		C989B8822C9D1A72004FD90D /* Color+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+.swift"; sourceTree = "<group>"; };
+		C989B8862C9D5383004FD90D /* LessonDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonDetailView.swift; sourceTree = "<group>"; };
 		C9CB200E2C9BF718005DECF7 /* CustomTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabView.swift; sourceTree = "<group>"; };
 		C9CB20102C9BF739005DECF7 /* TabModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabModel.swift; sourceTree = "<group>"; };
 		C9CB20122C9BF7C1005DECF7 /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
@@ -75,6 +80,7 @@
 		C9CB20232C9BFEAA005DECF7 /* LazyNavigationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LazyNavigationView.swift; sourceTree = "<group>"; };
 		C9CB202A2C9C0149005DECF7 /* FSCalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FSCalendarView.swift; sourceTree = "<group>"; };
 		C9CB202E2C9C1DEB005DECF7 /* CalendarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewModel.swift; sourceTree = "<group>"; };
+		C9FF89112C9DB82E004AF325 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +107,7 @@
 			isa = PBXGroup;
 			children = (
 				C904FA472C9C226B00D1C2DB /* Date+.swift */,
+				C989B8822C9D1A72004FD90D /* Color+.swift */,
 			);
 			path = "Extenstion+";
 			sourceTree = "<group>";
@@ -160,6 +167,7 @@
 			isa = PBXGroup;
 			children = (
 				C989B8782C9D09B1004FD90D /* PretendardFontType.swift */,
+				C9FF89112C9DB82E004AF325 /* Constant.swift */,
 			);
 			path = Enum;
 			sourceTree = "<group>";
@@ -292,6 +300,7 @@
 				C9CB202A2C9C0149005DECF7 /* FSCalendarView.swift */,
 				C904FA492C9C44F000D1C2DB /* TopMonthView.swift */,
 				C904FA4D2C9C575100D1C2DB /* LessonCardView.swift */,
+				C989B8862C9D5383004FD90D /* LessonDetailView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -396,13 +405,16 @@
 				C9CB20132C9BF7C1005DECF7 /* CalendarView.swift in Sources */,
 				C9CB202F2C9C1DEB005DECF7 /* CalendarViewModel.swift in Sources */,
 				C904FA452C9C20BF00D1C2DB /* DateFormat.swift in Sources */,
+				C989B8832C9D1A72004FD90D /* Color+.swift in Sources */,
 				C9CB200F2C9BF718005DECF7 /* CustomTabView.swift in Sources */,
 				C9CB20192C9BF909005DECF7 /* TabBarAccess.swift in Sources */,
+				C9FF89122C9DB82E004AF325 /* Constant.swift in Sources */,
 				C9CB201E2C9BFC1B005DECF7 /* NotesTabView.swift in Sources */,
 				C9CB20112C9BF739005DECF7 /* TabModel.swift in Sources */,
 				C9CB201B2C9BF929005DECF7 /* TabBarButtonStyle.swift in Sources */,
 				C989B87B2C9D0DB2004FD90D /* CustomFontModifier.swift in Sources */,
 				C96BC6BA2C9BD53400C5B5AE /* ContentView.swift in Sources */,
+				C989B8872C9D5383004FD90D /* LessonDetailView.swift in Sources */,
 				C9CB20152C9BF7CE005DECF7 /* FeedView.swift in Sources */,
 				C989B8792C9D09B1004FD90D /* PretendardFontType.swift in Sources */,
 				C904FA482C9C226B00D1C2DB /* Date+.swift in Sources */,
