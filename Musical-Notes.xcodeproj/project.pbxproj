@@ -124,6 +124,35 @@
 			path = "Extenstion+";
 			sourceTree = "<group>";
 		};
+		C909A5302CA19401007E6A61 /* MemoDetail */ = {
+			isa = PBXGroup;
+			children = (
+				C909A5322CA19416007E6A61 /* ViewModel */,
+				C909A5312CA19411007E6A61 /* View */,
+			);
+			path = MemoDetail;
+			sourceTree = "<group>";
+		};
+		C909A5312CA19411007E6A61 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C989B8862C9D5383004FD90D /* LessonDetailView.swift */,
+				C909A5242CA14F4C007E6A61 /* LessonMusicView.swift */,
+				C909A5262CA15006007E6A61 /* MusicInfoDetailView.swift */,
+				C909A5282CA158BA007E6A61 /* LessonTimeView.swift */,
+				C909A52A2CA1853F007E6A61 /* LessonMemoView.swift */,
+				C909A52C2CA19229007E6A61 /* LessonTimeCircleView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		C909A5322CA19416007E6A61 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		C96BC6AB2C9BD53400C5B5AE = {
 			isa = PBXGroup;
 			children = (
@@ -227,6 +256,7 @@
 		C9CB20082C9BE3F7005DECF7 /* Screen */ = {
 			isa = PBXGroup;
 			children = (
+				C909A5302CA19401007E6A61 /* MemoDetail */,
 				C989B87F2C9D15B8004FD90D /* App */,
 				C9CB200C2C9BE417005DECF7 /* MyPage */,
 				C9CB200B2C9BE410005DECF7 /* Feed */,
@@ -313,12 +343,6 @@
 				C9CB202A2C9C0149005DECF7 /* FSCalendarView.swift */,
 				C904FA492C9C44F000D1C2DB /* TopMonthView.swift */,
 				C904FA4D2C9C575100D1C2DB /* LessonCardView.swift */,
-				C989B8862C9D5383004FD90D /* LessonDetailView.swift */,
-				C909A5242CA14F4C007E6A61 /* LessonMusicView.swift */,
-				C909A5262CA15006007E6A61 /* MusicInfoDetailView.swift */,
-				C909A5282CA158BA007E6A61 /* LessonTimeView.swift */,
-				C909A52A2CA1853F007E6A61 /* LessonMemoView.swift */,
-				C909A52C2CA19229007E6A61 /* LessonTimeCircleView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
