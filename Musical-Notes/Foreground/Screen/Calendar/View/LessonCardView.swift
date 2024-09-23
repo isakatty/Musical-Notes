@@ -38,27 +38,13 @@ struct LessonCardView: View {
             }
             Rectangle()
                 .frame(height: 2)
-            memo(category: "레슨시간", memoDetail: "01:12:50")
+            MusicInfoDetailView(category: "레슨시간", memoDetail: "01:12:50")
         }
         .padding()
         .background(
             Color.gray.opacity(0.4)
         )
         .clipShape(RoundedRectangle(cornerRadius: 15))
-    }
-    
-    func memo(category: String, memoDetail: String) -> some View {
-        HStack(alignment: .center) {
-            Circle()
-                .frame(width: 5, height: 5)
-            Text(category)
-                .frame(width: 80, alignment: .leading)
-                .customFont(font: .semiBold)
-            
-            Text(memoDetail)
-                .frame(maxWidth: .infinity, alignment: .leading)
-                .customFont()
-        }
     }
 }
 

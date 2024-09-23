@@ -12,6 +12,12 @@
 		C904FA4A2C9C44F000D1C2DB /* TopMonthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C904FA492C9C44F000D1C2DB /* TopMonthView.swift */; };
 		C904FA4C2C9C4AEE00D1C2DB /* ButtonActionModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = C904FA4B2C9C4AEE00D1C2DB /* ButtonActionModifier.swift */; };
 		C904FA4E2C9C575100D1C2DB /* LessonCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C904FA4D2C9C575100D1C2DB /* LessonCardView.swift */; };
+		C909A5232CA14EB4007E6A61 /* AsyncImgView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C909A5222CA14EB4007E6A61 /* AsyncImgView.swift */; };
+		C909A5252CA14F4C007E6A61 /* LessonMusicView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C909A5242CA14F4C007E6A61 /* LessonMusicView.swift */; };
+		C909A5272CA15006007E6A61 /* MusicInfoDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C909A5262CA15006007E6A61 /* MusicInfoDetailView.swift */; };
+		C909A5292CA158BA007E6A61 /* LessonTimeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C909A5282CA158BA007E6A61 /* LessonTimeView.swift */; };
+		C909A52B2CA1853F007E6A61 /* LessonMemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C909A52A2CA1853F007E6A61 /* LessonMemoView.swift */; };
+		C909A52D2CA19229007E6A61 /* LessonTimeCircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C909A52C2CA19229007E6A61 /* LessonTimeCircleView.swift */; };
 		C96BC6B82C9BD53400C5B5AE /* Musical_NotesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96BC6B72C9BD53400C5B5AE /* Musical_NotesApp.swift */; };
 		C96BC6BA2C9BD53400C5B5AE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96BC6B92C9BD53400C5B5AE /* ContentView.swift */; };
 		C96BC6BC2C9BD53500C5B5AE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C96BC6BB2C9BD53500C5B5AE /* Assets.xcassets */; };
@@ -50,6 +56,12 @@
 		C904FA492C9C44F000D1C2DB /* TopMonthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopMonthView.swift; sourceTree = "<group>"; };
 		C904FA4B2C9C4AEE00D1C2DB /* ButtonActionModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonActionModifier.swift; sourceTree = "<group>"; };
 		C904FA4D2C9C575100D1C2DB /* LessonCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonCardView.swift; sourceTree = "<group>"; };
+		C909A5222CA14EB4007E6A61 /* AsyncImgView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncImgView.swift; sourceTree = "<group>"; };
+		C909A5242CA14F4C007E6A61 /* LessonMusicView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonMusicView.swift; sourceTree = "<group>"; };
+		C909A5262CA15006007E6A61 /* MusicInfoDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicInfoDetailView.swift; sourceTree = "<group>"; };
+		C909A5282CA158BA007E6A61 /* LessonTimeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonTimeView.swift; sourceTree = "<group>"; };
+		C909A52A2CA1853F007E6A61 /* LessonMemoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonMemoView.swift; sourceTree = "<group>"; };
+		C909A52C2CA19229007E6A61 /* LessonTimeCircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonTimeCircleView.swift; sourceTree = "<group>"; };
 		C96BC6B42C9BD53400C5B5AE /* Musical-Notes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Musical-Notes.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C96BC6B72C9BD53400C5B5AE /* Musical_NotesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Musical_NotesApp.swift; sourceTree = "<group>"; };
 		C96BC6B92C9BD53400C5B5AE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -186,7 +198,7 @@
 		C989B87D2C9D1581004FD90D /* Foreground */ = {
 			isa = PBXGroup;
 			children = (
-				C9CB201C2C9BFBC3005DECF7 /* CustomView */,
+				C9CB201C2C9BFBC3005DECF7 /* ReusableView */,
 				C9CB200D2C9BF701005DECF7 /* ViewModifier */,
 				C9CB20082C9BE3F7005DECF7 /* Screen */,
 			);
@@ -267,12 +279,13 @@
 			path = ViewModifier;
 			sourceTree = "<group>";
 		};
-		C9CB201C2C9BFBC3005DECF7 /* CustomView */ = {
+		C9CB201C2C9BFBC3005DECF7 /* ReusableView */ = {
 			isa = PBXGroup;
 			children = (
 				C9CB20232C9BFEAA005DECF7 /* LazyNavigationView.swift */,
+				C909A5222CA14EB4007E6A61 /* AsyncImgView.swift */,
 			);
-			path = CustomView;
+			path = ReusableView;
 			sourceTree = "<group>";
 		};
 		C9CB201F2C9BFD71005DECF7 /* Legacy */ = {
@@ -301,6 +314,11 @@
 				C904FA492C9C44F000D1C2DB /* TopMonthView.swift */,
 				C904FA4D2C9C575100D1C2DB /* LessonCardView.swift */,
 				C989B8862C9D5383004FD90D /* LessonDetailView.swift */,
+				C909A5242CA14F4C007E6A61 /* LessonMusicView.swift */,
+				C909A5262CA15006007E6A61 /* MusicInfoDetailView.swift */,
+				C909A5282CA158BA007E6A61 /* LessonTimeView.swift */,
+				C909A52A2CA1853F007E6A61 /* LessonMemoView.swift */,
+				C909A52C2CA19229007E6A61 /* LessonTimeCircleView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -398,11 +416,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C909A5252CA14F4C007E6A61 /* LessonMusicView.swift in Sources */,
 				C904FA4C2C9C4AEE00D1C2DB /* ButtonActionModifier.swift in Sources */,
 				C9CB20172C9BF7DB005DECF7 /* MyPageView.swift in Sources */,
+				C909A5272CA15006007E6A61 /* MusicInfoDetailView.swift in Sources */,
 				C904FA4A2C9C44F000D1C2DB /* TopMonthView.swift in Sources */,
+				C909A5292CA158BA007E6A61 /* LessonTimeView.swift in Sources */,
+				C909A5232CA14EB4007E6A61 /* AsyncImgView.swift in Sources */,
 				C9CB202B2C9C0149005DECF7 /* FSCalendarView.swift in Sources */,
 				C9CB20132C9BF7C1005DECF7 /* CalendarView.swift in Sources */,
+				C909A52D2CA19229007E6A61 /* LessonTimeCircleView.swift in Sources */,
 				C9CB202F2C9C1DEB005DECF7 /* CalendarViewModel.swift in Sources */,
 				C904FA452C9C20BF00D1C2DB /* DateFormat.swift in Sources */,
 				C989B8832C9D1A72004FD90D /* Color+.swift in Sources */,
@@ -414,6 +437,7 @@
 				C9CB201B2C9BF929005DECF7 /* TabBarButtonStyle.swift in Sources */,
 				C989B87B2C9D0DB2004FD90D /* CustomFontModifier.swift in Sources */,
 				C96BC6BA2C9BD53400C5B5AE /* ContentView.swift in Sources */,
+				C909A52B2CA1853F007E6A61 /* LessonMemoView.swift in Sources */,
 				C989B8872C9D5383004FD90D /* LessonDetailView.swift in Sources */,
 				C9CB20152C9BF7CE005DECF7 /* FeedView.swift in Sources */,
 				C989B8792C9D09B1004FD90D /* PretendardFontType.swift in Sources */,
