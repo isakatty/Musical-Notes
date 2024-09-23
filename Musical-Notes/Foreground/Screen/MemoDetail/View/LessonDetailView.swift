@@ -15,30 +15,39 @@ struct LessonDetailView: View {
     
     var body: some View {
         ScrollView {
-            LazyVStack(alignment: .center, spacing: 12) {
+            LazyVStack(alignment: .leading, spacing: 12) {
                 Text("2024년 09월 21일(토)")
                     .customFont(font: .medium, fontSize: 16)
                     .foregroundStyle(Color(uiColor: UIColor.darkGray).opacity(0.7))
-                    .frame(maxWidth: .infinity, alignment: .leading)
                 
                 // MARK: view2 - 시간
                 LessonTimeView(startTime: "12:17 A.M.", endTime: "13:47 A.M.")
-                .padding(.vertical)
+                    .padding(.vertical)
                 
                 LessonTimeCircleView(total: 60, progress: time)
+                    .frame(maxWidth: .infinity, alignment: .center)
                 
                 Text("오늘 레슨 메모")
                     .customFont(font: .bold, fontSize: 17)
-                    .frame(maxWidth: .infinity, alignment: .leading)
                 LessonMemoView(memo: "어쩌구 저쩌구 이런 저런 로렘픽섬alskdjfpoqwieflaksdjfl;aksdjflkasjdflkasdalksdjf kasjdfaskdjflaskdj \n 민어래댜미ㅏ얼 \n 최고티비 \n 커스텀 TextEditor를 만들어야 할 듯 ? \n Dynamic height을 갖는.. TextEditor \n 늘어나면 \n 늘어나야함.")
                 
                 Text("오늘 레슨 곡")
                     .customFont(font: .bold, fontSize: 17)
-                    .frame(maxWidth: .infinity, alignment: .leading)
                 LessonMusicView(imgStr: testImgStr, width: 80, height: 80, artist: "406호 프로젝트", songTitle: "Colorful", releaseDate: "2024년 09월 23일")
                 LessonMusicView(imgStr: testImgStr, width: 80, height: 80, artist: "406호 프로젝트", songTitle: "Colorful", releaseDate: "2024년 09월 23일")
             }
             .padding(.horizontal)
+            .toolbar {
+                ToolbarItem(placement: .topBarTrailing) {
+//                    LazyNavigationView(<#T##closure: View##View#>)
+                    Button(action: {
+                        print("하이루")
+                    }, label: {
+                        Text("수정")
+                    })
+                    .buttonStyle(.plain)
+                }
+            }
         }
     }
 }
