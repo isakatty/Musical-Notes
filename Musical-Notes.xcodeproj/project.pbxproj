@@ -40,6 +40,10 @@
 		C9AC16662CA2A32200251F38 /* MusicSearchCompoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9AC16652CA2A32200251F38 /* MusicSearchCompoView.swift */; };
 		C9AC16682CA2BACA00251F38 /* AddMemoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9AC16672CA2BACA00251F38 /* AddMemoViewModel.swift */; };
 		C9AC166A2CA2BE9100251F38 /* ViewHiddenModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9AC16692CA2BE9100251F38 /* ViewHiddenModifier.swift */; };
+		C9AC16722CA2D1FC00251F38 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = C9AC16712CA2D1FC00251F38 /* RealmSwift */; };
+		C9AC16772CA2D21D00251F38 /* MNotesMusic.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9AC16762CA2D21D00251F38 /* MNotesMusic.swift */; };
+		C9AC167A2CA2D29C00251F38 /* MNotesMemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9AC16792CA2D29C00251F38 /* MNotesMemo.swift */; };
+		C9AC167C2CA2D4F100251F38 /* RealmRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9AC167B2CA2D4F100251F38 /* RealmRepository.swift */; };
 		C9CB200F2C9BF718005DECF7 /* CustomTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9CB200E2C9BF718005DECF7 /* CustomTabView.swift */; };
 		C9CB20112C9BF739005DECF7 /* TabModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9CB20102C9BF739005DECF7 /* TabModel.swift */; };
 		C9CB20132C9BF7C1005DECF7 /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9CB20122C9BF7C1005DECF7 /* CalendarView.swift */; };
@@ -91,6 +95,9 @@
 		C9AC16652CA2A32200251F38 /* MusicSearchCompoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicSearchCompoView.swift; sourceTree = "<group>"; };
 		C9AC16672CA2BACA00251F38 /* AddMemoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMemoViewModel.swift; sourceTree = "<group>"; };
 		C9AC16692CA2BE9100251F38 /* ViewHiddenModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewHiddenModifier.swift; sourceTree = "<group>"; };
+		C9AC16762CA2D21D00251F38 /* MNotesMusic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MNotesMusic.swift; sourceTree = "<group>"; };
+		C9AC16792CA2D29C00251F38 /* MNotesMemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MNotesMemo.swift; sourceTree = "<group>"; };
+		C9AC167B2CA2D4F100251F38 /* RealmRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmRepository.swift; sourceTree = "<group>"; };
 		C9CB200E2C9BF718005DECF7 /* CustomTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabView.swift; sourceTree = "<group>"; };
 		C9CB20102C9BF739005DECF7 /* TabModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabModel.swift; sourceTree = "<group>"; };
 		C9CB20122C9BF7C1005DECF7 /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
@@ -110,6 +117,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C9AC16722CA2D1FC00251F38 /* RealmSwift in Frameworks */,
 				C9CB20292C9C00A6005DECF7 /* FSCalendar in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -280,6 +288,7 @@
 		C989B87E2C9D15A0004FD90D /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				C9AC16732CA2D20800251F38 /* Realm */,
 				C904FA462C9C226400D1C2DB /* Extenstion+ */,
 				C904FA432C9C20B300D1C2DB /* Helper */,
 				C989B8772C9D09A0004FD90D /* Enum */,
@@ -303,6 +312,32 @@
 				C9AC16652CA2A32200251F38 /* MusicSearchCompoView.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		C9AC16732CA2D20800251F38 /* Realm */ = {
+			isa = PBXGroup;
+			children = (
+				C9AC16752CA2D21300251F38 /* RealmRepository */,
+				C9AC16742CA2D20D00251F38 /* RealmModel */,
+			);
+			path = Realm;
+			sourceTree = "<group>";
+		};
+		C9AC16742CA2D20D00251F38 /* RealmModel */ = {
+			isa = PBXGroup;
+			children = (
+				C9AC16762CA2D21D00251F38 /* MNotesMusic.swift */,
+				C9AC16792CA2D29C00251F38 /* MNotesMemo.swift */,
+			);
+			path = RealmModel;
+			sourceTree = "<group>";
+		};
+		C9AC16752CA2D21300251F38 /* RealmRepository */ = {
+			isa = PBXGroup;
+			children = (
+				C9AC167B2CA2D4F100251F38 /* RealmRepository.swift */,
+			);
+			path = RealmRepository;
 			sourceTree = "<group>";
 		};
 		C9CB20082C9BE3F7005DECF7 /* Screen */ = {
@@ -428,6 +463,7 @@
 			name = "Musical-Notes";
 			packageProductDependencies = (
 				C9CB20282C9C00A6005DECF7 /* FSCalendar */,
+				C9AC16712CA2D1FC00251F38 /* RealmSwift */,
 			);
 			productName = "Musical-Notes";
 			productReference = C96BC6B42C9BD53400C5B5AE /* Musical-Notes.app */;
@@ -459,6 +495,7 @@
 			mainGroup = C96BC6AB2C9BD53400C5B5AE;
 			packageReferences = (
 				C9CB20272C9C00A6005DECF7 /* XCRemoteSwiftPackageReference "FSCalendar" */,
+				C9AC16702CA2D1FC00251F38 /* XCRemoteSwiftPackageReference "realm-swift" */,
 			);
 			productRefGroup = C96BC6B52C9BD53400C5B5AE /* Products */;
 			projectDirPath = "";
@@ -499,6 +536,7 @@
 				C9AC166A2CA2BE9100251F38 /* ViewHiddenModifier.swift in Sources */,
 				C904FA4C2C9C4AEE00D1C2DB /* ButtonActionModifier.swift in Sources */,
 				C9CB20172C9BF7DB005DECF7 /* MyPageView.swift in Sources */,
+				C9AC16772CA2D21D00251F38 /* MNotesMusic.swift in Sources */,
 				C98690352CA1AAFF00418A61 /* MusicSearchView.swift in Sources */,
 				C909A5272CA15006007E6A61 /* MusicInfoDetailView.swift in Sources */,
 				C9AC16662CA2A32200251F38 /* MusicSearchCompoView.swift in Sources */,
@@ -509,9 +547,11 @@
 				C9CB20132C9BF7C1005DECF7 /* CalendarView.swift in Sources */,
 				C909A52D2CA19229007E6A61 /* LessonTimeCircleView.swift in Sources */,
 				C9CB202F2C9C1DEB005DECF7 /* CalendarViewModel.swift in Sources */,
+				C9AC167A2CA2D29C00251F38 /* MNotesMemo.swift in Sources */,
 				C904FA452C9C20BF00D1C2DB /* DateFormat.swift in Sources */,
 				C989B8832C9D1A72004FD90D /* Color+.swift in Sources */,
 				C9CB200F2C9BF718005DECF7 /* CustomTabView.swift in Sources */,
+				C9AC167C2CA2D4F100251F38 /* RealmRepository.swift in Sources */,
 				C9CB20192C9BF909005DECF7 /* TabBarAccess.swift in Sources */,
 				C9FF89122C9DB82E004AF325 /* Constant.swift in Sources */,
 				C9CB201E2C9BFC1B005DECF7 /* NotesTabView.swift in Sources */,
@@ -750,6 +790,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		C9AC16702CA2D1FC00251F38 /* XCRemoteSwiftPackageReference "realm-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-swift.git";
+			requirement = {
+				kind = exactVersion;
+				version = 10.54.0;
+			};
+		};
 		C9CB20272C9C00A6005DECF7 /* XCRemoteSwiftPackageReference "FSCalendar" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/WenchaoD/FSCalendar.git";
@@ -761,6 +809,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		C9AC16712CA2D1FC00251F38 /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C9AC16702CA2D1FC00251F38 /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = RealmSwift;
+		};
 		C9CB20282C9C00A6005DECF7 /* FSCalendar */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = C9CB20272C9C00A6005DECF7 /* XCRemoteSwiftPackageReference "FSCalendar" */;
