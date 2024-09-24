@@ -1,0 +1,40 @@
+//
+//  MusicSearchCompoView.swift
+//  Musical-Notes
+//
+//  Created by Jisoo Ham on 9/24/24.
+//
+
+import SwiftUI
+
+struct MusicSearchCompoView: View {
+    let albumImg: String
+    let artistName: String
+    let songTitle: String
+    
+    var body: some View {
+        HStack {
+            AsyncImgView(imgStr: albumImg, width: 80, height: 80)
+            VStack(alignment: .leading, spacing: 10) {
+                Text(songTitle)
+                    .customFont(font: .semiBold)
+                HStack {
+                    Text(artistName)
+                    Circle()
+                        .frame(width: 3, height: 3)
+                    Text("시간은 미정")
+                }
+                .customFont(fontSize: 14)
+            }
+        }
+        .frame(maxWidth: .infinity, alignment: .leading)
+    }
+}
+
+#Preview {
+    MusicSearchCompoView(
+        albumImg: test,
+        artistName: "아이유",
+        songTitle: "Love wins all"
+    )
+}

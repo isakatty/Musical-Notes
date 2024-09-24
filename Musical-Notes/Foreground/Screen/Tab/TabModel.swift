@@ -11,5 +11,4 @@ enum TabModel: String {
     case calendar = "캘린더"
     case feed = "피드"
     case myPage = "마이페이지"
-    
 }

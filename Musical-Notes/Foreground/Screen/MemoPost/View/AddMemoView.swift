@@ -1,5 +1,5 @@
 //
-//  MemoPostView.swift
+//  AddMemoView.swift
 //  Musical-Notes
 //
 //  Created by Jisoo Ham on 9/23/24.
@@ -7,7 +7,9 @@
 
 import SwiftUI
 
-struct MemoPostView: View {
+struct AddMemoView: View {
+    @StateObject var viewModel: AddMemoViewModel
+    
     @State private var lessonDate = Date()
     @State private var isMusicSearchOn = false
     
@@ -21,7 +23,7 @@ struct MemoPostView: View {
                     Text("레슨 날짜")
                         .customFont()
                     
-                    DatePicker(selection: $lessonDate, displayedComponents: [.date]) {
+                    DatePicker(selection: $viewModel.memoDate, displayedComponents: [.date]) {
                         EmptyView()
                     }
                 }
@@ -33,7 +35,7 @@ struct MemoPostView: View {
                     Text("레슨 시작 시간")
                         .customFont(font: .medium)
                     
-                    DatePicker(selection: $lessonDate, displayedComponents: [.hourAndMinute]) {
+                    DatePicker(selection: $viewModel.startTime, displayedComponents: [.hourAndMinute]) {
                         EmptyView()
                     }
                     .datePickerStyle(.compact)
@@ -45,7 +47,7 @@ struct MemoPostView: View {
                     Text("레슨 마무리 시간")
                         .customFont(font: .medium)
                     
-                    DatePicker(selection: $lessonDate, displayedComponents: [.hourAndMinute]) {
+                    DatePicker(selection: $viewModel.endTime, displayedComponents: [.hourAndMinute]) {
                         EmptyView()
                     }
                 }
@@ -60,9 +62,8 @@ struct MemoPostView: View {
                 .padding(.top, 10)
                 
                 ZStack {
-                    Text("어쩌구 저쩌구 헬로헬로 \n \n \n test texting \n TextEditor 들어올 자리")
-                        .frame(maxWidth: .infinity, alignment: .leading)
-                        .padding(.all, 10)
+                    TextEditor(text: $viewModel.memoText)
+                        .frame(maxWidth: .infinity, minHeight: 80, alignment: .leading)
                         .customFont()
                     
                     RoundedRectangle(cornerRadius: 10)
@@ -79,9 +80,9 @@ struct MemoPostView: View {
                 }
                 .padding(.top, 10)
                 
-                Button(action: {
-                    isMusicSearchOn = true
-                }, label: {
+                NavigationLink {
+                    LazyNavigationView(MusicSearchView())
+                } label: {
                     ZStack {
                         RoundedRectangle(cornerRadius: 10)
                             .fill(.gray.opacity(0.35))
@@ -99,14 +100,10 @@ struct MemoPostView: View {
                             Spacer()
                         }
                     }
-                })
+                }
+
             }
         }
-        .sheet(isPresented: $isMusicSearchOn, onDismiss: {
-            isMusicSearchOn = false
-        }, content: {
-            MusicSearchView()
-        })
         .padding(.horizontal)
         .navigationTitle("일지 작성")
     }
@@ -114,6 +111,6 @@ struct MemoPostView: View {
 
 #Preview {
     NavigationStack {
-        MemoPostView()
+        AddMemoView(viewModel: AddMemoViewModel())
     }
 }

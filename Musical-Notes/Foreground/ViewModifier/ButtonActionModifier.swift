@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ButtonActionModifier: ViewModifier {
+private struct ButtonActionModifier: ViewModifier {
     let action: () -> Void
     
     func body(content: Content) -> some View {

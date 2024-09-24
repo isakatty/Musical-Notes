@@ -29,6 +29,14 @@ struct CalendarView: View {
     var body: some View {
         ScrollView {
             VStack(alignment: .leading) {
+                NavigationLink {
+                    AddMemoView(viewModel: AddMemoViewModel())
+                } label: {
+                    Text("Upload for test")
+                }
+                .frame(maxWidth: .infinity, alignment: .center)
+
+                
                 TopMonthView(viewModel: viewModel, fsCalendar: $fsCalendar)
                 FSCalendarView(viewModel: viewModel, fsCalendar: $fsCalendar)
                     .frame(height: viewModel.isSelectedScope ? 100 : 400)
@@ -51,6 +59,7 @@ struct CalendarView: View {
                 .padding(.horizontal, 8)
             }
             .frame(maxWidth: .infinity)
+            .navigationBarTitleDisplayMode(.inline)
         }
     }
     

@@ -22,7 +22,7 @@
 		C96BC6BA2C9BD53400C5B5AE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96BC6B92C9BD53400C5B5AE /* ContentView.swift */; };
 		C96BC6BC2C9BD53500C5B5AE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C96BC6BB2C9BD53500C5B5AE /* Assets.xcassets */; };
 		C96BC6BF2C9BD53500C5B5AE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C96BC6BE2C9BD53500C5B5AE /* Preview Assets.xcassets */; };
-		C98690322CA1978B00418A61 /* MemoPostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C98690312CA1978B00418A61 /* MemoPostView.swift */; };
+		C98690322CA1978B00418A61 /* AddMemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C98690312CA1978B00418A61 /* AddMemoView.swift */; };
 		C98690352CA1AAFF00418A61 /* MusicSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C98690342CA1AAFF00418A61 /* MusicSearchView.swift */; };
 		C989B86D2C9D08C3004FD90D /* Pretendard-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = C989B8642C9D08C3004FD90D /* Pretendard-Medium.otf */; };
 		C989B86E2C9D08C3004FD90D /* Pretendard-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = C989B8652C9D08C3004FD90D /* Pretendard-Regular.otf */; };
@@ -37,6 +37,9 @@
 		C989B87B2C9D0DB2004FD90D /* CustomFontModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = C989B87A2C9D0DB2004FD90D /* CustomFontModifier.swift */; };
 		C989B8832C9D1A72004FD90D /* Color+.swift in Sources */ = {isa = PBXBuildFile; fileRef = C989B8822C9D1A72004FD90D /* Color+.swift */; };
 		C989B8872C9D5383004FD90D /* LessonDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C989B8862C9D5383004FD90D /* LessonDetailView.swift */; };
+		C9AC16662CA2A32200251F38 /* MusicSearchCompoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9AC16652CA2A32200251F38 /* MusicSearchCompoView.swift */; };
+		C9AC16682CA2BACA00251F38 /* AddMemoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9AC16672CA2BACA00251F38 /* AddMemoViewModel.swift */; };
+		C9AC166A2CA2BE9100251F38 /* ViewHiddenModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9AC16692CA2BE9100251F38 /* ViewHiddenModifier.swift */; };
 		C9CB200F2C9BF718005DECF7 /* CustomTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9CB200E2C9BF718005DECF7 /* CustomTabView.swift */; };
 		C9CB20112C9BF739005DECF7 /* TabModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9CB20102C9BF739005DECF7 /* TabModel.swift */; };
 		C9CB20132C9BF7C1005DECF7 /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9CB20122C9BF7C1005DECF7 /* CalendarView.swift */; };
@@ -69,7 +72,7 @@
 		C96BC6B92C9BD53400C5B5AE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		C96BC6BB2C9BD53500C5B5AE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C96BC6BE2C9BD53500C5B5AE /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		C98690312CA1978B00418A61 /* MemoPostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoPostView.swift; sourceTree = "<group>"; };
+		C98690312CA1978B00418A61 /* AddMemoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMemoView.swift; sourceTree = "<group>"; };
 		C98690342CA1AAFF00418A61 /* MusicSearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicSearchView.swift; sourceTree = "<group>"; };
 		C989B8642C9D08C3004FD90D /* Pretendard-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Medium.otf"; sourceTree = "<group>"; };
 		C989B8652C9D08C3004FD90D /* Pretendard-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Regular.otf"; sourceTree = "<group>"; };
@@ -85,6 +88,9 @@
 		C989B87A2C9D0DB2004FD90D /* CustomFontModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomFontModifier.swift; sourceTree = "<group>"; };
 		C989B8822C9D1A72004FD90D /* Color+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+.swift"; sourceTree = "<group>"; };
 		C989B8862C9D5383004FD90D /* LessonDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonDetailView.swift; sourceTree = "<group>"; };
+		C9AC16652CA2A32200251F38 /* MusicSearchCompoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicSearchCompoView.swift; sourceTree = "<group>"; };
+		C9AC16672CA2BACA00251F38 /* AddMemoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMemoViewModel.swift; sourceTree = "<group>"; };
+		C9AC16692CA2BE9100251F38 /* ViewHiddenModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewHiddenModifier.swift; sourceTree = "<group>"; };
 		C9CB200E2C9BF718005DECF7 /* CustomTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabView.swift; sourceTree = "<group>"; };
 		C9CB20102C9BF739005DECF7 /* TabModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabModel.swift; sourceTree = "<group>"; };
 		C9CB20122C9BF7C1005DECF7 /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
@@ -204,7 +210,7 @@
 		C986902F2CA1977D00418A61 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				C98690312CA1978B00418A61 /* MemoPostView.swift */,
+				C98690312CA1978B00418A61 /* AddMemoView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -212,6 +218,7 @@
 		C98690302CA1978200418A61 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				C9AC16672CA2BACA00251F38 /* AddMemoViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -219,7 +226,7 @@
 		C98690332CA1AAF500418A61 /* MusicSearch */ = {
 			isa = PBXGroup;
 			children = (
-				C98690342CA1AAFF00418A61 /* MusicSearchView.swift */,
+				C9AC16642CA2A31600251F38 /* View */,
 			);
 			path = MusicSearch;
 			sourceTree = "<group>";
@@ -289,6 +296,15 @@
 			path = App;
 			sourceTree = "<group>";
 		};
+		C9AC16642CA2A31600251F38 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C98690342CA1AAFF00418A61 /* MusicSearchView.swift */,
+				C9AC16652CA2A32200251F38 /* MusicSearchCompoView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		C9CB20082C9BE3F7005DECF7 /* Screen */ = {
 			isa = PBXGroup;
 			children = (
@@ -343,6 +359,7 @@
 			children = (
 				C904FA4B2C9C4AEE00D1C2DB /* ButtonActionModifier.swift */,
 				C989B87A2C9D0DB2004FD90D /* CustomFontModifier.swift */,
+				C9AC16692CA2BE9100251F38 /* ViewHiddenModifier.swift */,
 			);
 			path = ViewModifier;
 			sourceTree = "<group>";
@@ -479,10 +496,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				C909A5252CA14F4C007E6A61 /* LessonMusicView.swift in Sources */,
+				C9AC166A2CA2BE9100251F38 /* ViewHiddenModifier.swift in Sources */,
 				C904FA4C2C9C4AEE00D1C2DB /* ButtonActionModifier.swift in Sources */,
 				C9CB20172C9BF7DB005DECF7 /* MyPageView.swift in Sources */,
 				C98690352CA1AAFF00418A61 /* MusicSearchView.swift in Sources */,
 				C909A5272CA15006007E6A61 /* MusicInfoDetailView.swift in Sources */,
+				C9AC16662CA2A32200251F38 /* MusicSearchCompoView.swift in Sources */,
 				C904FA4A2C9C44F000D1C2DB /* TopMonthView.swift in Sources */,
 				C909A5292CA158BA007E6A61 /* LessonTimeView.swift in Sources */,
 				C909A5232CA14EB4007E6A61 /* AsyncImgView.swift in Sources */,
@@ -505,7 +524,8 @@
 				C9CB20152C9BF7CE005DECF7 /* FeedView.swift in Sources */,
 				C989B8792C9D09B1004FD90D /* PretendardFontType.swift in Sources */,
 				C904FA482C9C226B00D1C2DB /* Date+.swift in Sources */,
-				C98690322CA1978B00418A61 /* MemoPostView.swift in Sources */,
+				C98690322CA1978B00418A61 /* AddMemoView.swift in Sources */,
+				C9AC16682CA2BACA00251F38 /* AddMemoViewModel.swift in Sources */,
 				C9CB20242C9BFEAA005DECF7 /* LazyNavigationView.swift in Sources */,
 				C904FA4E2C9C575100D1C2DB /* LessonCardView.swift in Sources */,
 				C96BC6B82C9BD53400C5B5AE /* Musical_NotesApp.swift in Sources */,
