@@ -20,7 +20,6 @@ final class MNotesMemo: Object, ObjectKeyIdentifiable {
     @Persisted var musics: List<MNotesMusic>
     
     convenience init(
-        id: ObjectId,
         regDate: Date,
         startTime: Date,
         endTime: Date,

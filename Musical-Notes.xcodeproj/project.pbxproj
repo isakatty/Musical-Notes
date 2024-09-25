@@ -56,6 +56,7 @@
 		C9CB20292C9C00A6005DECF7 /* FSCalendar in Frameworks */ = {isa = PBXBuildFile; productRef = C9CB20282C9C00A6005DECF7 /* FSCalendar */; };
 		C9CB202B2C9C0149005DECF7 /* FSCalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9CB202A2C9C0149005DECF7 /* FSCalendarView.swift */; };
 		C9CB202F2C9C1DEB005DECF7 /* CalendarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9CB202E2C9C1DEB005DECF7 /* CalendarViewModel.swift */; };
+		C9FF72D02CA3D51C00ACF94F /* View+.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9FF72CF2CA3D51C00ACF94F /* View+.swift */; };
 		C9FF89122C9DB82E004AF325 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9FF89112C9DB82E004AF325 /* Constant.swift */; };
 /* End PBXBuildFile section */
 
@@ -109,6 +110,7 @@
 		C9CB20232C9BFEAA005DECF7 /* LazyNavigationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LazyNavigationView.swift; sourceTree = "<group>"; };
 		C9CB202A2C9C0149005DECF7 /* FSCalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FSCalendarView.swift; sourceTree = "<group>"; };
 		C9CB202E2C9C1DEB005DECF7 /* CalendarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewModel.swift; sourceTree = "<group>"; };
+		C9FF72CF2CA3D51C00ACF94F /* View+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+.swift"; sourceTree = "<group>"; };
 		C9FF89112C9DB82E004AF325 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -138,6 +140,7 @@
 			children = (
 				C904FA472C9C226B00D1C2DB /* Date+.swift */,
 				C989B8822C9D1A72004FD90D /* Color+.swift */,
+				C9FF72CF2CA3D51C00ACF94F /* View+.swift */,
 			);
 			path = "Extenstion+";
 			sourceTree = "<group>";
@@ -558,6 +561,7 @@
 				C9CB20112C9BF739005DECF7 /* TabModel.swift in Sources */,
 				C9CB201B2C9BF929005DECF7 /* TabBarButtonStyle.swift in Sources */,
 				C989B87B2C9D0DB2004FD90D /* CustomFontModifier.swift in Sources */,
+				C9FF72D02CA3D51C00ACF94F /* View+.swift in Sources */,
 				C96BC6BA2C9BD53400C5B5AE /* ContentView.swift in Sources */,
 				C909A52B2CA1853F007E6A61 /* LessonMemoView.swift in Sources */,
 				C989B8872C9D5383004FD90D /* LessonDetailView.swift in Sources */,

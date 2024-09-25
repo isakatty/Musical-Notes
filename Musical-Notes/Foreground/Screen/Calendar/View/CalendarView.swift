@@ -61,6 +61,10 @@ struct CalendarView: View {
             .frame(maxWidth: .infinity)
             .navigationBarTitleDisplayMode(.inline)
         }
+        .onAppear {
+            RealmRepository.shared.fetchMemos()
+            
+        }
     }
     
     private var dateLabel: some View {

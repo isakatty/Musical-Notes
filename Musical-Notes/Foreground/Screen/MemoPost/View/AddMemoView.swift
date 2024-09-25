@@ -7,11 +7,15 @@
 
 import SwiftUI
 
-struct AddMemoView: View {
-    @StateObject var viewModel: AddMemoViewModel
+var musics: [MNotesMusic] = [
+    MNotesMusic(id: "1539200376", songTitle: "넌 나 어때", artist: "406 Project", artwork: "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/bd/1e/ee/bd1eee78-3d16-12ac-38bf-2289d9d76bb3/8806184740815.jpg/150x150bb.jpg"),
+    MNotesMusic(id: "1746260068", songTitle: "Apartment", artist: "406 Project", artwork: "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/bd/1e/ee/bd1eee78-3d16-12ac-38bf-2289d9d76bb3/8806184740815.jpg/150x150bb.jpg"),
     
-    @State private var lessonDate = Date()
-    @State private var isMusicSearchOn = false
+]
+
+struct AddMemoView: View {
+    @Environment(\.dismiss) private var dismiss
+    @StateObject var viewModel: AddMemoViewModel
     
     var body: some View {
         ScrollView {
@@ -106,6 +110,32 @@ struct AddMemoView: View {
         }
         .padding(.horizontal)
         .navigationTitle("일지 작성")
+        .toolbar {
+            ToolbarItem(placement: .topBarTrailing) {
+                Button(
+                    action: {
+                        print("저장 btn action")
+                        if viewModel.validateInfo() {
+                            viewModel.saveMemo(
+                                memoDate: viewModel.memoDate,
+                                start: viewModel.startTime,
+                                end: viewModel.endTime,
+                                memo: viewModel.memoText
+                            )
+                            dismiss()
+                        } else {
+                            print("입력한 정보를 확인해달라는 alert 띄우기")
+                        }
+                    },
+                    label: {
+                        Text("저장")
+                    }
+                )
+            }
+        }
+        .onTapGesture {
+            self.endTextEditing()
+        }
     }
 }
 

@@ -14,4 +14,18 @@ final class AddMemoViewModel: ObservableObject {
     @Published var endTime: Date = Date()
     @Published var memoText: String = ""
     
+    func validateInfo() -> Bool {
+        guard !memoText.isEmpty else {
+            return false
+        }
+        guard endTime > startTime else {
+            return false
+        }
+        return true
+    }
+    
+    func saveMemo(memoDate: Date, start: Date, end: Date, memo: String) {
+        let memo = MNotesMemo(regDate: memoDate, startTime: start, endTime: end, memoText: memo, lessonType: .practice)
+        RealmRepository.shared.addMemo(memo: memo)
+    }
 }
