@@ -120,7 +120,8 @@ struct AddMemoView: View {
                                 memoDate: viewModel.memoDate,
                                 start: viewModel.startTime,
                                 end: viewModel.endTime,
-                                memo: viewModel.memoText
+                                memo: viewModel.memoText,
+                                musics: musics
                             )
                             dismiss()
                         } else {

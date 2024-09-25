@@ -24,8 +24,8 @@ final class AddMemoViewModel: ObservableObject {
         return true
     }
     
-    func saveMemo(memoDate: Date, start: Date, end: Date, memo: String) {
+    func saveMemo(memoDate: Date, start: Date, end: Date, memo: String, musics: [MNotesMusic]) {
         let memo = MNotesMemo(regDate: memoDate, startTime: start, endTime: end, memoText: memo, lessonType: .practice)
-        RealmRepository.shared.addMemo(memo: memo)
+        RealmRepository.shared.addMemoToMusic(musics: musics, memo: memo)
     }
 }

@@ -17,7 +17,7 @@ final class MNotesMemo: Object, ObjectKeyIdentifiable {
     @Persisted var memoText: String
     @Persisted var lessonType: MNotes
     
-    @Persisted var musics: List<MNotesMusic>
+    @Persisted(originProperty: "memos") var music: LinkingObjects<MNotesMusic>
     
     convenience init(
         regDate: Date,

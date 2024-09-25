@@ -23,13 +23,28 @@ final class RealmRepository {
         return realm.objects(MNotesMemo.self)
     }
     
-    func addMemo(memo: MNotesMemo) {
+    func addMemoToMusic(musics: [MNotesMusic], memo: MNotesMemo) {
         do {
             try realm.write {
-                realm.add(memo)
+                addMemo(memo: memo)
+                
+                for music in musics {
+                    addMusic(music: music)
+                    music.memos.append(memo)
+                }
             }
         } catch {
             print("Realm Memo Save Fail")
+        }
+    }
+    
+    func addMusic(music: MNotesMusic) {
+        realm.add(music)
+    }
+    
+    func addMemo(memo: MNotesMemo) {
+        if realm.object(ofType: MNotesMemo.self, forPrimaryKey: memo.id) == nil {
+            realm.add(memo)
         }
     }
 }
