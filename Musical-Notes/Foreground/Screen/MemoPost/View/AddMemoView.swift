@@ -11,6 +11,8 @@ struct AddMemoView: View {
     @Environment(\.dismiss) private var dismiss
     @StateObject var viewModel: AddMemoViewModel
     
+    @State private var isShowAlert: Bool = false
+    
     var body: some View {
         ScrollView {
             VStack(alignment: .leading) {
@@ -100,6 +102,7 @@ struct AddMemoView: View {
                             dismiss()
                         } else {
                             print("입력한 정보를 확인해달라는 alert 띄우기")
+                            isShowAlert = true
                         }
                     },
                     label: {
@@ -111,6 +114,7 @@ struct AddMemoView: View {
         .onTapGesture {
             self.endTextEditing()
         }
+        .showAlert(isPresented: $isShowAlert, alertTitle: "일지를 작성하기에 부족한 정보가 있습니다.", alertSubTitle: "다시 확인해주세요.")
     }
 }
 

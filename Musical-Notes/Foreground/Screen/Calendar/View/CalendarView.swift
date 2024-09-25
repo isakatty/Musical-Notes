@@ -63,7 +63,6 @@ struct CalendarView: View {
         }
         .onAppear {
             RealmRepository.shared.fetchMemos()
-            
         }
     }
     

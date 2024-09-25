@@ -62,6 +62,8 @@
 		C9FF72DA2CA3F8CB00ACF94F /* SearchedSong.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9FF72D92CA3F8CB00ACF94F /* SearchedSong.swift */; };
 		C9FF72DC2CA3FE9000ACF94F /* TimeInterval+.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9FF72DB2CA3FE9000ACF94F /* TimeInterval+.swift */; };
 		C9FF72DF2CA4376900ACF94F /* DotCategoryModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9FF72DE2CA4376900ACF94F /* DotCategoryModifier.swift */; };
+		C9FF72E32CA43F3600ACF94F /* AlertModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9FF72E22CA43F3600ACF94F /* AlertModifier.swift */; };
+		C9FF72E92CA4507D00ACF94F /* AlertMusicView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9FF72E82CA4507D00ACF94F /* AlertMusicView.swift */; };
 		C9FF89122C9DB82E004AF325 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9FF89112C9DB82E004AF325 /* Constant.swift */; };
 /* End PBXBuildFile section */
 
@@ -121,6 +123,8 @@
 		C9FF72D92CA3F8CB00ACF94F /* SearchedSong.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchedSong.swift; sourceTree = "<group>"; };
 		C9FF72DB2CA3FE9000ACF94F /* TimeInterval+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TimeInterval+.swift"; sourceTree = "<group>"; };
 		C9FF72DE2CA4376900ACF94F /* DotCategoryModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DotCategoryModifier.swift; sourceTree = "<group>"; };
+		C9FF72E22CA43F3600ACF94F /* AlertModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertModifier.swift; sourceTree = "<group>"; };
+		C9FF72E82CA4507D00ACF94F /* AlertMusicView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertMusicView.swift; sourceTree = "<group>"; };
 		C9FF89112C9DB82E004AF325 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -413,6 +417,7 @@
 				C989B87A2C9D0DB2004FD90D /* CustomFontModifier.swift */,
 				C9AC16692CA2BE9100251F38 /* ViewHiddenModifier.swift */,
 				C9FF72DE2CA4376900ACF94F /* DotCategoryModifier.swift */,
+				C9FF72E22CA43F3600ACF94F /* AlertModifier.swift */,
 			);
 			path = ViewModifier;
 			sourceTree = "<group>";
@@ -422,6 +427,7 @@
 			children = (
 				C9CB20232C9BFEAA005DECF7 /* LazyNavigationView.swift */,
 				C909A5222CA14EB4007E6A61 /* AsyncImgView.swift */,
+				C9FF72E82CA4507D00ACF94F /* AlertMusicView.swift */,
 			);
 			path = ReusableView;
 			sourceTree = "<group>";
@@ -586,6 +592,7 @@
 				C9AC16662CA2A32200251F38 /* MusicSearchCompoView.swift in Sources */,
 				C9FF72DC2CA3FE9000ACF94F /* TimeInterval+.swift in Sources */,
 				C904FA4A2C9C44F000D1C2DB /* TopMonthView.swift in Sources */,
+				C9FF72E92CA4507D00ACF94F /* AlertMusicView.swift in Sources */,
 				C909A5292CA158BA007E6A61 /* LessonTimeView.swift in Sources */,
 				C909A5232CA14EB4007E6A61 /* AsyncImgView.swift in Sources */,
 				C9CB202B2C9C0149005DECF7 /* FSCalendarView.swift in Sources */,
@@ -615,6 +622,7 @@
 				C98690322CA1978B00418A61 /* AddMemoView.swift in Sources */,
 				C9AC16682CA2BACA00251F38 /* AddMemoViewModel.swift in Sources */,
 				C9CB20242C9BFEAA005DECF7 /* LazyNavigationView.swift in Sources */,
+				C9FF72E32CA43F3600ACF94F /* AlertModifier.swift in Sources */,
 				C904FA4E2C9C575100D1C2DB /* LessonCardView.swift in Sources */,
 				C96BC6B82C9BD53400C5B5AE /* Musical_NotesApp.swift in Sources */,
 			);
