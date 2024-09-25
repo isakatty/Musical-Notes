@@ -27,8 +27,10 @@ final class MusicRepository {
             
             let result = try? await request.response()
             
-            guard let result else { return [] }
-            
+            guard let result else {
+                print("result 없음")
+                return []
+            }
             
             let searchedSongs = result.songs.map { song in
                 let artworkURLStr = song.artwork?.url(width: 150, height: 150)?.absoluteString

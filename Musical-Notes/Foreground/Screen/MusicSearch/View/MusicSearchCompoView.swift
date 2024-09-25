@@ -16,6 +16,7 @@ struct MusicSearchCompoView: View {
     var body: some View {
         HStack {
             AsyncImgView(imgStr: albumImg, width: 80, height: 80)
+                .padding(.trailing, 16)
             VStack(alignment: .leading, spacing: 10) {
                 Text(songTitle)
                     .customFont(font: .semiBold)
@@ -34,7 +35,7 @@ struct MusicSearchCompoView: View {
 
 #Preview {
     MusicSearchCompoView(
-        albumImg: test,
+        albumImg: "",
         artistName: "아이유",
         songTitle: "Love wins all",
         duration: "04:31"

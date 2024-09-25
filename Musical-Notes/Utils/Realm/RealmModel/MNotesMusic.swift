@@ -14,6 +14,7 @@ final class MNotesMusic: Object, ObjectKeyIdentifiable {
     @Persisted var songTitle: String
     @Persisted var artist: String
     @Persisted var artwork: String
+    @Persisted var duration: String
     
     @Persisted var memos: List<MNotesMemo>
     
@@ -21,7 +22,8 @@ final class MNotesMusic: Object, ObjectKeyIdentifiable {
         id: String,
         songTitle: String,
         artist: String,
-        artwork: String
+        artwork: String,
+        duration: String
     ) {
         self.init()
         
@@ -29,5 +31,6 @@ final class MNotesMusic: Object, ObjectKeyIdentifiable {
         self.songTitle = songTitle
         self.artist = artist
         self.artwork = artwork
+        self.duration = duration
     }
 }

@@ -7,12 +7,6 @@
 
 import SwiftUI
 
-var musics: [MNotesMusic] = [
-    MNotesMusic(id: "1539200376", songTitle: "넌 나 어때", artist: "406 Project", artwork: "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/bd/1e/ee/bd1eee78-3d16-12ac-38bf-2289d9d76bb3/8806184740815.jpg/150x150bb.jpg"),
-    MNotesMusic(id: "1746260068", songTitle: "Apartment", artist: "406 Project", artwork: "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/bd/1e/ee/bd1eee78-3d16-12ac-38bf-2289d9d76bb3/8806184740815.jpg/150x150bb.jpg"),
-    
-]
-
 struct AddMemoView: View {
     @Environment(\.dismiss) private var dismiss
     @StateObject var viewModel: AddMemoViewModel
@@ -85,7 +79,7 @@ struct AddMemoView: View {
                 .padding(.top, 10)
                 
                 NavigationLink {
-                    LazyNavigationView(MusicSearchView())
+                    LazyNavigationView(MusicSearchView(parentVM: viewModel))
                 } label: {
                     ZStack {
                         RoundedRectangle(cornerRadius: 10)
@@ -105,6 +99,15 @@ struct AddMemoView: View {
                         }
                     }
                 }
+                
+                ForEach(viewModel.selectedMusics) { item in
+                    MusicSearchCompoView(
+                        albumImg: item.artwork,
+                        artistName: item.artist,
+                        songTitle: item.songTitle,
+                        duration: item.duration
+                    )
+                }
 
             }
         }
@@ -121,7 +124,7 @@ struct AddMemoView: View {
                                 start: viewModel.startTime,
                                 end: viewModel.endTime,
                                 memo: viewModel.memoText,
-                                musics: musics
+                                musics: viewModel.selectedMusics
                             )
                             dismiss()
                         } else {
