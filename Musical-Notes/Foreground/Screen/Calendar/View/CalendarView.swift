@@ -28,7 +28,7 @@ struct CalendarView: View {
     
     var body: some View {
         ScrollView {
-            VStack(alignment: .leading) {
+            VStack(alignment: .center) {
                 NavigationLink {
                     AddMemoView(viewModel: AddMemoViewModel())
                 } label: {
@@ -38,8 +38,10 @@ struct CalendarView: View {
 
                 
                 TopMonthView(viewModel: viewModel, fsCalendar: $fsCalendar)
+                    .frame(maxWidth: 360)
                 FSCalendarView(viewModel: viewModel, fsCalendar: $fsCalendar)
                     .frame(height: viewModel.isSelectedScope ? 100 : 400)
+                    .frame(maxWidth: 360)
                 
                 HStack(alignment: .top) {
                     dateLabel
@@ -61,9 +63,6 @@ struct CalendarView: View {
             .frame(maxWidth: .infinity)
             .navigationBarTitleDisplayMode(.inline)
         }
-        .onAppear {
-            RealmRepository.shared.fetchMemos()
-        }
     }
     
     private var dateLabel: some View {
@@ -72,11 +71,12 @@ struct CalendarView: View {
                 viewModel.selectedDate?.formattedString(dateFormat: .monthDate)
                 ?? viewModel.today.formattedString(dateFormat: .monthDate)
             )
-            .customFont(font: .semiBold, fontSize: 17)
+            .customFont(font: .medium, fontSize: 17)
             
             Spacer(minLength: 0)
             Rectangle()
-                .frame(width: 1.5)
+                .fill(.black)
+                .frame(width: 0.6)
         }
     }
 }

@@ -17,7 +17,7 @@ struct MusicInfoDetailView: View {
                 .frame(width: 5, height: 5)
             Text(category)
                 .frame(width: 80, alignment: .leading)
-                .customFont(font: .semiBold)
+                .customFont(font: .medium)
             
             Text(memoDetail)
                 .frame(maxWidth: .infinity, alignment: .leading)

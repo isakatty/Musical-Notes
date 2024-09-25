@@ -64,6 +64,8 @@
 		C9FF72DF2CA4376900ACF94F /* DotCategoryModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9FF72DE2CA4376900ACF94F /* DotCategoryModifier.swift */; };
 		C9FF72E32CA43F3600ACF94F /* AlertModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9FF72E22CA43F3600ACF94F /* AlertModifier.swift */; };
 		C9FF72E92CA4507D00ACF94F /* AlertMusicView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9FF72E82CA4507D00ACF94F /* AlertMusicView.swift */; };
+		C9FF72ED2CA45D7C00ACF94F /* FeedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9FF72EC2CA45D7C00ACF94F /* FeedViewModel.swift */; };
+		C9FF72F62CA474D300ACF94F /* MNotesCarousel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9FF72F52CA474D300ACF94F /* MNotesCarousel.swift */; };
 		C9FF89122C9DB82E004AF325 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9FF89112C9DB82E004AF325 /* Constant.swift */; };
 /* End PBXBuildFile section */
 
@@ -125,6 +127,8 @@
 		C9FF72DE2CA4376900ACF94F /* DotCategoryModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DotCategoryModifier.swift; sourceTree = "<group>"; };
 		C9FF72E22CA43F3600ACF94F /* AlertModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertModifier.swift; sourceTree = "<group>"; };
 		C9FF72E82CA4507D00ACF94F /* AlertMusicView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertMusicView.swift; sourceTree = "<group>"; };
+		C9FF72EC2CA45D7C00ACF94F /* FeedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewModel.swift; sourceTree = "<group>"; };
+		C9FF72F52CA474D300ACF94F /* MNotesCarousel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MNotesCarousel.swift; sourceTree = "<group>"; };
 		C9FF89112C9DB82E004AF325 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -397,7 +401,8 @@
 		C9CB200B2C9BE410005DECF7 /* Feed */ = {
 			isa = PBXGroup;
 			children = (
-				C9CB20142C9BF7CE005DECF7 /* FeedView.swift */,
+				C9FF72EB2CA45CD400ACF94F /* ViewModel */,
+				C9FF72EA2CA45CCF00ACF94F /* View */,
 			);
 			path = Feed;
 			sourceTree = "<group>";
@@ -493,6 +498,23 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		C9FF72EA2CA45CCF00ACF94F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C9CB20142C9BF7CE005DECF7 /* FeedView.swift */,
+				C9FF72F52CA474D300ACF94F /* MNotesCarousel.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		C9FF72EB2CA45CD400ACF94F /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				C9FF72EC2CA45D7C00ACF94F /* FeedViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -585,7 +607,9 @@
 				C904FA4C2C9C4AEE00D1C2DB /* ButtonActionModifier.swift in Sources */,
 				C9FF72DF2CA4376900ACF94F /* DotCategoryModifier.swift in Sources */,
 				C9CB20172C9BF7DB005DECF7 /* MyPageView.swift in Sources */,
+				C9FF72F62CA474D300ACF94F /* MNotesCarousel.swift in Sources */,
 				C9FF72D52CA3ED2800ACF94F /* MusicSearchViewModel.swift in Sources */,
+				C9FF72ED2CA45D7C00ACF94F /* FeedViewModel.swift in Sources */,
 				C9AC16772CA2D21D00251F38 /* MNotesMusic.swift in Sources */,
 				C98690352CA1AAFF00418A61 /* MusicSearchView.swift in Sources */,
 				C909A5272CA15006007E6A61 /* MusicInfoDetailView.swift in Sources */,

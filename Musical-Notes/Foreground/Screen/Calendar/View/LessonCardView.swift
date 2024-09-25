@@ -32,19 +32,20 @@ struct LessonCardView: View {
                         .customFont(font: .regular, fontSize: 14)
                         .foregroundStyle(Color(uiColor: .darkGray))
                     Text("Potential")
-                        .customFont(font: .semiBold, fontSize: 17)
+                        .customFont(font: .medium, fontSize: 17)
                 }
                 .frame(maxWidth: .infinity, alignment: .leading)
             }
             Rectangle()
-                .frame(height: 2)
+                .fill(.black.opacity(0.7))
+                .frame(height: 0.8)
             MusicInfoDetailView(category: "레슨시간", memoDetail: "01:12:50")
         }
         .padding()
-        .background(
-            Color.gray.opacity(0.4)
+        .overlay(
+            RoundedRectangle(cornerRadius: 10)
+                .stroke(Color.black, lineWidth: 0.6)
         )
-        .clipShape(RoundedRectangle(cornerRadius: 15))
     }
 }
 

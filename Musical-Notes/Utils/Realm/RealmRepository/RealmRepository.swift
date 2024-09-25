@@ -47,4 +47,8 @@ final class RealmRepository {
             realm.add(memo)
         }
     }
+    
+    func fetchMusics()  -> Results<MNotesMusic> {
+        return realm.objects(MNotesMusic.self)
+    }
 }
