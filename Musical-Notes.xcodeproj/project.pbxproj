@@ -61,6 +61,7 @@
 		C9FF72D82CA3ED4D00ACF94F /* MusicRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9FF72D72CA3ED4D00ACF94F /* MusicRepository.swift */; };
 		C9FF72DA2CA3F8CB00ACF94F /* SearchedSong.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9FF72D92CA3F8CB00ACF94F /* SearchedSong.swift */; };
 		C9FF72DC2CA3FE9000ACF94F /* TimeInterval+.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9FF72DB2CA3FE9000ACF94F /* TimeInterval+.swift */; };
+		C9FF72DF2CA4376900ACF94F /* DotCategoryModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9FF72DE2CA4376900ACF94F /* DotCategoryModifier.swift */; };
 		C9FF89122C9DB82E004AF325 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9FF89112C9DB82E004AF325 /* Constant.swift */; };
 /* End PBXBuildFile section */
 
@@ -119,6 +120,7 @@
 		C9FF72D72CA3ED4D00ACF94F /* MusicRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicRepository.swift; sourceTree = "<group>"; };
 		C9FF72D92CA3F8CB00ACF94F /* SearchedSong.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchedSong.swift; sourceTree = "<group>"; };
 		C9FF72DB2CA3FE9000ACF94F /* TimeInterval+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TimeInterval+.swift"; sourceTree = "<group>"; };
+		C9FF72DE2CA4376900ACF94F /* DotCategoryModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DotCategoryModifier.swift; sourceTree = "<group>"; };
 		C9FF89112C9DB82E004AF325 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -410,6 +412,7 @@
 				C904FA4B2C9C4AEE00D1C2DB /* ButtonActionModifier.swift */,
 				C989B87A2C9D0DB2004FD90D /* CustomFontModifier.swift */,
 				C9AC16692CA2BE9100251F38 /* ViewHiddenModifier.swift */,
+				C9FF72DE2CA4376900ACF94F /* DotCategoryModifier.swift */,
 			);
 			path = ViewModifier;
 			sourceTree = "<group>";
@@ -574,6 +577,7 @@
 				C909A5252CA14F4C007E6A61 /* LessonMusicView.swift in Sources */,
 				C9AC166A2CA2BE9100251F38 /* ViewHiddenModifier.swift in Sources */,
 				C904FA4C2C9C4AEE00D1C2DB /* ButtonActionModifier.swift in Sources */,
+				C9FF72DF2CA4376900ACF94F /* DotCategoryModifier.swift in Sources */,
 				C9CB20172C9BF7DB005DECF7 /* MyPageView.swift in Sources */,
 				C9FF72D52CA3ED2800ACF94F /* MusicSearchViewModel.swift in Sources */,
 				C9AC16772CA2D21D00251F38 /* MNotesMusic.swift in Sources */,

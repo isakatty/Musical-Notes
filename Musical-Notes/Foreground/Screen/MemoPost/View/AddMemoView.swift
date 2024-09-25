@@ -14,50 +14,27 @@ struct AddMemoView: View {
     var body: some View {
         ScrollView {
             VStack(alignment: .leading) {
-                HStack {
-                    Circle()
-                        .frame(width: 5, height: 5)
-                    
-                    Text("레슨 날짜")
-                        .customFont()
-                    
-                    DatePicker(selection: $viewModel.memoDate, displayedComponents: [.date]) {
-                        EmptyView()
-                    }
-                }
                 
-                HStack {
-                    Circle()
-                        .frame(width: 5, height: 5)
-                    
-                    Text("레슨 시작 시간")
-                        .customFont(font: .medium)
-                    
-                    DatePicker(selection: $viewModel.startTime, displayedComponents: [.hourAndMinute]) {
-                        EmptyView()
-                    }
-                    .datePickerStyle(.compact)
+                DatePicker(selection: $viewModel.memoDate, displayedComponents: [.date]) {
+                    EmptyView()
                 }
-                HStack {
-                    Circle()
-                        .frame(width: 5, height: 5)
-                    
-                    Text("레슨 마무리 시간")
-                        .customFont(font: .medium)
-                    
-                    DatePicker(selection: $viewModel.endTime, displayedComponents: [.hourAndMinute]) {
-                        EmptyView()
-                    }
-                }
+                .makeCategoryView("레슨 날짜")
                 
-                HStack {
-                    Circle()
-                        .frame(width: 5, height: 5)
-                    
-                    Text("메모")
-                        .customFont(font: .medium)
+                DatePicker(selection: $viewModel.startTime, displayedComponents: [.hourAndMinute]) {
+                    EmptyView()
                 }
-                .padding(.top, 10)
+                .datePickerStyle(.compact)
+                .makeCategoryView("레슨 시작 시간")
+                
+                DatePicker(selection: $viewModel.endTime, displayedComponents: [.hourAndMinute]) {
+                    EmptyView()
+                }
+                .datePickerStyle(.compact)
+                .makeCategoryView("레슨 마무리 시간")
+                
+                EmptyView()
+                    .makeCategoryView("메모")
+                    .padding(.top, 10)
                 
                 ZStack {
                     TextEditor(text: $viewModel.memoText)
@@ -69,14 +46,9 @@ struct AddMemoView: View {
                         .opacity(0.4)
                 }
                 
-                HStack {
-                    Circle()
-                        .frame(width: 5, height: 5)
-                    
-                    Text("연습곡 추가")
-                        .customFont(font: .medium)
-                }
-                .padding(.top, 10)
+                EmptyView()
+                    .makeCategoryView("연습곡 추가")
+                    .padding(.top, 10)
                 
                 NavigationLink {
                     LazyNavigationView(MusicSearchView(parentVM: viewModel))
@@ -108,7 +80,6 @@ struct AddMemoView: View {
                         duration: item.duration
                     )
                 }
-
             }
         }
         .padding(.horizontal)
