@@ -15,14 +15,13 @@ final class MNotesMusic: Object, ObjectKeyIdentifiable {
     @Persisted var artist: String
     @Persisted var artwork: String
     
-    @Persisted var memo: List<MNotesMemo>
+    @Persisted var memos: List<MNotesMemo>
     
     convenience init(
         id: String,
         songTitle: String,
         artist: String,
-        artwork: String,
-        memo: List<MNotesMemo>
+        artwork: String
     ) {
         self.init()
         
@@ -30,6 +29,5 @@ final class MNotesMusic: Object, ObjectKeyIdentifiable {
         self.songTitle = songTitle
         self.artist = artist
         self.artwork = artwork
-        self.memo = memo
     }
 }

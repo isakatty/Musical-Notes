@@ -17,7 +17,25 @@ final class MNotesMemo: Object, ObjectKeyIdentifiable {
     @Persisted var memoText: String
     @Persisted var lessonType: MNotes
     
-    @Persisted var songs: List<MNotesMusic>
+    @Persisted var musics: List<MNotesMusic>
+    
+    convenience init(
+        id: ObjectId,
+        regDate: Date,
+        startTime: Date,
+        endTime: Date,
+        memoText: String,
+        lessonType: MNotes
+    ) {
+        self.init()
+        
+        self.regDate = regDate
+        self.startTime = startTime
+        self.endTime = endTime
+        self.memoText = memoText
+        self.lessonType = lessonType
+    }
+    
 }
 
 enum MNotes: String, PersistableEnum {
