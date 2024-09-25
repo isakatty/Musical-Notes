@@ -57,6 +57,10 @@
 		C9CB202B2C9C0149005DECF7 /* FSCalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9CB202A2C9C0149005DECF7 /* FSCalendarView.swift */; };
 		C9CB202F2C9C1DEB005DECF7 /* CalendarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9CB202E2C9C1DEB005DECF7 /* CalendarViewModel.swift */; };
 		C9FF72D02CA3D51C00ACF94F /* View+.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9FF72CF2CA3D51C00ACF94F /* View+.swift */; };
+		C9FF72D52CA3ED2800ACF94F /* MusicSearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9FF72D42CA3ED2800ACF94F /* MusicSearchViewModel.swift */; };
+		C9FF72D82CA3ED4D00ACF94F /* MusicRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9FF72D72CA3ED4D00ACF94F /* MusicRepository.swift */; };
+		C9FF72DA2CA3F8CB00ACF94F /* SearchedSong.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9FF72D92CA3F8CB00ACF94F /* SearchedSong.swift */; };
+		C9FF72DC2CA3FE9000ACF94F /* TimeInterval+.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9FF72DB2CA3FE9000ACF94F /* TimeInterval+.swift */; };
 		C9FF89122C9DB82E004AF325 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9FF89112C9DB82E004AF325 /* Constant.swift */; };
 /* End PBXBuildFile section */
 
@@ -111,6 +115,10 @@
 		C9CB202A2C9C0149005DECF7 /* FSCalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FSCalendarView.swift; sourceTree = "<group>"; };
 		C9CB202E2C9C1DEB005DECF7 /* CalendarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewModel.swift; sourceTree = "<group>"; };
 		C9FF72CF2CA3D51C00ACF94F /* View+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+.swift"; sourceTree = "<group>"; };
+		C9FF72D42CA3ED2800ACF94F /* MusicSearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicSearchViewModel.swift; sourceTree = "<group>"; };
+		C9FF72D72CA3ED4D00ACF94F /* MusicRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicRepository.swift; sourceTree = "<group>"; };
+		C9FF72D92CA3F8CB00ACF94F /* SearchedSong.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchedSong.swift; sourceTree = "<group>"; };
+		C9FF72DB2CA3FE9000ACF94F /* TimeInterval+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TimeInterval+.swift"; sourceTree = "<group>"; };
 		C9FF89112C9DB82E004AF325 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -141,6 +149,7 @@
 				C904FA472C9C226B00D1C2DB /* Date+.swift */,
 				C989B8822C9D1A72004FD90D /* Color+.swift */,
 				C9FF72CF2CA3D51C00ACF94F /* View+.swift */,
+				C9FF72DB2CA3FE9000ACF94F /* TimeInterval+.swift */,
 			);
 			path = "Extenstion+";
 			sourceTree = "<group>";
@@ -237,6 +246,7 @@
 		C98690332CA1AAF500418A61 /* MusicSearch */ = {
 			isa = PBXGroup;
 			children = (
+				C9FF72D32CA3ED1D00ACF94F /* ViewModel */,
 				C9AC16642CA2A31600251F38 /* View */,
 			);
 			path = MusicSearch;
@@ -281,6 +291,7 @@
 		C989B87D2C9D1581004FD90D /* Foreground */ = {
 			isa = PBXGroup;
 			children = (
+				C9FF72DD2CA4104400ACF94F /* Model */,
 				C9CB201C2C9BFBC3005DECF7 /* ReusableView */,
 				C9CB200D2C9BF701005DECF7 /* ViewModifier */,
 				C9CB20082C9BE3F7005DECF7 /* Screen */,
@@ -291,6 +302,7 @@
 		C989B87E2C9D15A0004FD90D /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				C9FF72D62CA3ED4400ACF94F /* Repository */,
 				C9AC16732CA2D20800251F38 /* Realm */,
 				C904FA462C9C226400D1C2DB /* Extenstion+ */,
 				C904FA432C9C20B300D1C2DB /* Helper */,
@@ -448,6 +460,30 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		C9FF72D32CA3ED1D00ACF94F /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				C9FF72D42CA3ED2800ACF94F /* MusicSearchViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		C9FF72D62CA3ED4400ACF94F /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				C9FF72D72CA3ED4D00ACF94F /* MusicRepository.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		C9FF72DD2CA4104400ACF94F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C9FF72D92CA3F8CB00ACF94F /* SearchedSong.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -539,10 +575,12 @@
 				C9AC166A2CA2BE9100251F38 /* ViewHiddenModifier.swift in Sources */,
 				C904FA4C2C9C4AEE00D1C2DB /* ButtonActionModifier.swift in Sources */,
 				C9CB20172C9BF7DB005DECF7 /* MyPageView.swift in Sources */,
+				C9FF72D52CA3ED2800ACF94F /* MusicSearchViewModel.swift in Sources */,
 				C9AC16772CA2D21D00251F38 /* MNotesMusic.swift in Sources */,
 				C98690352CA1AAFF00418A61 /* MusicSearchView.swift in Sources */,
 				C909A5272CA15006007E6A61 /* MusicInfoDetailView.swift in Sources */,
 				C9AC16662CA2A32200251F38 /* MusicSearchCompoView.swift in Sources */,
+				C9FF72DC2CA3FE9000ACF94F /* TimeInterval+.swift in Sources */,
 				C904FA4A2C9C44F000D1C2DB /* TopMonthView.swift in Sources */,
 				C909A5292CA158BA007E6A61 /* LessonTimeView.swift in Sources */,
 				C909A5232CA14EB4007E6A61 /* AsyncImgView.swift in Sources */,
@@ -559,6 +597,7 @@
 				C9FF89122C9DB82E004AF325 /* Constant.swift in Sources */,
 				C9CB201E2C9BFC1B005DECF7 /* NotesTabView.swift in Sources */,
 				C9CB20112C9BF739005DECF7 /* TabModel.swift in Sources */,
+				C9FF72DA2CA3F8CB00ACF94F /* SearchedSong.swift in Sources */,
 				C9CB201B2C9BF929005DECF7 /* TabBarButtonStyle.swift in Sources */,
 				C989B87B2C9D0DB2004FD90D /* CustomFontModifier.swift in Sources */,
 				C9FF72D02CA3D51C00ACF94F /* View+.swift in Sources */,
@@ -567,6 +606,7 @@
 				C989B8872C9D5383004FD90D /* LessonDetailView.swift in Sources */,
 				C9CB20152C9BF7CE005DECF7 /* FeedView.swift in Sources */,
 				C989B8792C9D09B1004FD90D /* PretendardFontType.swift in Sources */,
+				C9FF72D82CA3ED4D00ACF94F /* MusicRepository.swift in Sources */,
 				C904FA482C9C226B00D1C2DB /* Date+.swift in Sources */,
 				C98690322CA1978B00418A61 /* AddMemoView.swift in Sources */,
 				C9AC16682CA2BACA00251F38 /* AddMemoViewModel.swift in Sources */,

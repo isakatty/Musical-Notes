@@ -11,6 +11,7 @@ struct MusicSearchCompoView: View {
     let albumImg: String
     let artistName: String
     let songTitle: String
+    let duration: String
     
     var body: some View {
         HStack {
@@ -22,7 +23,7 @@ struct MusicSearchCompoView: View {
                     Text(artistName)
                     Circle()
                         .frame(width: 3, height: 3)
-                    Text("시간은 미정")
+                    Text(duration)
                 }
                 .customFont(fontSize: 14)
             }
@@ -35,6 +36,7 @@ struct MusicSearchCompoView: View {
     MusicSearchCompoView(
         albumImg: test,
         artistName: "아이유",
-        songTitle: "Love wins all"
+        songTitle: "Love wins all",
+        duration: "04:31"
     )
 }
