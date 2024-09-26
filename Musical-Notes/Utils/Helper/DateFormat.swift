@@ -11,7 +11,7 @@ enum DateFormat: String {
     case yearMonth = "yyyy월 MM월"
     case yearMonthDay = "yyyy.MM.dd"
     case monthDate = "MM.dd"
-    case hourMinutes = "a hh:mm"
+    case hourMinutes = "a hh:mm:ss"
     case yearMonthDayDate = "yyyy년 MM월 dd일(E)"
 }
 

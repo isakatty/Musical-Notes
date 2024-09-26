@@ -30,7 +30,7 @@ struct LessonTimeCircleView: View {
                 .frame(width: 120, height: 120)
                 .animation(.easeInOut, value: progress)
             
-            Text("\(totalTime)분")
+            Text(totalTime)
                 .customFont(font: .semiBold, fontSize: 20)
         }
     }

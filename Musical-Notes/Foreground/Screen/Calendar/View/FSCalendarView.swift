@@ -54,11 +54,12 @@ struct FSCalendarView: UIViewRepresentable {
             _ calendar: FSCalendar,
             numberOfEventsFor date: Date
         ) -> Int {
-            if date.formattedString(dateFormat: .yearMonthDay) == Date().formattedString(dateFormat: .yearMonthDay) {
+            if parent.viewModel.fetchAllMemo().contains(where: { memo in
+                memo.regDate.formattedString(dateFormat: .yearMonthDay) == date.formattedString(dateFormat: .yearMonthDay)
+            }) {
                 return 1
-            } else {
-                return 0
             }
+            return 0
         }
         
         func calendarCurrentPageDidChange(_ calendar: FSCalendar) {

@@ -63,4 +63,7 @@ final class CalendarViewModel: ObservableObject {
             findSelectedDateMemo(selectedDate: selectedDate)
         }
     }
+    func fetchAllMemo() -> [MNotesMemo] {
+        return Array(RealmRepository.shared.fetchMemos())
+    }
 }
