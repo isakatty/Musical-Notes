@@ -34,7 +34,15 @@ final class MusicRepository {
             
             let searchedSongs = result.songs.map { song in
                 let artworkURLStr = song.artwork?.url(width: 150, height: 150)?.absoluteString
-                return SearchedSong(id: song.id.rawValue, song: song.title, artist: song.artistName, artwork: artworkURLStr, duration: song.duration)
+                return SearchedSong(
+                    id: song.id.rawValue,
+                    song: song.title,
+                    artist: song.artistName,
+                    artwork: artworkURLStr,
+                    duration: song.duration,
+                    releaseDate: song.releaseDate,
+                    albumTitle: song.albumTitle
+                )
             }
             return searchedSongs
         } else {

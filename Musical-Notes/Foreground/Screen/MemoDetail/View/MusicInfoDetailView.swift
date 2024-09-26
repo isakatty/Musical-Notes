@@ -15,6 +15,7 @@ struct MusicInfoDetailView: View {
         HStack(alignment: .center) {
             Circle()
                 .frame(width: 5, height: 5)
+                .foregroundStyle(.black.opacity(0.7))
             Text(category)
                 .frame(width: 80, alignment: .leading)
                 .customFont(font: .medium)

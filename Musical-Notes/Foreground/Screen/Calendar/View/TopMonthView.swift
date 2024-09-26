@@ -45,6 +45,5 @@ struct TopMonthView: View {
                 }
                 .buttonStyle(.plain)
         }
-        .padding(.horizontal)
     }
 }

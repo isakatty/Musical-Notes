@@ -19,7 +19,7 @@ struct LessonCardView: View {
                     Text(memo.lessonType.toTitle)
                         .customFont(font: .thin, fontSize: 13)
                         .foregroundStyle(Color(uiColor: .darkGray))
-                    Text("\(memo.music.first?.artist ?? "") | Black, no Sugar")
+                    Text("\(memo.music.first?.artist ?? "") | \(memo.music.first?.albumTitle ?? "")")
                         .customFont(font: .regular, fontSize: 14)
                         .foregroundStyle(Color(uiColor: .darkGray))
                     Text("\(memo.music.first?.songTitle ?? "")")
@@ -35,7 +35,8 @@ struct LessonCardView: View {
                 memoDetail: memo.endTime.changedToTime(startDate: memo.startTime)
             )
         }
-        .padding()
+        .padding(.horizontal, 8)
+        .frame(height: 140)
         .overlay(
             RoundedRectangle(cornerRadius: 10)
                 .stroke(Color.black, lineWidth: 0.6)

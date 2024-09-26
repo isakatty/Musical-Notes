@@ -23,7 +23,15 @@ struct MusicSearchView: View {
                         duration: item.durationTime
                     )
                     .onTapGesture {
-                        let music = MNotesMusic(id: item.id, songTitle: item.song, artist: item.artist, artwork: item.artwork ?? "", duration: item.durationTime)
+                        let music = MNotesMusic(
+                            id: item.id,
+                            songTitle: item.song,
+                            artist: item.artist,
+                            artwork: item.artwork ?? "",
+                            duration: item.durationTime,
+                            releaseDate: item.releaseDateStr,
+                            albumTitle: item.albumTitle ?? ""
+                        )
                         parentVM.selectedMusics.append(music)
                         dismiss()
                     }

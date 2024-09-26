@@ -10,11 +10,12 @@ import SwiftUI
 struct LessonTimeView: View {
     let startTime: String
     let endTime: String
+    let lessonType: MNotes
     
     var body: some View {
         HStack(alignment: .center) {
             VStack(alignment: .center) {
-                Text("레슨 시작 시간")
+                Text("\(lessonType.toTitle) 시작 시간")
                     .customFont(fontSize: 14)
                 Text(startTime)
                     .customFont()
@@ -26,7 +27,7 @@ struct LessonTimeView: View {
                 .frame(width: 1)
             
             VStack(alignment: .center) {
-                Text("레슨 끝 시간")
+                Text("\(lessonType.toTitle) 끝 시간")
                     .customFont(fontSize: 14)
                 Text(endTime)
                     .customFont()

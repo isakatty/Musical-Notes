@@ -21,6 +21,7 @@
 		C960F57B2CA555370068177B /* FeedMusicTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C960F57A2CA555370068177B /* FeedMusicTitleView.swift */; };
 		C960F57D2CA5561D0068177B /* LessonMemoDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C960F57C2CA5561D0068177B /* LessonMemoDetailViewModel.swift */; };
 		C960F57F2CA5745B0068177B /* Int+.swift in Sources */ = {isa = PBXBuildFile; fileRef = C960F57E2CA5745B0068177B /* Int+.swift */; };
+		C960F5812CA5B50E0068177B /* EncourageMemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C960F5802CA5B50E0068177B /* EncourageMemoView.swift */; };
 		C96BC6B82C9BD53400C5B5AE /* Musical_NotesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96BC6B72C9BD53400C5B5AE /* Musical_NotesApp.swift */; };
 		C96BC6BA2C9BD53400C5B5AE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96BC6B92C9BD53400C5B5AE /* ContentView.swift */; };
 		C96BC6BC2C9BD53500C5B5AE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C96BC6BB2C9BD53500C5B5AE /* Assets.xcassets */; };
@@ -87,6 +88,7 @@
 		C960F57A2CA555370068177B /* FeedMusicTitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedMusicTitleView.swift; sourceTree = "<group>"; };
 		C960F57C2CA5561D0068177B /* LessonMemoDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonMemoDetailViewModel.swift; sourceTree = "<group>"; };
 		C960F57E2CA5745B0068177B /* Int+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+.swift"; sourceTree = "<group>"; };
+		C960F5802CA5B50E0068177B /* EncourageMemoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EncourageMemoView.swift; sourceTree = "<group>"; };
 		C96BC6B42C9BD53400C5B5AE /* Musical-Notes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Musical-Notes.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C96BC6B72C9BD53400C5B5AE /* Musical_NotesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Musical_NotesApp.swift; sourceTree = "<group>"; };
 		C96BC6B92C9BD53400C5B5AE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -441,6 +443,7 @@
 				C9CB20232C9BFEAA005DECF7 /* LazyNavigationView.swift */,
 				C909A5222CA14EB4007E6A61 /* AsyncImgView.swift */,
 				C9FF72E82CA4507D00ACF94F /* AlertMusicView.swift */,
+				C960F5802CA5B50E0068177B /* EncourageMemoView.swift */,
 			);
 			path = ReusableView;
 			sourceTree = "<group>";
@@ -614,6 +617,7 @@
 				C909A5252CA14F4C007E6A61 /* LessonMusicView.swift in Sources */,
 				C9AC166A2CA2BE9100251F38 /* ViewHiddenModifier.swift in Sources */,
 				C904FA4C2C9C4AEE00D1C2DB /* ButtonActionModifier.swift in Sources */,
+				C960F5812CA5B50E0068177B /* EncourageMemoView.swift in Sources */,
 				C9FF72DF2CA4376900ACF94F /* DotCategoryModifier.swift in Sources */,
 				C9CB20172C9BF7DB005DECF7 /* MyPageView.swift in Sources */,
 				C9FF72F62CA474D300ACF94F /* MNotesCarousel.swift in Sources */,

@@ -28,48 +28,72 @@ struct CalendarView: View {
     }()
     
     var body: some View {
-        ScrollView {
-            VStack(alignment: .center) {
-                NavigationLink {
-                    AddMemoView(viewModel: AddMemoViewModel())
-                } label: {
-                    Text("Upload for test")
-                }
-                .frame(maxWidth: .infinity, alignment: .center)
-
-                
-                TopMonthView(viewModel: viewModel, fsCalendar: fsCalendar)
-                    .frame(maxWidth: 360)
-                FSCalendarView(viewModel: viewModel, fsCalendar: fsCalendar)
-                    .frame(height: viewModel.isSelectedScope ? 100 : 400)
-                    .frame(maxWidth: 360)
-                
-                HStack(alignment: .top) {
-                    dateLabel
-                        .frame(minWidth: 60, maxWidth: 60, alignment: .leading)
-                    Spacer(minLength: 12)
+        VStack {
+            Text("Calendar")
+                .customFont(font: .extraBold, fontSize: 30)
+                .frame(maxWidth: .infinity, alignment: .leading)
+                .padding()
+            ScrollView {
+                VStack(alignment: .center) {
+                    TopMonthView(viewModel: viewModel, fsCalendar: fsCalendar)
+                        .frame(maxWidth: .infinity)
+                    FSCalendarView(viewModel: viewModel, fsCalendar: fsCalendar)
+                        .frame(height: viewModel.isSelectedScope ? 100 : 400)
+                        .frame(maxWidth: .infinity)
                     
-                    LazyVStack(alignment: .leading) {
-                        ForEach(viewModel.memos) { memo in
+                    HStack(alignment: .top) {
+                        dateLabel
+                            .frame(minWidth: 60, maxWidth: 60, alignment: .leading)
+                        Spacer(minLength: 12)
+                        
+                        if viewModel.memos.isEmpty {
                             NavigationLink {
-                                LazyNavigationView(LessonDetailView(viewModel: LessonMemoDetailViewModel(musicMemo: memo)))
+                                LazyNavigationView(AddMemoView(viewModel: AddMemoViewModel()))
                             } label: {
-                                LessonCardView(memo: memo)
+                                EncourageMemoView()
                             }
-                            .buttonStyle(.plain)
+                        } else {
+                            LazyVStack(alignment: .leading) {
+                                ForEach(viewModel.memos) { memo in
+                                    NavigationLink {
+                                        LazyNavigationView(LessonDetailView(viewModel: LessonMemoDetailViewModel(musicMemo: memo)))
+                                    } label: {
+                                        LessonCardView(memo: memo)
+                                    }
+                                    .buttonStyle(.plain)
+                                }
+                            }
                         }
                     }
+                    
+                    if !viewModel.memos.isEmpty {
+                        NavigationLink {
+                            LazyNavigationView(AddMemoView(viewModel: AddMemoViewModel()))
+                        } label: {
+                            RoundedRectangle(cornerRadius: 10)
+                                .fill(.gray.opacity(0.2))
+                                .overlay {
+                                    Text(" + 추가하기")
+                                        .customFont()
+                                        .foregroundStyle(.gray.opacity(0.55))
+                                }
+                                .frame(maxWidth: .infinity, alignment: .center)
+                                .frame(height: 30)
+                        }
+                        .buttonStyle(.plain)
+                    }
                 }
-                .padding(.horizontal, 8)
+                .frame(maxWidth: .infinity)
+                .padding(.horizontal)
+                .navigationBarTitleDisplayMode(.inline)
             }
-            .frame(maxWidth: .infinity)
-            .navigationBarTitleDisplayMode(.inline)
         }
         .onAppear {
             if viewModel.isInitialOpen {
-                print("==initial open==")
+                print("initial Open!!")
                 viewModel.findSelectedDateMemo(selectedDate: fsCalendar.today)
             } else {
+                print("Not initial Open!!")
                 viewModel.fetchMemo()
             }
         }

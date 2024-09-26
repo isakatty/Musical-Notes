@@ -25,16 +25,17 @@ struct LessonDetailView: View {
                 // MARK: view2 - 시간
                 LessonTimeView(
                     startTime: viewModel.musicMemo.startTime.formattedString(dateFormat: .hourMinutes),
-                    endTime: viewModel.musicMemo.endTime.formattedString(dateFormat: .hourMinutes)
+                    endTime: viewModel.musicMemo.endTime.formattedString(dateFormat: .hourMinutes),
+                    lessonType: viewModel.musicMemo.lessonType
                 )
-                    .padding(.vertical)
+                .padding(.vertical)
                 
                 LessonTimeCircleView(
                     total: 60,
                     progress: viewModel.musicMemo.endTime.changedToMinutes(startDate: viewModel.musicMemo.startTime),
                     totalTime: viewModel.musicMemo.endTime.changedToTime(startDate: viewModel.musicMemo.startTime)
                 )
-                    .frame(maxWidth: .infinity, alignment: .center)
+                .frame(maxWidth: .infinity, alignment: .center)
                 
                 Text("오늘 \(viewModel.musicMemo.lessonType.toTitle) 메모")
                     .customFont(font: .bold, fontSize: 17)
@@ -56,7 +57,7 @@ struct LessonDetailView: View {
             .padding(.horizontal)
             .toolbar {
                 ToolbarItem(placement: .topBarTrailing) {
-//                    LazyNavigationView(<#T##closure: View##View#>)
+                    //                    LazyNavigationView(<#T##closure: View##View#>)
                     Menu("더보기") {
                         Button(action: {
                             print("하이루")

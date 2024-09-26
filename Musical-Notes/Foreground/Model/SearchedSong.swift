@@ -13,10 +13,16 @@ struct SearchedSong: Hashable, Identifiable {
     let artist: String
     let artwork: String?
     let duration: TimeInterval?
+    let releaseDate: Date?
+    let albumTitle: String?
     
     var durationTime: String {
         guard let duration else { return "" }
         
         return duration.strFormatted()
+    }
+    var releaseDateStr: String {
+        guard let releaseDate else { return Date().formattedString(dateFormat: .yearMonthDay) }
+        return releaseDate.formattedString(dateFormat: .yearMonthDay)
     }
 }
