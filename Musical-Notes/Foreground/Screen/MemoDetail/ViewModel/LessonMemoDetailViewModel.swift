@@ -13,14 +13,5 @@ final class LessonMemoDetailViewModel: ObservableObject {
     init(musicMemo: MNotesMemo) {
         self.musicMemo = musicMemo
         
-        print(makeTimeUI())
-    }
-    
-    func makeTimeUI() -> (String, String) {
-        return (differenceTime().timeFormat, "")
-    }
-    
-    private func differenceTime() -> Int {
-        return Int(musicMemo.endTime.timeIntervalSince(musicMemo.startTime))
     }
 }

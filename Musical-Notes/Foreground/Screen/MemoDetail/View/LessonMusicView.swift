@@ -14,7 +14,7 @@ struct LessonMusicView: View {
     
     let artist: String
     let songTitle: String
-    let releaseDate: String
+    let duration: String
     
     var body: some View {
         HStack(alignment: .center, spacing: 10) {
@@ -22,7 +22,7 @@ struct LessonMusicView: View {
             VStack(alignment: .leading, spacing: 10) {
                 MusicInfoDetailView(category: "가수", memoDetail: artist)
                 MusicInfoDetailView(category: "곡", memoDetail: songTitle)
-                MusicInfoDetailView(category: "발매일", memoDetail: releaseDate)
+                MusicInfoDetailView(category: "재생 시간", memoDetail: duration)
             }
         }
     }

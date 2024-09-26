@@ -8,8 +8,9 @@
 import SwiftUI
 
 struct LessonTimeCircleView: View {
-    var total: Double
-    var progress: Double
+    var total: Int
+    var progress: Int
+    var totalTime: String
 
     var body: some View {
         ZStack {
@@ -29,7 +30,7 @@ struct LessonTimeCircleView: View {
                 .frame(width: 120, height: 120)
                 .animation(.easeInOut, value: progress)
             
-            Text("\(Int(progress))분")
+            Text("\(totalTime)분")
                 .customFont(font: .semiBold, fontSize: 20)
         }
     }
