@@ -29,8 +29,7 @@ final class RealmRepository {
                 addMemo(memo: memo)
                 
                 for music in musics {
-                    addMusic(music: music)
-                    music.memos.append(memo)
+                    addMusic(music: music, memo: memo)
                 }
             }
         } catch {
@@ -38,8 +37,15 @@ final class RealmRepository {
         }
     }
     
-    func addMusic(music: MNotesMusic) {
-        realm.add(music)
+    func addMusic(music: MNotesMusic, memo: MNotesMemo) {
+        if let existingMusic = realm.object(ofType: MNotesMusic.self, forPrimaryKey: music.id) {
+            if !existingMusic.memos.contains(memo) {
+                existingMusic.memos.append(memo)
+            }
+        } else {
+            music.memos.append(memo)
+            realm.add(music)
+        }
     }
     
     func addMemo(memo: MNotesMemo) {
