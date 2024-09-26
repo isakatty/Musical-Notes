@@ -54,7 +54,7 @@ final class RealmRepository {
         }
     }
     
-    func fetchMusics()  -> Results<MNotesMusic> {
+    func fetchMusics() -> Results<MNotesMusic> {
         return realm.objects(MNotesMusic.self)
     }
     
@@ -67,5 +67,14 @@ final class RealmRepository {
             memo.regDate >= startOfDay && memo.regDate < endOfDay
         }
     }
-
+    func removeMemo(memo: MNotesMemo) {
+        do {
+            try realm.write {
+                realm.delete(memo)
+            }
+        } catch {
+            print("delete Error")
+        }
+    }
+    
 }

@@ -9,6 +9,7 @@ import SwiftUI
 
 struct LessonDetailView: View {
     @StateObject var viewModel: LessonMemoDetailViewModel
+    @Environment(\.dismiss) private var dismiss
     
     init(viewModel: LessonMemoDetailViewModel) {
         _viewModel = StateObject(wrappedValue: viewModel)
@@ -56,11 +57,22 @@ struct LessonDetailView: View {
             .toolbar {
                 ToolbarItem(placement: .topBarTrailing) {
 //                    LazyNavigationView(<#T##closure: View##View#>)
-                    Button(action: {
-                        print("하이루")
-                    }, label: {
-                        Text("수정")
-                    })
+                    Menu("더보기") {
+                        Button(action: {
+                            print("하이루")
+                        }, label: {
+                            Text("수정")
+                        })
+                        
+                        Button(action: {
+                            // MARK: alert 띄우기
+                            print("하이루")
+                            viewModel.removeMemo()
+                            dismiss()
+                        }, label: {
+                            Text("삭제")
+                        })
+                    }
                     .buttonStyle(.plain)
                 }
             }

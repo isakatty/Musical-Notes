@@ -48,7 +48,7 @@ struct CalendarView: View {
                     dateLabel
                         .frame(minWidth: 60, maxWidth: 60, alignment: .leading)
                     Spacer(minLength: 12)
-                    // MARK: Realm
+                    
                     LazyVStack(alignment: .leading) {
                         ForEach(viewModel.memos) { memo in
                             NavigationLink {
@@ -64,15 +64,20 @@ struct CalendarView: View {
             }
             .frame(maxWidth: .infinity)
             .navigationBarTitleDisplayMode(.inline)
-            .onAppear {
-                if viewModel.isInitialOpen {
-                    print("==initial open==")
-                    viewModel.findSelectedDateMemo(selectedDate: fsCalendar.today)
-                }
+        }
+        .onAppear {
+            if viewModel.isInitialOpen {
+                print("==initial open==")
+                viewModel.findSelectedDateMemo(selectedDate: fsCalendar.today)
+            } else {
+                viewModel.fetchMemo()
             }
-            .onDisappear {
-                viewModel.isInitialOpen = false
-            }
+        }
+        .onDisappear {
+            viewModel.isInitialOpen = false
+        }
+        .refreshable {
+            viewModel.fetchMemo()
         }
     }
     

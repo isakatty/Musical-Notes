@@ -12,6 +12,10 @@ final class LessonMemoDetailViewModel: ObservableObject {
     
     init(musicMemo: MNotesMemo) {
         self.musicMemo = musicMemo
-        
+    }
+    
+    func removeMemo() {
+        RealmRepository.shared.removeMemo(memo: musicMemo)
+        musicMemo = MNotesMemo()
     }
 }

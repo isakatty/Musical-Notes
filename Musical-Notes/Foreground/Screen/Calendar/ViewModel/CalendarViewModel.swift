@@ -55,4 +55,12 @@ final class CalendarViewModel: ObservableObject {
         
         memos = Array(RealmRepository.shared.filterMemoWithDate(selected: selectedDate))
     }
+    
+    func fetchMemo() {
+        if selectedDate == nil {
+            findSelectedDateMemo(selectedDate: today)
+        } else {
+            findSelectedDateMemo(selectedDate: selectedDate)
+        }
+    }
 }
