@@ -12,7 +12,7 @@ import FSCalendar
 
 struct FSCalendarView: UIViewRepresentable {
     @ObservedObject var viewModel: CalendarViewModel
-    @Binding var fsCalendar: FSCalendar
+    var fsCalendar: FSCalendar
     
     func makeCoordinator() -> Coordinator {
         return Coordinator(self)

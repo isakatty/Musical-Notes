@@ -11,7 +11,7 @@ import FSCalendar
 
 struct CalendarView: View {
     @StateObject var viewModel = CalendarViewModel()
-    @State private var fsCalendar: FSCalendar = {
+    private var fsCalendar: FSCalendar = {
         let calendar = FSCalendar()
         calendar.today = Date()
         calendar.locale = Locale(identifier: "ko_KR")
@@ -22,7 +22,8 @@ struct CalendarView: View {
         calendar.appearance.weekdayTextColor = .black
         calendar.appearance.eventDefaultColor = UIColor.green // 하단에 찍히는 점
         calendar.appearance.eventSelectionColor = UIColor.black
-        calendar.scrollEnabled = false
+        calendar.scrollEnabled = true
+        calendar.placeholderType = .none
         return calendar
     }()
     
@@ -37,9 +38,9 @@ struct CalendarView: View {
                 .frame(maxWidth: .infinity, alignment: .center)
 
                 
-                TopMonthView(viewModel: viewModel, fsCalendar: $fsCalendar)
+                TopMonthView(viewModel: viewModel, fsCalendar: fsCalendar)
                     .frame(maxWidth: 360)
-                FSCalendarView(viewModel: viewModel, fsCalendar: $fsCalendar)
+                FSCalendarView(viewModel: viewModel, fsCalendar: fsCalendar)
                     .frame(height: viewModel.isSelectedScope ? 100 : 400)
                     .frame(maxWidth: 360)
                 
@@ -80,6 +81,7 @@ struct CalendarView: View {
         }
     }
 }
+
 #Preview {
     ContentView()
 }

@@ -10,7 +10,7 @@ import FSCalendar
 
 struct TopMonthView: View {
     @ObservedObject var viewModel: CalendarViewModel
-    @Binding var fsCalendar: FSCalendar
+    var fsCalendar: FSCalendar
     
     var body: some View {
         HStack {
