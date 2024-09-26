@@ -19,6 +19,8 @@
 		C909A52B2CA1853F007E6A61 /* LessonMemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C909A52A2CA1853F007E6A61 /* LessonMemoView.swift */; };
 		C909A52D2CA19229007E6A61 /* LessonTimeCircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C909A52C2CA19229007E6A61 /* LessonTimeCircleView.swift */; };
 		C960F57B2CA555370068177B /* FeedMusicTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C960F57A2CA555370068177B /* FeedMusicTitleView.swift */; };
+		C960F57D2CA5561D0068177B /* LessonMemoDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C960F57C2CA5561D0068177B /* LessonMemoDetailViewModel.swift */; };
+		C960F57F2CA5745B0068177B /* Int+.swift in Sources */ = {isa = PBXBuildFile; fileRef = C960F57E2CA5745B0068177B /* Int+.swift */; };
 		C96BC6B82C9BD53400C5B5AE /* Musical_NotesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96BC6B72C9BD53400C5B5AE /* Musical_NotesApp.swift */; };
 		C96BC6BA2C9BD53400C5B5AE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96BC6B92C9BD53400C5B5AE /* ContentView.swift */; };
 		C96BC6BC2C9BD53500C5B5AE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C96BC6BB2C9BD53500C5B5AE /* Assets.xcassets */; };
@@ -83,6 +85,8 @@
 		C909A52A2CA1853F007E6A61 /* LessonMemoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonMemoView.swift; sourceTree = "<group>"; };
 		C909A52C2CA19229007E6A61 /* LessonTimeCircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonTimeCircleView.swift; sourceTree = "<group>"; };
 		C960F57A2CA555370068177B /* FeedMusicTitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedMusicTitleView.swift; sourceTree = "<group>"; };
+		C960F57C2CA5561D0068177B /* LessonMemoDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonMemoDetailViewModel.swift; sourceTree = "<group>"; };
+		C960F57E2CA5745B0068177B /* Int+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+.swift"; sourceTree = "<group>"; };
 		C96BC6B42C9BD53400C5B5AE /* Musical-Notes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Musical-Notes.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C96BC6B72C9BD53400C5B5AE /* Musical_NotesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Musical_NotesApp.swift; sourceTree = "<group>"; };
 		C96BC6B92C9BD53400C5B5AE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -162,6 +166,7 @@
 				C989B8822C9D1A72004FD90D /* Color+.swift */,
 				C9FF72CF2CA3D51C00ACF94F /* View+.swift */,
 				C9FF72DB2CA3FE9000ACF94F /* TimeInterval+.swift */,
+				C960F57E2CA5745B0068177B /* Int+.swift */,
 			);
 			path = "Extenstion+";
 			sourceTree = "<group>";
@@ -191,6 +196,7 @@
 		C909A5322CA19416007E6A61 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				C960F57C2CA5561D0068177B /* LessonMemoDetailViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -612,6 +618,7 @@
 				C9CB20172C9BF7DB005DECF7 /* MyPageView.swift in Sources */,
 				C9FF72F62CA474D300ACF94F /* MNotesCarousel.swift in Sources */,
 				C9FF72D52CA3ED2800ACF94F /* MusicSearchViewModel.swift in Sources */,
+				C960F57F2CA5745B0068177B /* Int+.swift in Sources */,
 				C9FF72ED2CA45D7C00ACF94F /* FeedViewModel.swift in Sources */,
 				C9AC16772CA2D21D00251F38 /* MNotesMusic.swift in Sources */,
 				C98690352CA1AAFF00418A61 /* MusicSearchView.swift in Sources */,
@@ -646,6 +653,7 @@
 				C9CB20152C9BF7CE005DECF7 /* FeedView.swift in Sources */,
 				C989B8792C9D09B1004FD90D /* PretendardFontType.swift in Sources */,
 				C9FF72D82CA3ED4D00ACF94F /* MusicRepository.swift in Sources */,
+				C960F57D2CA5561D0068177B /* LessonMemoDetailViewModel.swift in Sources */,
 				C904FA482C9C226B00D1C2DB /* Date+.swift in Sources */,
 				C98690322CA1978B00418A61 /* AddMemoView.swift in Sources */,
 				C9AC16682CA2BACA00251F38 /* AddMemoViewModel.swift in Sources */,

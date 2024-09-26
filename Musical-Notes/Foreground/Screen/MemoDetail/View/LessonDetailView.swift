@@ -8,20 +8,29 @@
 import SwiftUI
 
 struct LessonDetailView: View {
+    @StateObject var viewModel: LessonMemoDetailViewModel
+    
     // MARK: Memo id 혹은 memo 전체 받기.
     private let testImgStr: String = "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/c8/3c/3b/c83c3b28-0d78-bc48-5ae5-d523f07ef5d8/888272138375.jpg/150x150bb.jpg"
     @State private var testTE: String = ""
     private var time: Double = 40
     
+    init(viewModel: LessonMemoDetailViewModel) {
+        _viewModel = StateObject(wrappedValue: viewModel)
+    }
+    
     var body: some View {
         ScrollView {
             LazyVStack(alignment: .leading, spacing: 12) {
-                Text("2024년 09월 21일(토)")
+                Text(viewModel.musicMemo.regDate.formattedString(dateFormat: .yearMonthDayDate))
                     .customFont(font: .medium, fontSize: 16)
                     .foregroundStyle(Color(uiColor: UIColor.darkGray).opacity(0.7))
                 
                 // MARK: view2 - 시간
-                LessonTimeView(startTime: "12:17 A.M.", endTime: "13:47 A.M.")
+                LessonTimeView(
+                    startTime: viewModel.musicMemo.startTime.formattedString(dateFormat: .hourMinutes),
+                    endTime: viewModel.musicMemo.endTime.formattedString(dateFormat: .hourMinutes)
+                )
                     .padding(.vertical)
                 
                 LessonTimeCircleView(total: 60, progress: time)
@@ -52,6 +61,3 @@ struct LessonDetailView: View {
     }
 }
 
-#Preview {
-    LessonDetailView()
-}

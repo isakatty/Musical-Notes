@@ -57,4 +57,15 @@ final class RealmRepository {
     func fetchMusics()  -> Results<MNotesMusic> {
         return realm.objects(MNotesMusic.self)
     }
+    
+    func filterMemoWithDate(selected: Date) -> Results<MNotesMemo> {
+        let calendar = Calendar.current
+        let startOfDay = calendar.startOfDay(for: selected)
+        let endOfDay = calendar.date(byAdding: .day, value: 1, to: startOfDay)!
+        
+        return realm.objects(MNotesMemo.self).where { memo in
+            memo.regDate >= startOfDay && memo.regDate < endOfDay
+        }
+    }
+
 }

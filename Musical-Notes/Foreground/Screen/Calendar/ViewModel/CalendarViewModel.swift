@@ -8,13 +8,16 @@
 import Foundation
 
 final class CalendarViewModel: ObservableObject {
+    @Published var isInitialOpen: Bool = false
     @Published var isSelectedScope: Bool = false
     @Published var currentPage: Date?
     @Published var selectedDate: Date?
+    @Published var memos = [MNotesMemo]()
     
     var today = Date()
     
     init() {
+        isInitialOpen = true
         print("== CalendarViewModel init ==")
     }
     
@@ -43,5 +46,13 @@ final class CalendarViewModel: ObservableObject {
         
         currentPage = cal.date(byAdding: dateComponents, to: currentPage ?? today)
         return currentPage
+    }
+    
+    func findSelectedDateMemo(selectedDate: Date?) {
+        guard let selectedDate else {
+            return
+        }
+        
+        memos = Array(RealmRepository.shared.filterMemoWithDate(selected: selectedDate))
     }
 }

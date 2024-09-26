@@ -46,6 +46,7 @@ struct FSCalendarView: UIViewRepresentable {
             at monthPosition: FSCalendarMonthPosition
         ) {
             parent.viewModel.selectedDate = date
+            parent.viewModel.findSelectedDateMemo(selectedDate: date)
             calendar.today = nil
         }
         

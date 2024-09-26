@@ -49,20 +49,30 @@ struct CalendarView: View {
                         .frame(minWidth: 60, maxWidth: 60, alignment: .leading)
                     Spacer(minLength: 12)
                     // MARK: Realm
-                    VStack(alignment: .leading) {
-                        NavigationLink {
-                            LazyNavigationView(LessonDetailView())
-                        } label: {
-                            LessonCardView()
+                    LazyVStack(alignment: .leading) {
+                        ForEach(viewModel.memos) { memo in
+                            NavigationLink {
+                                LazyNavigationView(LessonDetailView(viewModel: LessonMemoDetailViewModel(musicMemo: memo)))
+                            } label: {
+                                LessonCardView(memo: memo)
+                            }
+                            .buttonStyle(.plain)
                         }
-                        .buttonStyle(.plain)
-                        LessonCardView()
                     }
                 }
                 .padding(.horizontal, 8)
             }
             .frame(maxWidth: .infinity)
             .navigationBarTitleDisplayMode(.inline)
+            .onAppear {
+                if viewModel.isInitialOpen {
+                    print("==initial open==")
+                    viewModel.findSelectedDateMemo(selectedDate: fsCalendar.today)
+                }
+            }
+            .onDisappear {
+                viewModel.isInitialOpen = false
+            }
         }
     }
     

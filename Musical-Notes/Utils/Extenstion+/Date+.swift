@@ -11,4 +11,9 @@ extension Date {
     func formattedString(dateFormat: DateFormat) -> String {
         return dateFormat.formatter.string(from: self)
     }
+    
+    func changedToTime(startDate: Date) -> String {
+        let useTime = Int(self.timeIntervalSince(startDate))
+        return useTime.timeFormat
+    }
 }
