@@ -12,7 +12,7 @@ struct EncourageMemoView: View {
         VStack(alignment: .leading) {
             Text("연습 혹은 레슨 일지를 기록해보세요 !")
                 .customFont(font: .medium)
-                .foregroundStyle(.gray.opacity(0.4))
+                .foregroundStyle(.gray.opacity(0.6))
         }
         .padding()
         .frame(maxWidth: .infinity)

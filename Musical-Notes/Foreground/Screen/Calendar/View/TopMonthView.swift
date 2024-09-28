@@ -15,7 +15,7 @@ struct TopMonthView: View {
     var body: some View {
         HStack {
             Text(viewModel.currentPage?.formattedString(dateFormat: .yearMonth) ?? viewModel.today.formattedString(dateFormat: .yearMonth))
-                .customFont(font: .bold, fontSize: 17)
+                .customFont(font: .medium, fontSize: 20)
             Spacer()
             Image(systemName: "chevron.left")
                 .wrapToButton {

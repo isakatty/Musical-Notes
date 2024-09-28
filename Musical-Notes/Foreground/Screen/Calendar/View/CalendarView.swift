@@ -16,7 +16,7 @@ struct CalendarView: View {
         calendar.today = Date()
         calendar.locale = Locale(identifier: "ko_KR")
         calendar.headerHeight = 0
-        calendar.appearance.todayColor = .yellow
+        calendar.appearance.todayColor = .clear
         calendar.appearance.titleTodayColor = .black
         calendar.appearance.selectionColor = .systemPink
         calendar.appearance.weekdayTextColor = .black
@@ -37,9 +37,21 @@ struct CalendarView: View {
                 VStack(alignment: .center) {
                     TopMonthView(viewModel: viewModel, fsCalendar: fsCalendar)
                         .frame(maxWidth: .infinity)
-                    FSCalendarView(viewModel: viewModel, fsCalendar: fsCalendar)
-                        .frame(height: viewModel.isSelectedScope ? 100 : 400)
+                    
+                    RoundedRectangle(cornerRadius: 10)
+                        .fill(.white)
+                        .overlay {
+                            FSCalendarView(viewModel: viewModel, fsCalendar: fsCalendar)
+                                .frame(height: viewModel.isSelectedScope ? 100 : 350)
+                                .frame(maxWidth: .infinity)
+                        }
+                        .frame(height: viewModel.isSelectedScope ? 100 : 350)
                         .frame(maxWidth: .infinity)
+                        .shadow(radius: 5)
+                    
+                    Text("Records")
+                        .customFont(font: .extraBold, fontSize: 30)
+                        .frame(maxWidth: .infinity, alignment: .leading)
                     
                     HStack(alignment: .top) {
                         dateLabel
@@ -87,6 +99,7 @@ struct CalendarView: View {
                 .padding(.horizontal)
                 .navigationBarTitleDisplayMode(.inline)
             }
+            .scrollIndicators(.hidden)
         }
         .onAppear {
             if viewModel.isInitialOpen {
