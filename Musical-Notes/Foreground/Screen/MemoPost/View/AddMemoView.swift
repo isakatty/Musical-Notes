@@ -16,23 +16,21 @@ struct AddMemoView: View {
     var body: some View {
         ScrollView {
             VStack(alignment: .leading) {
-                
-                DatePicker(selection: $viewModel.memoDate, displayedComponents: [.date]) {
-                    EmptyView()
-                }
-                .makeCategoryView("레슨 날짜")
+                Text(viewModel.memoDate.formattedString(dateFormat: .yearMonthDayDate))
+                    .customFont()
+                    .frame(maxWidth: .infinity, alignment: .center)
                 
                 DatePicker(selection: $viewModel.startTime, displayedComponents: [.hourAndMinute]) {
                     EmptyView()
                 }
                 .datePickerStyle(.compact)
-                .makeCategoryView("레슨 시작 시간")
+                .makeCategoryView("시작 시간")
                 
                 DatePicker(selection: $viewModel.endTime, displayedComponents: [.hourAndMinute]) {
                     EmptyView()
                 }
                 .datePickerStyle(.compact)
-                .makeCategoryView("레슨 마무리 시간")
+                .makeCategoryView("마무리 시간")
                 
                 EmptyView()
                     .makeCategoryView("메모")
@@ -55,23 +53,7 @@ struct AddMemoView: View {
                 NavigationLink {
                     LazyNavigationView(MusicSearchView(parentVM: viewModel))
                 } label: {
-                    ZStack {
-                        RoundedRectangle(cornerRadius: 10)
-                            .fill(.gray.opacity(0.35))
-                            .frame(height: 44)
-                        
-                        HStack {
-                            Image(systemName: "magnifyingglass")
-                                .renderingMode(.template)
-                                .foregroundStyle(.black.opacity(0.4))
-                                .frame(alignment: .leading)
-                                .padding(.leading)
-                            
-                            Text("오늘 연습한 곡을 찾아보세요 :) ")
-                                .foregroundStyle(.black.opacity(0.4))
-                            Spacer()
-                        }
-                    }
+                    makeSearchMusicBar()
                 }
                 
                 ForEach(viewModel.selectedMusics) { item in
@@ -118,8 +100,24 @@ struct AddMemoView: View {
     }
 }
 
-#Preview {
-    NavigationStack {
-        AddMemoView(viewModel: AddMemoViewModel())
+extension AddMemoView {
+    func makeSearchMusicBar() -> some View {
+        ZStack {
+            RoundedRectangle(cornerRadius: 10)
+                .fill(.gray.opacity(0.35))
+                .frame(height: 44)
+            
+            HStack {
+                Image(systemName: "magnifyingglass")
+                    .renderingMode(.template)
+                    .foregroundStyle(.black.opacity(0.4))
+                    .frame(alignment: .leading)
+                    .padding(.leading)
+                
+                Text("오늘 연습한 곡을 찾아보세요 :) ")
+                    .foregroundStyle(.black.opacity(0.4))
+                Spacer()
+            }
+        }
     }
 }

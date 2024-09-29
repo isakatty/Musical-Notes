@@ -20,6 +20,7 @@ struct CustomTabView: View {
 }
 extension CustomTabView {
     var tabView2 : some View {
+        NavigationStack {
             TabView (selection: $currentTab) {
                 CalendarView()
                     .tag(TabModel.calendar)
@@ -32,6 +33,7 @@ extension CustomTabView {
             }
             .setTabBarVisibility(isHidden: true)
         }
+    }
     
     var tabView: some View {
         HStack{
@@ -40,7 +42,8 @@ extension CustomTabView {
                     currentTab = .calendar
                 }
             }, label: {
-                Capsule(style: .circular).fill(.yellow)
+                Capsule(style: .circular)
+                    .fill(.yellow)
                     .overlay(Text("홈").foregroundColor(.black))
                     .padding()
                     .scaleEffect(currentTab == .calendar ? 1 : 0.8)
@@ -86,8 +89,4 @@ extension CustomTabView {
         .clipShape(Capsule(style: .circular))
         .padding(.horizontal)
     }
-}
-
-#Preview {
-    CustomTabView()
 }

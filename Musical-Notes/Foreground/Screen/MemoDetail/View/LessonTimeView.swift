@@ -27,7 +27,7 @@ struct LessonTimeView: View {
                 .frame(width: 1)
             
             VStack(alignment: .center) {
-                Text("\(lessonType.toTitle) 끝 시간")
+                Text("\(lessonType.toTitle) 마무리 시간")
                     .customFont(fontSize: 14)
                 Text(endTime)
                     .customFont()

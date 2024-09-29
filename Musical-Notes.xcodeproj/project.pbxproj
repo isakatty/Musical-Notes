@@ -42,6 +42,9 @@
 		C989B8832C9D1A72004FD90D /* Color+.swift in Sources */ = {isa = PBXBuildFile; fileRef = C989B8822C9D1A72004FD90D /* Color+.swift */; };
 		C989B8872C9D5383004FD90D /* LessonDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C989B8862C9D5383004FD90D /* LessonDetailView.swift */; };
 		C98ED9172CA93BF100D43D53 /* FeedRecordMemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C98ED9162CA93BF100D43D53 /* FeedRecordMemoView.swift */; };
+		C98ED91B2CA972E700D43D53 /* FeedRecordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C98ED91A2CA972E700D43D53 /* FeedRecordViewModel.swift */; };
+		C98ED91C2CA99AB400D43D53 /* RealmSwift in Embed Frameworks */ = {isa = PBXBuildFile; productRef = C9AC16712CA2D1FC00251F38 /* RealmSwift */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		C98ED91F2CA9AA9700D43D53 /* CalendarRecordsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C98ED91E2CA9AA9700D43D53 /* CalendarRecordsView.swift */; };
 		C9AC16662CA2A32200251F38 /* MusicSearchCompoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9AC16652CA2A32200251F38 /* MusicSearchCompoView.swift */; };
 		C9AC16682CA2BACA00251F38 /* AddMemoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9AC16672CA2BACA00251F38 /* AddMemoViewModel.swift */; };
 		C9AC166A2CA2BE9100251F38 /* ViewHiddenModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9AC16692CA2BE9100251F38 /* ViewHiddenModifier.swift */; };
@@ -74,6 +77,20 @@
 		C9FF72F62CA474D300ACF94F /* MNotesCarousel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9FF72F52CA474D300ACF94F /* MNotesCarousel.swift */; };
 		C9FF89122C9DB82E004AF325 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9FF89112C9DB82E004AF325 /* Constant.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		C98ED91D2CA99AB400D43D53 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				C98ED91C2CA99AB400D43D53 /* RealmSwift in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		C904FA442C9C20BF00D1C2DB /* DateFormat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormat.swift; sourceTree = "<group>"; };
@@ -113,6 +130,8 @@
 		C989B8822C9D1A72004FD90D /* Color+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+.swift"; sourceTree = "<group>"; };
 		C989B8862C9D5383004FD90D /* LessonDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonDetailView.swift; sourceTree = "<group>"; };
 		C98ED9162CA93BF100D43D53 /* FeedRecordMemoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedRecordMemoView.swift; sourceTree = "<group>"; };
+		C98ED91A2CA972E700D43D53 /* FeedRecordViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedRecordViewModel.swift; sourceTree = "<group>"; };
+		C98ED91E2CA9AA9700D43D53 /* CalendarRecordsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarRecordsView.swift; sourceTree = "<group>"; };
 		C9AC16652CA2A32200251F38 /* MusicSearchCompoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicSearchCompoView.swift; sourceTree = "<group>"; };
 		C9AC16672CA2BACA00251F38 /* AddMemoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMemoViewModel.swift; sourceTree = "<group>"; };
 		C9AC16692CA2BE9100251F38 /* ViewHiddenModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewHiddenModifier.swift; sourceTree = "<group>"; };
@@ -344,6 +363,14 @@
 			path = App;
 			sourceTree = "<group>";
 		};
+		C98ED9192CA972D200D43D53 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				C98ED91A2CA972E700D43D53 /* FeedRecordViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		C9AC16642CA2A31600251F38 /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -382,6 +409,7 @@
 		C9BE4C4D2CA818EF005C8024 /* FeedRecords */ = {
 			isa = PBXGroup;
 			children = (
+				C98ED9192CA972D200D43D53 /* ViewModel */,
 				C9BE4C4E2CA81DFA005C8024 /* View */,
 			);
 			path = FeedRecords;
@@ -495,6 +523,7 @@
 				C9CB202A2C9C0149005DECF7 /* FSCalendarView.swift */,
 				C904FA492C9C44F000D1C2DB /* TopMonthView.swift */,
 				C904FA4D2C9C575100D1C2DB /* LessonCardView.swift */,
+				C98ED91E2CA9AA9700D43D53 /* CalendarRecordsView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -559,6 +588,7 @@
 				C96BC6B02C9BD53400C5B5AE /* Sources */,
 				C96BC6B12C9BD53400C5B5AE /* Frameworks */,
 				C96BC6B22C9BD53400C5B5AE /* Resources */,
+				C98ED91D2CA99AB400D43D53 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -667,6 +697,7 @@
 				C9AC167C2CA2D4F100251F38 /* RealmRepository.swift in Sources */,
 				C9CB20192C9BF909005DECF7 /* TabBarAccess.swift in Sources */,
 				C9FF89122C9DB82E004AF325 /* Constant.swift in Sources */,
+				C98ED91B2CA972E700D43D53 /* FeedRecordViewModel.swift in Sources */,
 				C9CB201E2C9BFC1B005DECF7 /* NotesTabView.swift in Sources */,
 				C9CB20112C9BF739005DECF7 /* TabModel.swift in Sources */,
 				C9FF72DA2CA3F8CB00ACF94F /* SearchedSong.swift in Sources */,
@@ -675,6 +706,7 @@
 				C989B87B2C9D0DB2004FD90D /* CustomFontModifier.swift in Sources */,
 				C9FF72D02CA3D51C00ACF94F /* View+.swift in Sources */,
 				C96BC6BA2C9BD53400C5B5AE /* ContentView.swift in Sources */,
+				C98ED91F2CA9AA9700D43D53 /* CalendarRecordsView.swift in Sources */,
 				C909A52B2CA1853F007E6A61 /* LessonMemoView.swift in Sources */,
 				C989B8872C9D5383004FD90D /* LessonDetailView.swift in Sources */,
 				C9CB20152C9BF7CE005DECF7 /* FeedView.swift in Sources */,

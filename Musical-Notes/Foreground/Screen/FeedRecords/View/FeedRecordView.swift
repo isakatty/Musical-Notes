@@ -8,14 +8,20 @@
 import SwiftUI
 
 struct FeedRecordView: View {
+    @StateObject var viewModel: FeedRecordViewModel
+    
+    init(viewModel: FeedRecordViewModel) {
+        _viewModel = StateObject(wrappedValue: viewModel)
+    }
+    
     var body: some View {
         VStack(alignment: .leading) {
-            Text("To.X")
+            Text("\(viewModel.music.songTitle) - \(viewModel.music.artist)")
                 .customFont(font: .extraBold, fontSize: 30)
             ScrollView {
                 LazyVStack(alignment: .leading) {
-                    ForEach(0..<2) { index in
-                        FeedRecordMemoView()
+                    ForEach(viewModel.music.memos) { memo in
+                        FeedRecordMemoView(musicMemo: memo)
                     }
                 }
                 .background(.white)
@@ -25,9 +31,5 @@ struct FeedRecordView: View {
         .frame(maxWidth: .infinity)
         .padding(.horizontal)
     }
-}
-
-#Preview {
-    FeedRecordView()
 }
 

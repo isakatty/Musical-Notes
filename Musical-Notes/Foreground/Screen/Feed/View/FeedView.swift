@@ -38,7 +38,7 @@ struct FeedView: View {
                         FeedMusicTitleView(music: music)
                         
                         NavigationLink {
-                            LazyNavigationView(FeedRecordView())
+                            LazyNavigationView(FeedRecordView(viewModel: FeedRecordViewModel(music: music)))
                         } label: {
                             RoundedRectangle(cornerRadius: 20)
                                 .fill(.black)
