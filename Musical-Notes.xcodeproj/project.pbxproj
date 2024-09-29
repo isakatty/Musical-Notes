@@ -41,6 +41,7 @@
 		C989B87B2C9D0DB2004FD90D /* CustomFontModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = C989B87A2C9D0DB2004FD90D /* CustomFontModifier.swift */; };
 		C989B8832C9D1A72004FD90D /* Color+.swift in Sources */ = {isa = PBXBuildFile; fileRef = C989B8822C9D1A72004FD90D /* Color+.swift */; };
 		C989B8872C9D5383004FD90D /* LessonDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C989B8862C9D5383004FD90D /* LessonDetailView.swift */; };
+		C98ED9172CA93BF100D43D53 /* FeedRecordMemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C98ED9162CA93BF100D43D53 /* FeedRecordMemoView.swift */; };
 		C9AC16662CA2A32200251F38 /* MusicSearchCompoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9AC16652CA2A32200251F38 /* MusicSearchCompoView.swift */; };
 		C9AC16682CA2BACA00251F38 /* AddMemoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9AC16672CA2BACA00251F38 /* AddMemoViewModel.swift */; };
 		C9AC166A2CA2BE9100251F38 /* ViewHiddenModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9AC16692CA2BE9100251F38 /* ViewHiddenModifier.swift */; };
@@ -48,6 +49,7 @@
 		C9AC16772CA2D21D00251F38 /* MNotesMusic.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9AC16762CA2D21D00251F38 /* MNotesMusic.swift */; };
 		C9AC167A2CA2D29C00251F38 /* MNotesMemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9AC16792CA2D29C00251F38 /* MNotesMemo.swift */; };
 		C9AC167C2CA2D4F100251F38 /* RealmRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9AC167B2CA2D4F100251F38 /* RealmRepository.swift */; };
+		C9BE4C502CA81E06005C8024 /* FeedRecordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9BE4C4F2CA81E05005C8024 /* FeedRecordView.swift */; };
 		C9CB200F2C9BF718005DECF7 /* CustomTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9CB200E2C9BF718005DECF7 /* CustomTabView.swift */; };
 		C9CB20112C9BF739005DECF7 /* TabModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9CB20102C9BF739005DECF7 /* TabModel.swift */; };
 		C9CB20132C9BF7C1005DECF7 /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9CB20122C9BF7C1005DECF7 /* CalendarView.swift */; };
@@ -110,12 +112,14 @@
 		C989B87A2C9D0DB2004FD90D /* CustomFontModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomFontModifier.swift; sourceTree = "<group>"; };
 		C989B8822C9D1A72004FD90D /* Color+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+.swift"; sourceTree = "<group>"; };
 		C989B8862C9D5383004FD90D /* LessonDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonDetailView.swift; sourceTree = "<group>"; };
+		C98ED9162CA93BF100D43D53 /* FeedRecordMemoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedRecordMemoView.swift; sourceTree = "<group>"; };
 		C9AC16652CA2A32200251F38 /* MusicSearchCompoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicSearchCompoView.swift; sourceTree = "<group>"; };
 		C9AC16672CA2BACA00251F38 /* AddMemoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMemoViewModel.swift; sourceTree = "<group>"; };
 		C9AC16692CA2BE9100251F38 /* ViewHiddenModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewHiddenModifier.swift; sourceTree = "<group>"; };
 		C9AC16762CA2D21D00251F38 /* MNotesMusic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MNotesMusic.swift; sourceTree = "<group>"; };
 		C9AC16792CA2D29C00251F38 /* MNotesMemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MNotesMemo.swift; sourceTree = "<group>"; };
 		C9AC167B2CA2D4F100251F38 /* RealmRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmRepository.swift; sourceTree = "<group>"; };
+		C9BE4C4F2CA81E05005C8024 /* FeedRecordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedRecordView.swift; sourceTree = "<group>"; };
 		C9CB200E2C9BF718005DECF7 /* CustomTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabView.swift; sourceTree = "<group>"; };
 		C9CB20102C9BF739005DECF7 /* TabModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabModel.swift; sourceTree = "<group>"; };
 		C9CB20122C9BF7C1005DECF7 /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
@@ -375,9 +379,27 @@
 			path = RealmRepository;
 			sourceTree = "<group>";
 		};
+		C9BE4C4D2CA818EF005C8024 /* FeedRecords */ = {
+			isa = PBXGroup;
+			children = (
+				C9BE4C4E2CA81DFA005C8024 /* View */,
+			);
+			path = FeedRecords;
+			sourceTree = "<group>";
+		};
+		C9BE4C4E2CA81DFA005C8024 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C9BE4C4F2CA81E05005C8024 /* FeedRecordView.swift */,
+				C98ED9162CA93BF100D43D53 /* FeedRecordMemoView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		C9CB20082C9BE3F7005DECF7 /* Screen */ = {
 			isa = PBXGroup;
 			children = (
+				C9BE4C4D2CA818EF005C8024 /* FeedRecords */,
 				C98690332CA1AAF500418A61 /* MusicSearch */,
 				C986902E2CA1977500418A61 /* MemoPost */,
 				C909A5302CA19401007E6A61 /* MemoDetail */,
@@ -615,6 +637,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C909A5252CA14F4C007E6A61 /* LessonMusicView.swift in Sources */,
+				C9BE4C502CA81E06005C8024 /* FeedRecordView.swift in Sources */,
 				C9AC166A2CA2BE9100251F38 /* ViewHiddenModifier.swift in Sources */,
 				C904FA4C2C9C4AEE00D1C2DB /* ButtonActionModifier.swift in Sources */,
 				C960F5812CA5B50E0068177B /* EncourageMemoView.swift in Sources */,
@@ -664,6 +687,7 @@
 				C9CB20242C9BFEAA005DECF7 /* LazyNavigationView.swift in Sources */,
 				C9FF72E32CA43F3600ACF94F /* AlertModifier.swift in Sources */,
 				C904FA4E2C9C575100D1C2DB /* LessonCardView.swift in Sources */,
+				C98ED9172CA93BF100D43D53 /* FeedRecordMemoView.swift in Sources */,
 				C96BC6B82C9BD53400C5B5AE /* Musical_NotesApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

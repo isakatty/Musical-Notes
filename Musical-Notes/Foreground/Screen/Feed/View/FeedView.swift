@@ -37,17 +37,18 @@ struct FeedView: View {
                         
                         FeedMusicTitleView(music: music)
                         
-                        RoundedRectangle(cornerRadius: 20)
-                            .fill(.black)
-                            .overlay {
-                                Text("\(music.memos.count) RECORDS")
-                                    .customFont(font: .extraBold, fontSize: 18)
-                                    .foregroundStyle(.white)
-                            }
-                            .frame(width: max(size.width - 60, 80), height: 60)
-                            .onTapGesture {
-                                print("== MEMO ==")
-                            }
+                        NavigationLink {
+                            LazyNavigationView(FeedRecordView())
+                        } label: {
+                            RoundedRectangle(cornerRadius: 20)
+                                .fill(.black)
+                                .overlay {
+                                    Text("\(music.memos.count) RECORDS")
+                                        .customFont(font: .extraBold, fontSize: 18)
+                                        .foregroundStyle(.white)
+                                }
+                                .frame(width: max(size.width - 60, 80), height: 60)
+                        }
                     }
                 }
             }
@@ -59,8 +60,4 @@ struct FeedView: View {
             viewModel.fetchMusics()
         }
     }
-}
-
-#Preview {
-    FeedView()
 }

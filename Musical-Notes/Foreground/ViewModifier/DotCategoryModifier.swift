@@ -14,6 +14,7 @@ private struct DotCategoryModifier: ViewModifier {
         HStack {
             Circle()
                 .frame(width: 5, height: 5)
+                .opacity(0.6)
             
             Text(category)
                 .customFont()
