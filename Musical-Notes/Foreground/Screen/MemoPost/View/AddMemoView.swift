@@ -96,7 +96,7 @@ struct AddMemoView: View {
         .onTapGesture {
             self.endTextEditing()
         }
-        .showOneBtnAlert(isPresented: $isShowAlert, alertTitle: "일지를 작성하기에 부족한 정보가 있습니다.", alertSubTitle: "다시 확인해주세요.") {
+        .showOneBtnAlert(isPresented: $isShowAlert, alertTitle: "일지를 작성하기에 부족한 정보가 있습니다.", alertSubTitle: "다시 확인해주세요.", btnText: "확인") {
             isShowAlert.toggle()
         }
     }

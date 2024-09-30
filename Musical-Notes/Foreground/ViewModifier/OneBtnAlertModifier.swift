@@ -11,6 +11,7 @@ private struct OneBtnAlertModifier: ViewModifier {
     @Binding var isPresented: Bool
     let alertTitle: String
     let alertSubTitle: String
+    let btnText: String
     var action: () -> Void
     
     func body(content: Content) -> some View {
@@ -27,7 +28,7 @@ private struct OneBtnAlertModifier: ViewModifier {
                             self.isPresented = false
                         }
                     
-                    OneBtnAlertView(isPresented: $isPresented, alertTitle: alertTitle, alertSubTitle: alertSubTitle, action: action)
+                    OneBtnAlertView(isPresented: $isPresented, alertTitle: alertTitle, alertSubTitle: alertSubTitle, btnText: btnText, action: action)
                         .transition(.move(edge: .bottom).combined(with: .opacity))
                 }
             }
@@ -42,7 +43,7 @@ private struct OneBtnAlertModifier: ViewModifier {
 }
 
 extension View {
-    func showOneBtnAlert(isPresented: Binding<Bool>, alertTitle: String, alertSubTitle: String, action: @escaping () -> Void) -> some View {
-        modifier(OneBtnAlertModifier(isPresented: isPresented, alertTitle: alertTitle, alertSubTitle: alertSubTitle, action: action))
+    func showOneBtnAlert(isPresented: Binding<Bool>, alertTitle: String, alertSubTitle: String, btnText: String, action: @escaping () -> Void) -> some View {
+        modifier(OneBtnAlertModifier(isPresented: isPresented, alertTitle: alertTitle, alertSubTitle: alertSubTitle, btnText: btnText, action: action))
     }
 }

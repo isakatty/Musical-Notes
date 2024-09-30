@@ -10,6 +10,7 @@ import MusicKit
 
 final class MusicRepository {
     @Published var isMusicAuthorized: Bool = false
+    weak var delegate: MusicRepositoryDelegate?
     
     init() {
         print("== Music Repository init ==")
@@ -49,10 +50,11 @@ final class MusicRepository {
             return []
         }
     }
-    private func requestMusicAuthorization() async {
+    
+    func requestMusicAuthorization() async {
         let status = await MusicAuthorization.request()
         
-        switch status{
+        switch status {
         case .authorized:
             isMusicAuthorized = true
         case .notDetermined:
@@ -68,5 +70,7 @@ final class MusicRepository {
             print("Error getting Apple Music Authorization: Unknown (New case)")
             isMusicAuthorized = false
         }
+        
+        delegate?.musicAuthorizationDidChange(isAuthorized: isMusicAuthorized)
     }
 }

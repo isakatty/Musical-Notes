@@ -11,6 +11,7 @@ struct OneBtnAlertView: View {
     @Binding var isPresented: Bool
     let alertTitle: String
     let alertSubTitle: String
+    let btnText: String
     
     let action: () -> Void
     
@@ -45,7 +46,7 @@ struct OneBtnAlertView: View {
                 RoundedRectangle(cornerRadius: 10)
                     .fill(.ivoryBlue)
                     .overlay {
-                        Text("확인")
+                        Text(btnText)
                             .customFont()
                             .foregroundStyle(.white)
                     }
