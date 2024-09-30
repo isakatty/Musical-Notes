@@ -57,7 +57,6 @@ struct LessonDetailView: View {
             .padding(.horizontal)
             .toolbar {
                 ToolbarItem(placement: .topBarTrailing) {
-                    //                    LazyNavigationView(<#T##closure: View##View#>)
                     Menu("더보기") {
                         Button(action: {
                             print("하이루")

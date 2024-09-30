@@ -19,6 +19,7 @@ struct LessonMusicView: View {
     var body: some View {
         HStack(alignment: .center, spacing: 10) {
             AsyncImgView(imgStr: imgStr, width: width, height: height)
+                .clipShape(RoundedRectangle(cornerRadius: 10))
             VStack(alignment: .leading, spacing: 10) {
                 MusicInfoDetailView(category: "가수", memoDetail: artist)
                 MusicInfoDetailView(category: "곡", memoDetail: songTitle)

@@ -9,7 +9,7 @@ import Foundation
 import MusicKit
 
 protocol MusicRepositoryDelegate: AnyObject {
-    func musicAuthorizationDidChange(isAuthorized: Bool)
+    func musicAuthorizationDidChange(isAuthorized: Bool) async
 }
 
 @MainActor
@@ -23,10 +23,7 @@ final class MusicSearchViewModel: ObservableObject, MusicRepositoryDelegate {
     init() {
         print("== searchViewModel init ==")
         
-        // repository의 delegate로 viewModel 설정
         repository.delegate = self
-        
-        // 초기 권한 상태 반영
         isAuthorized = !repository.isMusicAuthorized
     }
     
@@ -34,7 +31,6 @@ final class MusicSearchViewModel: ObservableObject, MusicRepositoryDelegate {
         musics = await repository.fetchMusic(txt)
     }
     
-    // MusicRepositoryDelegate 프로토콜 구현
     func musicAuthorizationDidChange(isAuthorized: Bool) {
         self.isAuthorized = !isAuthorized
     }

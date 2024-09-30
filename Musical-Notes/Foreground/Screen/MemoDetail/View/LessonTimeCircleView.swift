@@ -17,14 +17,15 @@ struct LessonTimeCircleView: View {
             Circle()
                 .trim(from: 0, to: 1)
                 .stroke(
-                    .yellow.opacity(0.3),
+                    .ivoryBlue.opacity(0.3),
                     style: StrokeStyle(lineWidth: 15, lineCap: .round))
                 .frame(width: 120, height: 120)
             
+            let effectiveProgress = (progress % 60 == 0) ? 60 : min(progress, progress % 60)
             Circle()
-                .trim(from: 0, to: CGFloat(min(progress / total, 1)))
+                .trim(from: 0, to: CGFloat(effectiveProgress) / CGFloat(total))
                 .stroke(
-                    .yellow.opacity(0.8),
+                    .ivoryBlue.opacity(0.7),
                     style: StrokeStyle(lineWidth: 15, lineCap: .round))
                 .rotationEffect(Angle(degrees: -90))
                 .frame(width: 120, height: 120)

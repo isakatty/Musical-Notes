@@ -15,8 +15,9 @@ struct CalendarRecordsView: View {
     
     var body: some View {
         Text("Records")
-            .customFont(font: .extraBold, fontSize: 30)
+            .customFont(font: .extraBold, fontSize: 24)
             .frame(maxWidth: .infinity, alignment: .leading)
+            .padding(.top, 10)
         
         HStack(alignment: .top) {
             dateLabel
@@ -48,7 +49,7 @@ struct CalendarRecordsView: View {
                 LazyNavigationView(AddMemoView(viewModel: AddMemoViewModel(memoDate: fsCalendar.selectedDate ?? Date())))
             } label: {
                 RoundedRectangle(cornerRadius: 10)
-                    .fill(.gray.opacity(0.2))
+                    .fill(.ivoryBlue.opacity(0.2))
                     .overlay {
                         Text(" + 추가하기")
                             .customFont()
@@ -68,11 +69,10 @@ struct CalendarRecordsView: View {
                 ?? viewModel.today.formattedString(dateFormat: .monthDate)
             )
             .customFont(font: .medium, fontSize: 17)
-            
             Spacer(minLength: 0)
             Rectangle()
                 .fill(.black)
-                .frame(width: 0.6)
+                .frame(width: 1)
         }
     }
 }

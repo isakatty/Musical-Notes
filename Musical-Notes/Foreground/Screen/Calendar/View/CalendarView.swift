@@ -18,9 +18,9 @@ struct CalendarView: View {
         calendar.headerHeight = 0
         calendar.appearance.todayColor = .clear
         calendar.appearance.titleTodayColor = .black
-        calendar.appearance.selectionColor = UIColor(named: "LemonYellow")
-        calendar.appearance.weekdayTextColor = .black
-        calendar.appearance.eventDefaultColor = UIColor(named: "ivoryBlue")
+        calendar.appearance.selectionColor = .ivoryBlue
+        calendar.appearance.weekdayTextColor = .lightsGray
+        calendar.appearance.eventDefaultColor = .ivoryBlue
         calendar.scrollEnabled = true
         calendar.placeholderType = .none
         return calendar

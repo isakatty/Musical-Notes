@@ -71,6 +71,6 @@ final class MusicRepository {
             isMusicAuthorized = false
         }
         
-        delegate?.musicAuthorizationDidChange(isAuthorized: isMusicAuthorized)
+        await delegate?.musicAuthorizationDidChange(isAuthorized: isMusicAuthorized)
     }
 }

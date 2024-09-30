@@ -19,6 +19,6 @@ extension Date {
     
     func changedToMinutes(startDate: Date) -> Int {
         let useTime = Int(self.timeIntervalSince(startDate))
-        return useTime.minute
+        return useTime / 60
     }
 }
