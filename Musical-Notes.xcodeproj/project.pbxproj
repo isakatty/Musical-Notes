@@ -53,6 +53,9 @@
 		C9AC167A2CA2D29C00251F38 /* MNotesMemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9AC16792CA2D29C00251F38 /* MNotesMemo.swift */; };
 		C9AC167C2CA2D4F100251F38 /* RealmRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9AC167B2CA2D4F100251F38 /* RealmRepository.swift */; };
 		C9BE4C502CA81E06005C8024 /* FeedRecordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9BE4C4F2CA81E05005C8024 /* FeedRecordView.swift */; };
+		C9C5F91C2CAA7EB800C25556 /* SimpleAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C5F91B2CAA7EB800C25556 /* SimpleAlertView.swift */; };
+		C9C5F91E2CAA97B800C25556 /* OneBtnAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C5F91D2CAA97B800C25556 /* OneBtnAlertView.swift */; };
+		C9C5F9202CAA9A0300C25556 /* OneBtnAlertModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C5F91F2CAA9A0300C25556 /* OneBtnAlertModifier.swift */; };
 		C9CB200F2C9BF718005DECF7 /* CustomTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9CB200E2C9BF718005DECF7 /* CustomTabView.swift */; };
 		C9CB20112C9BF739005DECF7 /* TabModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9CB20102C9BF739005DECF7 /* TabModel.swift */; };
 		C9CB20132C9BF7C1005DECF7 /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9CB20122C9BF7C1005DECF7 /* CalendarView.swift */; };
@@ -71,7 +74,7 @@
 		C9FF72DA2CA3F8CB00ACF94F /* SearchedSong.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9FF72D92CA3F8CB00ACF94F /* SearchedSong.swift */; };
 		C9FF72DC2CA3FE9000ACF94F /* TimeInterval+.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9FF72DB2CA3FE9000ACF94F /* TimeInterval+.swift */; };
 		C9FF72DF2CA4376900ACF94F /* DotCategoryModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9FF72DE2CA4376900ACF94F /* DotCategoryModifier.swift */; };
-		C9FF72E32CA43F3600ACF94F /* AlertModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9FF72E22CA43F3600ACF94F /* AlertModifier.swift */; };
+		C9FF72E32CA43F3600ACF94F /* TwoBtnAlertModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9FF72E22CA43F3600ACF94F /* TwoBtnAlertModifier.swift */; };
 		C9FF72E92CA4507D00ACF94F /* AlertMusicView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9FF72E82CA4507D00ACF94F /* AlertMusicView.swift */; };
 		C9FF72ED2CA45D7C00ACF94F /* FeedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9FF72EC2CA45D7C00ACF94F /* FeedViewModel.swift */; };
 		C9FF72F62CA474D300ACF94F /* MNotesCarousel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9FF72F52CA474D300ACF94F /* MNotesCarousel.swift */; };
@@ -139,6 +142,9 @@
 		C9AC16792CA2D29C00251F38 /* MNotesMemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MNotesMemo.swift; sourceTree = "<group>"; };
 		C9AC167B2CA2D4F100251F38 /* RealmRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmRepository.swift; sourceTree = "<group>"; };
 		C9BE4C4F2CA81E05005C8024 /* FeedRecordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedRecordView.swift; sourceTree = "<group>"; };
+		C9C5F91B2CAA7EB800C25556 /* SimpleAlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleAlertView.swift; sourceTree = "<group>"; };
+		C9C5F91D2CAA97B800C25556 /* OneBtnAlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneBtnAlertView.swift; sourceTree = "<group>"; };
+		C9C5F91F2CAA9A0300C25556 /* OneBtnAlertModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneBtnAlertModifier.swift; sourceTree = "<group>"; };
 		C9CB200E2C9BF718005DECF7 /* CustomTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabView.swift; sourceTree = "<group>"; };
 		C9CB20102C9BF739005DECF7 /* TabModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabModel.swift; sourceTree = "<group>"; };
 		C9CB20122C9BF7C1005DECF7 /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
@@ -156,7 +162,7 @@
 		C9FF72D92CA3F8CB00ACF94F /* SearchedSong.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchedSong.swift; sourceTree = "<group>"; };
 		C9FF72DB2CA3FE9000ACF94F /* TimeInterval+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TimeInterval+.swift"; sourceTree = "<group>"; };
 		C9FF72DE2CA4376900ACF94F /* DotCategoryModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DotCategoryModifier.swift; sourceTree = "<group>"; };
-		C9FF72E22CA43F3600ACF94F /* AlertModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertModifier.swift; sourceTree = "<group>"; };
+		C9FF72E22CA43F3600ACF94F /* TwoBtnAlertModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwoBtnAlertModifier.swift; sourceTree = "<group>"; };
 		C9FF72E82CA4507D00ACF94F /* AlertMusicView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertMusicView.swift; sourceTree = "<group>"; };
 		C9FF72EC2CA45D7C00ACF94F /* FeedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewModel.swift; sourceTree = "<group>"; };
 		C9FF72F52CA474D300ACF94F /* MNotesCarousel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MNotesCarousel.swift; sourceTree = "<group>"; };
@@ -482,7 +488,8 @@
 				C989B87A2C9D0DB2004FD90D /* CustomFontModifier.swift */,
 				C9AC16692CA2BE9100251F38 /* ViewHiddenModifier.swift */,
 				C9FF72DE2CA4376900ACF94F /* DotCategoryModifier.swift */,
-				C9FF72E22CA43F3600ACF94F /* AlertModifier.swift */,
+				C9FF72E22CA43F3600ACF94F /* TwoBtnAlertModifier.swift */,
+				C9C5F91F2CAA9A0300C25556 /* OneBtnAlertModifier.swift */,
 			);
 			path = ViewModifier;
 			sourceTree = "<group>";
@@ -494,6 +501,8 @@
 				C909A5222CA14EB4007E6A61 /* AsyncImgView.swift */,
 				C9FF72E82CA4507D00ACF94F /* AlertMusicView.swift */,
 				C960F5802CA5B50E0068177B /* EncourageMemoView.swift */,
+				C9C5F91B2CAA7EB800C25556 /* SimpleAlertView.swift */,
+				C9C5F91D2CAA97B800C25556 /* OneBtnAlertView.swift */,
 			);
 			path = ReusableView;
 			sourceTree = "<group>";
@@ -674,6 +683,7 @@
 				C9FF72DF2CA4376900ACF94F /* DotCategoryModifier.swift in Sources */,
 				C9CB20172C9BF7DB005DECF7 /* MyPageView.swift in Sources */,
 				C9FF72F62CA474D300ACF94F /* MNotesCarousel.swift in Sources */,
+				C9C5F91E2CAA97B800C25556 /* OneBtnAlertView.swift in Sources */,
 				C9FF72D52CA3ED2800ACF94F /* MusicSearchViewModel.swift in Sources */,
 				C960F57F2CA5745B0068177B /* Int+.swift in Sources */,
 				C9FF72ED2CA45D7C00ACF94F /* FeedViewModel.swift in Sources */,
@@ -695,6 +705,7 @@
 				C989B8832C9D1A72004FD90D /* Color+.swift in Sources */,
 				C9CB200F2C9BF718005DECF7 /* CustomTabView.swift in Sources */,
 				C9AC167C2CA2D4F100251F38 /* RealmRepository.swift in Sources */,
+				C9C5F91C2CAA7EB800C25556 /* SimpleAlertView.swift in Sources */,
 				C9CB20192C9BF909005DECF7 /* TabBarAccess.swift in Sources */,
 				C9FF89122C9DB82E004AF325 /* Constant.swift in Sources */,
 				C98ED91B2CA972E700D43D53 /* FeedRecordViewModel.swift in Sources */,
@@ -709,6 +720,7 @@
 				C98ED91F2CA9AA9700D43D53 /* CalendarRecordsView.swift in Sources */,
 				C909A52B2CA1853F007E6A61 /* LessonMemoView.swift in Sources */,
 				C989B8872C9D5383004FD90D /* LessonDetailView.swift in Sources */,
+				C9C5F9202CAA9A0300C25556 /* OneBtnAlertModifier.swift in Sources */,
 				C9CB20152C9BF7CE005DECF7 /* FeedView.swift in Sources */,
 				C989B8792C9D09B1004FD90D /* PretendardFontType.swift in Sources */,
 				C9FF72D82CA3ED4D00ACF94F /* MusicRepository.swift in Sources */,
@@ -717,7 +729,7 @@
 				C98690322CA1978B00418A61 /* AddMemoView.swift in Sources */,
 				C9AC16682CA2BACA00251F38 /* AddMemoViewModel.swift in Sources */,
 				C9CB20242C9BFEAA005DECF7 /* LazyNavigationView.swift in Sources */,
-				C9FF72E32CA43F3600ACF94F /* AlertModifier.swift in Sources */,
+				C9FF72E32CA43F3600ACF94F /* TwoBtnAlertModifier.swift in Sources */,
 				C904FA4E2C9C575100D1C2DB /* LessonCardView.swift in Sources */,
 				C98ED9172CA93BF100D43D53 /* FeedRecordMemoView.swift in Sources */,
 				C96BC6B82C9BD53400C5B5AE /* Musical_NotesApp.swift in Sources */,

@@ -16,8 +16,6 @@ struct FeedRecordView: View {
     
     var body: some View {
         VStack(alignment: .leading) {
-            Text("\(viewModel.music.songTitle) - \(viewModel.music.artist)")
-                .customFont(font: .extraBold, fontSize: 30)
             ScrollView {
                 LazyVStack(alignment: .leading) {
                     ForEach(viewModel.music.memos) { memo in
@@ -30,6 +28,7 @@ struct FeedRecordView: View {
         }
         .frame(maxWidth: .infinity)
         .padding(.horizontal)
+        .navigationTitle(viewModel.music.songTitle)
     }
 }
 

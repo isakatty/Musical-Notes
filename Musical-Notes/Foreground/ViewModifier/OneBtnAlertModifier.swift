@@ -1,16 +1,17 @@
 //
-//  AlertModifier.swift
+//  OneBtnAlertModifier.swift
 //  Musical-Notes
 //
-//  Created by Jisoo Ham on 9/25/24.
+//  Created by Jisoo Ham on 9/30/24.
 //
 
 import SwiftUI
 
-private struct AlertModifier: ViewModifier {
+private struct OneBtnAlertModifier: ViewModifier {
     @Binding var isPresented: Bool
     let alertTitle: String
     let alertSubTitle: String
+    var action: () -> Void
     
     func body(content: Content) -> some View {
         ZStack {
@@ -26,7 +27,7 @@ private struct AlertModifier: ViewModifier {
                             self.isPresented = false
                         }
                     
-                    AlertMusicView(isPresented: $isPresented, alertTitle: alertTitle, alertSubTitle: alertSubTitle)
+                    OneBtnAlertView(isPresented: $isPresented, alertTitle: alertTitle, alertSubTitle: alertSubTitle, action: action)
                         .transition(.move(edge: .bottom).combined(with: .opacity))
                 }
             }
@@ -41,7 +42,7 @@ private struct AlertModifier: ViewModifier {
 }
 
 extension View {
-    func showAlert(isPresented: Binding<Bool>, alertTitle: String, alertSubTitle: String) -> some View {
-        modifier(AlertModifier(isPresented: isPresented, alertTitle: alertTitle, alertSubTitle: alertSubTitle))
+    func showOneBtnAlert(isPresented: Binding<Bool>, alertTitle: String, alertSubTitle: String, action: @escaping () -> Void) -> some View {
+        modifier(OneBtnAlertModifier(isPresented: isPresented, alertTitle: alertTitle, alertSubTitle: alertSubTitle, action: action))
     }
 }

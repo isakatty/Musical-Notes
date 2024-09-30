@@ -66,9 +66,5 @@ struct FSCalendarView: UIViewRepresentable {
             parent.viewModel.currentPage = calendar.currentPage
             print(calendar.currentPage, #function)
         }
-        
-        func maximumDate(for calendar: FSCalendar) -> Date {
-            return Date()
-        }
     }
 }

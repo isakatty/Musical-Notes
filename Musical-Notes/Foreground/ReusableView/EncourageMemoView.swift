@@ -16,7 +16,7 @@ struct EncourageMemoView: View {
         }
         .padding()
         .frame(maxWidth: .infinity)
-        .frame(height: 140)
+        .frame(height: 100)
         .overlay(
             RoundedRectangle(cornerRadius: 10)
                 .stroke(Color.gray.opacity(0.4), lineWidth: 0.6)

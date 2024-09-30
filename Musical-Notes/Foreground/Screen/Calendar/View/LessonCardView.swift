@@ -14,6 +14,7 @@ struct LessonCardView: View {
         VStack {
             HStack(alignment: .center) {
                 AsyncImgView(imgStr: memo.music.first?.artwork ?? "", width: 70, height: 70)
+                    .clipShape(RoundedRectangle(cornerRadius: 10))
                 
                 VStack(alignment: .leading) {
                     Text(memo.lessonType.toTitle)
@@ -26,17 +27,12 @@ struct LessonCardView: View {
                         .customFont(font: .medium, fontSize: 17)
                 }
                 .frame(maxWidth: .infinity, alignment: .leading)
+                .padding(.leading, 8)
             }
-            Rectangle()
-                .fill(.black.opacity(0.7))
-                .frame(height: 0.8)
-            MusicInfoDetailView(
-                category: "\(memo.lessonType.toTitle)시간",
-                memoDetail: memo.endTime.changedToTime(startDate: memo.startTime)
-            )
+            .padding(.leading, 4)
         }
         .padding(.horizontal, 8)
-        .frame(height: 140)
+        .frame(height: 100)
         .overlay(
             RoundedRectangle(cornerRadius: 10)
                 .stroke(Color.black, lineWidth: 0.6)

@@ -34,14 +34,14 @@ struct NotesTabView: View {
                 Text("Feed")
             }
             
-            NavigationStack {
-                MyPageView()
-            }
-            .tag(TabModel.myPage)
-            .tabItem {
-                Image(systemName: "person")
-                Text("My")
-            }
+//            NavigationStack {
+//                MyPageView()
+//            }
+//            .tag(TabModel.myPage)
+//            .tabItem {
+//                Image(systemName: "person")
+//                Text("My")
+//            }
         }
     }
     
