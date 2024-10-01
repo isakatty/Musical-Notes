@@ -15,25 +15,21 @@ struct LessonTimeView: View {
     var body: some View {
         HStack(alignment: .center) {
             VStack(alignment: .center) {
-                Text("\(lessonType.toTitle) 시작 시간")
+                Text("시작 시간")
                     .customFont(fontSize: 14)
                 Text(startTime)
                     .customFont()
             }
-            .frame(maxWidth: .infinity, alignment: .center)
-            
             Rectangle()
-                .fill().opacity(0.6)
-                .frame(width: 1)
+                .fill(.black.opacity(0.6))
+                .frame(height: 1)
             
             VStack(alignment: .center) {
-                Text("\(lessonType.toTitle) 마무리 시간")
+                Text("마무리 시간")
                     .customFont(fontSize: 14)
                 Text(endTime)
                     .customFont()
             }
-            .frame(maxWidth: .infinity, alignment: .center)
         }
-        .frame(maxWidth: .infinity)
     }
 }

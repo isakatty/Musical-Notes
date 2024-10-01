@@ -21,8 +21,8 @@ struct NotesTabView: View {
             }
             .tag(TabModel.calendar)
             .tabItem {
-                Image(systemName: "house")
-                Text("Home")
+                Image(systemName: "calendar")
+                Text("달력")
             }
             
             NavigationStack {
@@ -30,8 +30,8 @@ struct NotesTabView: View {
             }
             .tag(TabModel.feed)
             .tabItem {
-                Image(systemName: "list.clipboard")
-                Text("Feed")
+                Image(systemName: "book.pages.fill")
+                Text("피드")
             }
             
 //            NavigationStack {
@@ -43,8 +43,8 @@ struct NotesTabView: View {
 //                Text("My")
 //            }
         }
+        .tint(.ivoryBlue)
     }
-    
 }
 
 #Preview {

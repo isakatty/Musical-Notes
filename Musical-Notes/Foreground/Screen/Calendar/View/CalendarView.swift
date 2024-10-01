@@ -58,7 +58,7 @@ struct CalendarView: View {
         }
         .onAppear {
             if viewModel.isInitialOpen {
-                viewModel.findSelectedDateMemo(selectedDate: fsCalendar.today)
+                viewModel.fetchMemo()
             } else {
                 viewModel.fetchMemo()
                 fsCalendar.reloadData()
@@ -66,6 +66,7 @@ struct CalendarView: View {
         }
         .onDisappear {
             viewModel.isInitialOpen = false
+            viewModel.memos = []
         }
         .refreshable {
             viewModel.fetchMemo()

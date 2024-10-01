@@ -11,70 +11,84 @@ struct LessonDetailView: View {
     @StateObject var viewModel: LessonMemoDetailViewModel
     @Environment(\.dismiss) private var dismiss
     
-    init(viewModel: LessonMemoDetailViewModel) {
-        _viewModel = StateObject(wrappedValue: viewModel)
-    }
+    @State private var isShowAlert: Bool = false
     
     var body: some View {
-        ScrollView {
-            LazyVStack(alignment: .leading, spacing: 12) {
-                Text(viewModel.musicMemo.regDate.formattedString(dateFormat: .yearMonthDayDate))
-                    .customFont(font: .medium, fontSize: 16)
-                    .foregroundStyle(Color(uiColor: UIColor.darkGray).opacity(0.7))
-                
-                // MARK: view2 - 시간
-                LessonTimeView(
-                    startTime: viewModel.musicMemo.startTime.formattedString(dateFormat: .hourMinutes),
-                    endTime: viewModel.musicMemo.endTime.formattedString(dateFormat: .hourMinutes),
-                    lessonType: viewModel.musicMemo.lessonType
-                )
-                .padding(.vertical)
-                
-                LessonTimeCircleView(
-                    total: 60,
-                    progress: viewModel.musicMemo.endTime.changedToMinutes(startDate: viewModel.musicMemo.startTime),
-                    totalTime: viewModel.musicMemo.endTime.changedToTime(startDate: viewModel.musicMemo.startTime)
-                )
-                .frame(maxWidth: .infinity, alignment: .center)
-                
-                Text("오늘 \(viewModel.musicMemo.lessonType.toTitle) 메모")
-                    .customFont(font: .bold, fontSize: 17)
-                LessonMemoView(memo: viewModel.musicMemo.memoText)
-                
-                Text("오늘 \(viewModel.musicMemo.lessonType.toTitle) 곡")
-                    .customFont(font: .bold, fontSize: 17)
-                ForEach(viewModel.musicMemo.music) { music in
-                    LessonMusicView(
-                        imgStr: music.artwork,
-                        width: 80,
-                        height: 80,
-                        artist: music.artist,
-                        songTitle: music.songTitle,
-                        duration: music.duration
+        ZStack {
+            UnevenRoundedRectangle(cornerRadii: .init(bottomTrailing: 20, topTrailing: 20))
+                .fill(Color.white)
+                .padding(.trailing, 20)
+                .padding(.bottom)
+                .shadow(radius: 10)
+            
+            ScrollView {
+                VStack(alignment: .leading, spacing: 12) {
+                    Text(viewModel.musicMemo.regDate.formattedString(dateFormat: .yearMonthDayDate))
+                        .font(.system(size: 16, weight: .medium))
+                        .foregroundColor(Color.gray.opacity(0.7))
+                    
+                    Text("오늘 \(viewModel.musicMemo.lessonType.toTitle) 곡")
+                        .font(.system(size: 17, weight: .bold))
+                    
+                    ScrollView(.horizontal, showsIndicators: false) {
+                        LazyHStack(spacing: 10) {
+                            ForEach(viewModel.musicMemo.music) { music in
+                                LessonMusicView(
+                                    imgStr: music.artwork,
+                                    width: 100,
+                                    height: 100,
+                                    artist: music.artist,
+                                    songTitle: music.songTitle,
+                                    duration: music.duration
+                                )
+                                .padding(.trailing)
+                            }
+                        }
+                    }
+                    
+                    Divider()
+                        .background(Color.black.opacity(0.5))
+                        .padding(.vertical, 10)
+                    
+                    Text("오늘 \(viewModel.musicMemo.lessonType.toTitle) 메모")
+                        .font(.system(size: 17, weight: .bold))
+                    LessonMemoView(memo: viewModel.musicMemo.memoText)
+                    
+                    Text("오늘 \(viewModel.musicMemo.lessonType.toTitle) 시간")
+                        .font(.system(size: 17, weight: .bold))
+                        .padding(.top, 40)
+                    
+                    LessonTimeCircleView(
+                        total: 60,
+                        progress: viewModel.musicMemo.endTime.changedToMinutes(startDate: viewModel.musicMemo.startTime),
+                        totalTime: viewModel.musicMemo.endTime.changedToTime(startDate: viewModel.musicMemo.startTime)
                     )
+                    .frame(maxWidth: .infinity, alignment: .center)
+                    
+                    LessonTimeView(
+                        startTime: viewModel.musicMemo.startTime.formattedString(dateFormat: .hourMinutes),
+                        endTime: viewModel.musicMemo.endTime.formattedString(dateFormat: .hourMinutes),
+                        lessonType: viewModel.musicMemo.lessonType
+                    )
+                    .padding(.vertical)
+                    .padding(.top, 20)
                 }
-            }
-            .padding(.horizontal)
-            .toolbar {
-                ToolbarItem(placement: .topBarTrailing) {
-                    Menu("더보기") {
+                .toolbar {
+                    ToolbarItem(placement: .topBarTrailing) {
                         Button(action: {
-                            print("하이루")
-                        }, label: {
-                            Text("수정")
-                        })
-                        
-                        Button(action: {
-                            // MARK: alert 띄우기
-                            print("하이루")
-                            viewModel.removeMemo()
-                            dismiss()
+                            isShowAlert = true
                         }, label: {
                             Text("삭제")
                         })
                     }
-                    .buttonStyle(.plain)
                 }
+            }
+            .padding(.trailing)
+            .padding()
+            .scrollIndicators(.hidden)
+            .showAlert(isPresented: $isShowAlert, alertTitle: "게시글 삭제", alertSubTitle: "정말 삭제하시겠습니까?") {
+                viewModel.removeMemo()
+                dismiss()
             }
         }
     }

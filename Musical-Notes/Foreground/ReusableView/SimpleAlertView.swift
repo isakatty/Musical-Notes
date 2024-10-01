@@ -46,7 +46,7 @@ struct SimpleAlertView: View {
                     RoundedRectangle(cornerRadius: 10)
                         .fill(.ivoryBlue)
                         .overlay {
-                            Text("확인")
+                            Text("취소")
                                 .customFont()
                                 .foregroundStyle(.white)
                         }
@@ -58,7 +58,7 @@ struct SimpleAlertView: View {
                     RoundedRectangle(cornerRadius: 10)
                         .fill(.ivoryBlue)
                         .overlay {
-                            Text("취소")
+                            Text("확인")
                                 .customFont()
                                 .foregroundStyle(.white)
                         }
