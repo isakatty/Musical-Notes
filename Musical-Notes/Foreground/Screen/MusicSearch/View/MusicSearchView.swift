@@ -13,11 +13,12 @@ struct MusicSearchView: View {
     @Environment(\.dismiss) private var dismiss
     @Environment(\.scenePhase) var scenePhase
     
+    @State private var searchOffSet: Int = 0
+    
     var body: some View {
         ScrollView {
             LazyVStack {
                 if viewModel.musics.isEmpty {
-                    
                     Text("음악을 검색해주세요")
                         .customFont()
                 } else {
@@ -41,7 +42,17 @@ struct MusicSearchView: View {
                             parentVM.selectedMusics.append(music)
                             dismiss()
                         }
+                        
                     }
+                }
+                if viewModel.hasNextBatch {
+                    ProgressView()
+                        .onAppear {
+                            searchOffSet += 25
+                            Task {
+                                await viewModel.searchMusic(viewModel.searchTxt, offset: searchOffSet)
+                            }
+                        }
                 }
             }
         }
@@ -52,7 +63,7 @@ struct MusicSearchView: View {
         .searchable(text: $viewModel.searchTxt)
         .onSubmit(of: .search) {
             Task {
-                await viewModel.searchMusic(viewModel.searchTxt)
+                await viewModel.searchMusic(viewModel.searchTxt, offset: searchOffSet)
             }
         }
         .showOneBtnAlert(isPresented: $viewModel.isAuthorized, alertTitle: "권한 설정이 필요합니다.", alertSubTitle: "음악 검색을 위해서는 미디어 권한 설정을 허용해야 가능합니다.", btnText: "설정으로 이동") {

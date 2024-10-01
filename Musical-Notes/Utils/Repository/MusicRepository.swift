@@ -20,17 +20,17 @@ final class MusicRepository {
         }
     }
     
-    func fetchMusic(_ txt: String) async -> [SearchedSong] {
+    func fetchMusic(_ txt: String, offset: Int = 0) async -> MusicSearchResult {
         if isMusicAuthorized {
             var request = MusicCatalogSearchRequest(term: txt, types: [Song.self])
             request.limit = 25
-            request.offset = 0
+            request.offset = offset
             
             let result = try? await request.response()
             
             guard let result else {
                 print("result 없음")
-                return []
+                return MusicSearchResult(songs: [], hasNextBatch: false)
             }
             
             let searchedSongs = result.songs.map { song in
@@ -45,9 +45,12 @@ final class MusicRepository {
                     albumTitle: song.albumTitle
                 )
             }
-            return searchedSongs
+            
+            let hasNextBatch = result.songs.hasNextBatch
+            
+            return MusicSearchResult(songs: searchedSongs, hasNextBatch: hasNextBatch)
         } else {
-            return []
+            return MusicSearchResult(songs: [], hasNextBatch: false)
         }
     }
     

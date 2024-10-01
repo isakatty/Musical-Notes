@@ -56,6 +56,7 @@
 		C9C5F91C2CAA7EB800C25556 /* SimpleAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C5F91B2CAA7EB800C25556 /* SimpleAlertView.swift */; };
 		C9C5F91E2CAA97B800C25556 /* OneBtnAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C5F91D2CAA97B800C25556 /* OneBtnAlertView.swift */; };
 		C9C5F9202CAA9A0300C25556 /* OneBtnAlertModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C5F91F2CAA9A0300C25556 /* OneBtnAlertModifier.swift */; };
+		C9C5F9292CABCB4600C25556 /* MusicSearchResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C5F9282CABCB4600C25556 /* MusicSearchResult.swift */; };
 		C9CB200F2C9BF718005DECF7 /* CustomTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9CB200E2C9BF718005DECF7 /* CustomTabView.swift */; };
 		C9CB20112C9BF739005DECF7 /* TabModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9CB20102C9BF739005DECF7 /* TabModel.swift */; };
 		C9CB20132C9BF7C1005DECF7 /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9CB20122C9BF7C1005DECF7 /* CalendarView.swift */; };
@@ -145,6 +146,7 @@
 		C9C5F91B2CAA7EB800C25556 /* SimpleAlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleAlertView.swift; sourceTree = "<group>"; };
 		C9C5F91D2CAA97B800C25556 /* OneBtnAlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneBtnAlertView.swift; sourceTree = "<group>"; };
 		C9C5F91F2CAA9A0300C25556 /* OneBtnAlertModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneBtnAlertModifier.swift; sourceTree = "<group>"; };
+		C9C5F9282CABCB4600C25556 /* MusicSearchResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicSearchResult.swift; sourceTree = "<group>"; };
 		C9CB200E2C9BF718005DECF7 /* CustomTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabView.swift; sourceTree = "<group>"; };
 		C9CB20102C9BF739005DECF7 /* TabModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabModel.swift; sourceTree = "<group>"; };
 		C9CB20122C9BF7C1005DECF7 /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
@@ -565,6 +567,7 @@
 			isa = PBXGroup;
 			children = (
 				C9FF72D92CA3F8CB00ACF94F /* SearchedSong.swift */,
+				C9C5F9282CABCB4600C25556 /* MusicSearchResult.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -728,6 +731,7 @@
 				C904FA482C9C226B00D1C2DB /* Date+.swift in Sources */,
 				C98690322CA1978B00418A61 /* AddMemoView.swift in Sources */,
 				C9AC16682CA2BACA00251F38 /* AddMemoViewModel.swift in Sources */,
+				C9C5F9292CABCB4600C25556 /* MusicSearchResult.swift in Sources */,
 				C9CB20242C9BFEAA005DECF7 /* LazyNavigationView.swift in Sources */,
 				C9FF72E32CA43F3600ACF94F /* TwoBtnAlertModifier.swift in Sources */,
 				C904FA4E2C9C575100D1C2DB /* LessonCardView.swift in Sources */,
