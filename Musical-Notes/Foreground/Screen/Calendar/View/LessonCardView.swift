@@ -20,7 +20,7 @@ struct LessonCardView: View {
                     Text(memo.lessonType.toTitle)
                         .customFont(font: .thin, fontSize: 13)
                         .foregroundStyle(Color(uiColor: .darkGray))
-                    Text("\(memo.music.first?.artist ?? "") | \(memo.music.first?.albumTitle ?? "")")
+                    Text("\(memo.music.first?.artist ?? "")")
                         .customFont(font: .regular, fontSize: 14)
                         .foregroundStyle(Color(uiColor: .darkGray))
                     Text("\(memo.music.first?.songTitle ?? "")")
