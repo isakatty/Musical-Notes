@@ -12,6 +12,7 @@ final class FeedViewModel: ObservableObject {
     @Published var musics = [MNotesMusic]()
     
     func fetchMusics() {
+//        RealmRepository.shared.removeMusics()
         musics = Array(RealmRepository.shared.fetchMusics())
     }
 }

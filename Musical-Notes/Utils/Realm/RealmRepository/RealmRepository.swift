@@ -58,6 +58,26 @@ final class RealmRepository {
         return realm.objects(MNotesMusic.self)
     }
     
+    func removeMusics() {
+        let allMusics = realm.objects(MNotesMusic.self)
+        
+        for music in allMusics {
+            do {
+                try realm.write {
+                    if findMemoInMusic(music: music) {
+                        realm.delete(music)
+                    }
+                }
+            } catch {
+                print("Music 삭제 실패")
+            }
+        }
+    }
+    
+    func findMemoInMusic(music: MNotesMusic) -> Bool {
+        return music.memos.isEmpty ? true : false
+    }
+    
     func filterMemoWithDate(selected: Date) -> Results<MNotesMemo> {
         let calendar = Calendar.current
         let startOfDay = calendar.startOfDay(for: selected)
