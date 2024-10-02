@@ -37,7 +37,7 @@ final class MNotesMemo: Object, ObjectKeyIdentifiable {
     
 }
 
-enum MNotes: String, PersistableEnum {
+enum MNotes: Int, PersistableEnum {
     case lesson
     case practice
     

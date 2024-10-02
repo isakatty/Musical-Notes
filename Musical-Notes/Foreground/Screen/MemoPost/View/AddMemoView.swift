@@ -17,8 +17,13 @@ struct AddMemoView: View {
         ScrollView {
             VStack(alignment: .leading) {
                 Text(viewModel.memoDate.formattedString(dateFormat: .yearMonthDayDate))
-                    .customFont()
+                    .customFont(font: .medium, fontSize: 20)
                     .frame(maxWidth: .infinity, alignment: .center)
+                
+                CustomPickerView(preselectedIndex: $viewModel.selectedSeg, options: MNotes.allCases)
+                    .frame(width: 200)
+                    .frame(maxWidth: .infinity, alignment: .center)
+                    .padding(.bottom, 20)
                 
                 DatePicker(selection: $viewModel.startTime, displayedComponents: [.hourAndMinute]) {
                     EmptyView()

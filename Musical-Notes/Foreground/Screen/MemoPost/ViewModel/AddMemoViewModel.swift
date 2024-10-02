@@ -15,6 +15,7 @@ final class AddMemoViewModel: ObservableObject {
     @Published var memoText: String = ""
     
     @Published var selectedMusics: [MNotesMusic] = []
+    @Published var selectedSeg: Int = 0
     
     init(memoDate: Date) {
         self.memoDate = memoDate
@@ -34,14 +35,13 @@ final class AddMemoViewModel: ObservableObject {
         return true
     }
     func saveMemo(memoDate: Date, start: Date, end: Date, memo: String, musics: [MNotesMusic]) {
-                                                                                                // MARK: lesson Type 수정해야함.
         var adjustedEnd = end
             
         if end < start {
             adjustedEnd = Calendar.current.date(byAdding: .day, value: 1, to: end) ?? Date()
         }
     
-        let memo = MNotesMemo(regDate: memoDate, startTime: start, endTime: adjustedEnd, memoText: memo, lessonType: .practice)
+        let memo = MNotesMemo(regDate: memoDate, startTime: start, endTime: adjustedEnd, memoText: memo, lessonType: MNotes(rawValue: selectedSeg) ?? .practice)
         RealmRepository.shared.addMemoToMusic(musics: musics, memo: memo)
     }
     
