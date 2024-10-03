@@ -9,6 +9,7 @@ import SwiftUI
 
 struct FeedRecordView: View {
     @StateObject var viewModel: FeedRecordViewModel
+    @Environment(\.dismiss) private var dismiss
     
     init(viewModel: FeedRecordViewModel) {
         _viewModel = StateObject(wrappedValue: viewModel)
@@ -16,19 +17,18 @@ struct FeedRecordView: View {
     
     var body: some View {
         VStack(alignment: .leading) {
-            ScrollView {
-                LazyVStack(alignment: .leading) {
-                    ForEach(viewModel.music.memos) { memo in
-                        FeedRecordMemoView(musicMemo: memo)
-                    }
-                }
-                .background(.white)
-            }
-            .scrollIndicators(.hidden)
+            FeedRecordTestView(music: viewModel.music)
         }
-        .frame(maxWidth: .infinity)
-        .padding(.horizontal)
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
         .navigationTitle(viewModel.music.songTitle)
+        .background(Color.secondaryBG)
+        .onAppear {
+            viewModel.fetchMusic()
+            
+            if viewModel.music.memos.isEmpty {
+                dismiss()
+            }
+        }
     }
 }
 

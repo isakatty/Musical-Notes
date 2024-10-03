@@ -32,10 +32,11 @@ struct CustomPickerView: View {
                 }
                 .overlay(
                     Text(options[index].toTitle)
+                        .customFont()
                 )
             }
         }
-        .frame(height: 40)
+        .frame(height: 30)
         .cornerRadius(20)
     }
 }

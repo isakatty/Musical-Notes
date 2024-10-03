@@ -86,6 +86,13 @@ struct FeedView: View {
         .padding(.horizontal)
         .onAppear {
             viewModel.fetchMusics()
+            print(currentIndex)
         }
+        .customOnChange(count: viewModel.musics.count, currentIndex: $currentIndex)
+//        .onChange(of: viewModel.musics.count, perform: { value in
+//            if viewModel.musics.count < value {
+//                currentIndex = currentIndex != 0 ? currentIndex - 1 : 0
+//            }
+//        })
     }
 }

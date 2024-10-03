@@ -14,4 +14,8 @@ final class FeedRecordViewModel: ObservableObject {
     init(music: MNotesMusic) {
         self.music = music
     }
+    
+    func fetchMusic() {
+        music = RealmRepository.shared.fetchSpecificMusic(music: music) ?? music
+    }
 }

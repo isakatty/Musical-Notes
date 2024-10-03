@@ -19,7 +19,7 @@ struct CalendarView: View {
         calendar.appearance.todayColor = .clear
         calendar.appearance.titleTodayColor = .black
         calendar.appearance.selectionColor = .ivoryBlue
-        calendar.appearance.weekdayTextColor = .lightsGray
+        calendar.appearance.weekdayTextColor = .gray
         calendar.appearance.eventDefaultColor = .ivoryBlue
         calendar.scrollEnabled = true
         calendar.placeholderType = .none
@@ -39,7 +39,7 @@ struct CalendarView: View {
                     
                     RoundedRectangle(cornerRadius: 10)
                         .fill(.white)
-                        .shadow(radius: 5)
+                        .shadow(color: .ivoryBlue.opacity(0.4), radius: 2)
                         .overlay {
                             FSCalendarView(viewModel: viewModel, fsCalendar: fsCalendar)
                                 .frame(height: viewModel.isSelectedScope ? 100 : 350)

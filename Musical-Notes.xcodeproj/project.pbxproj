@@ -19,6 +19,12 @@
 		C909A52B2CA1853F007E6A61 /* LessonMemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C909A52A2CA1853F007E6A61 /* LessonMemoView.swift */; };
 		C909A52D2CA19229007E6A61 /* LessonTimeCircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C909A52C2CA19229007E6A61 /* LessonTimeCircleView.swift */; };
 		C92FA47A2CAD3DE200AD9502 /* CustomPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C92FA4792CAD3DE200AD9502 /* CustomPickerView.swift */; };
+		C92FA47C2CAD8CAC00AD9502 /* FeedRecordTestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C92FA47B2CAD8CAC00AD9502 /* FeedRecordTestView.swift */; };
+		C95535D02CAE5C8C00DDCE4D /* FeedRecordDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C95535CF2CAE5C8C00DDCE4D /* FeedRecordDetailView.swift */; };
+		C95535D22CAE5ECF00DDCE4D /* FeedDetailRectangleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C95535D12CAE5ECF00DDCE4D /* FeedDetailRectangleView.swift */; };
+		C95535D42CAE638B00DDCE4D /* TitleCategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C95535D32CAE638B00DDCE4D /* TitleCategoryView.swift */; };
+		C95535D62CAE8C6F00DDCE4D /* FeedRecordListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C95535D52CAE8C6F00DDCE4D /* FeedRecordListView.swift */; };
+		C95535D82CAEC61F00DDCE4D /* CustomOnChangeModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = C95535D72CAEC61F00DDCE4D /* CustomOnChangeModifier.swift */; };
 		C960F57B2CA555370068177B /* FeedMusicTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C960F57A2CA555370068177B /* FeedMusicTitleView.swift */; };
 		C960F57D2CA5561D0068177B /* LessonMemoDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C960F57C2CA5561D0068177B /* LessonMemoDetailViewModel.swift */; };
 		C960F57F2CA5745B0068177B /* Int+.swift in Sources */ = {isa = PBXBuildFile; fileRef = C960F57E2CA5745B0068177B /* Int+.swift */; };
@@ -110,6 +116,12 @@
 		C909A52A2CA1853F007E6A61 /* LessonMemoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonMemoView.swift; sourceTree = "<group>"; };
 		C909A52C2CA19229007E6A61 /* LessonTimeCircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonTimeCircleView.swift; sourceTree = "<group>"; };
 		C92FA4792CAD3DE200AD9502 /* CustomPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPickerView.swift; sourceTree = "<group>"; };
+		C92FA47B2CAD8CAC00AD9502 /* FeedRecordTestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedRecordTestView.swift; sourceTree = "<group>"; };
+		C95535CF2CAE5C8C00DDCE4D /* FeedRecordDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedRecordDetailView.swift; sourceTree = "<group>"; };
+		C95535D12CAE5ECF00DDCE4D /* FeedDetailRectangleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedDetailRectangleView.swift; sourceTree = "<group>"; };
+		C95535D32CAE638B00DDCE4D /* TitleCategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleCategoryView.swift; sourceTree = "<group>"; };
+		C95535D52CAE8C6F00DDCE4D /* FeedRecordListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedRecordListView.swift; sourceTree = "<group>"; };
+		C95535D72CAEC61F00DDCE4D /* CustomOnChangeModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomOnChangeModifier.swift; sourceTree = "<group>"; };
 		C960F57A2CA555370068177B /* FeedMusicTitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedMusicTitleView.swift; sourceTree = "<group>"; };
 		C960F57C2CA5561D0068177B /* LessonMemoDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonMemoDetailViewModel.swift; sourceTree = "<group>"; };
 		C960F57E2CA5745B0068177B /* Int+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+.swift"; sourceTree = "<group>"; };
@@ -431,6 +443,10 @@
 			children = (
 				C9BE4C4F2CA81E05005C8024 /* FeedRecordView.swift */,
 				C98ED9162CA93BF100D43D53 /* FeedRecordMemoView.swift */,
+				C92FA47B2CAD8CAC00AD9502 /* FeedRecordTestView.swift */,
+				C95535CF2CAE5C8C00DDCE4D /* FeedRecordDetailView.swift */,
+				C95535D12CAE5ECF00DDCE4D /* FeedDetailRectangleView.swift */,
+				C95535D52CAE8C6F00DDCE4D /* FeedRecordListView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -495,6 +511,7 @@
 				C9FF72DE2CA4376900ACF94F /* DotCategoryModifier.swift */,
 				C9FF72E22CA43F3600ACF94F /* TwoBtnAlertModifier.swift */,
 				C9C5F91F2CAA9A0300C25556 /* OneBtnAlertModifier.swift */,
+				C95535D72CAEC61F00DDCE4D /* CustomOnChangeModifier.swift */,
 			);
 			path = ViewModifier;
 			sourceTree = "<group>";
@@ -508,6 +525,7 @@
 				C960F5802CA5B50E0068177B /* EncourageMemoView.swift */,
 				C9C5F91B2CAA7EB800C25556 /* SimpleAlertView.swift */,
 				C9C5F91D2CAA97B800C25556 /* OneBtnAlertView.swift */,
+				C95535D32CAE638B00DDCE4D /* TitleCategoryView.swift */,
 			);
 			path = ReusableView;
 			sourceTree = "<group>";
@@ -694,6 +712,7 @@
 				C960F57F2CA5745B0068177B /* Int+.swift in Sources */,
 				C9FF72ED2CA45D7C00ACF94F /* FeedViewModel.swift in Sources */,
 				C9AC16772CA2D21D00251F38 /* MNotesMusic.swift in Sources */,
+				C95535D42CAE638B00DDCE4D /* TitleCategoryView.swift in Sources */,
 				C98690352CA1AAFF00418A61 /* MusicSearchView.swift in Sources */,
 				C909A5272CA15006007E6A61 /* MusicInfoDetailView.swift in Sources */,
 				C9AC16662CA2A32200251F38 /* MusicSearchCompoView.swift in Sources */,
@@ -709,12 +728,15 @@
 				C9CB202F2C9C1DEB005DECF7 /* CalendarViewModel.swift in Sources */,
 				C9AC167A2CA2D29C00251F38 /* MNotesMemo.swift in Sources */,
 				C904FA452C9C20BF00D1C2DB /* DateFormat.swift in Sources */,
+				C95535D22CAE5ECF00DDCE4D /* FeedDetailRectangleView.swift in Sources */,
+				C95535D82CAEC61F00DDCE4D /* CustomOnChangeModifier.swift in Sources */,
 				C989B8832C9D1A72004FD90D /* Color+.swift in Sources */,
 				C9CB200F2C9BF718005DECF7 /* CustomTabView.swift in Sources */,
 				C9AC167C2CA2D4F100251F38 /* RealmRepository.swift in Sources */,
 				C9C5F91C2CAA7EB800C25556 /* SimpleAlertView.swift in Sources */,
 				C9CB20192C9BF909005DECF7 /* TabBarAccess.swift in Sources */,
 				C9FF89122C9DB82E004AF325 /* Constant.swift in Sources */,
+				C95535D02CAE5C8C00DDCE4D /* FeedRecordDetailView.swift in Sources */,
 				C98ED91B2CA972E700D43D53 /* FeedRecordViewModel.swift in Sources */,
 				C9CB201E2C9BFC1B005DECF7 /* NotesTabView.swift in Sources */,
 				C9CB20112C9BF739005DECF7 /* TabModel.swift in Sources */,
@@ -729,6 +751,7 @@
 				C989B8872C9D5383004FD90D /* LessonDetailView.swift in Sources */,
 				C9C5F9202CAA9A0300C25556 /* OneBtnAlertModifier.swift in Sources */,
 				C9CB20152C9BF7CE005DECF7 /* FeedView.swift in Sources */,
+				C95535D62CAE8C6F00DDCE4D /* FeedRecordListView.swift in Sources */,
 				C989B8792C9D09B1004FD90D /* PretendardFontType.swift in Sources */,
 				C9FF72D82CA3ED4D00ACF94F /* MusicRepository.swift in Sources */,
 				C960F57D2CA5561D0068177B /* LessonMemoDetailViewModel.swift in Sources */,
@@ -740,6 +763,7 @@
 				C9FF72E32CA43F3600ACF94F /* TwoBtnAlertModifier.swift in Sources */,
 				C904FA4E2C9C575100D1C2DB /* LessonCardView.swift in Sources */,
 				C98ED9172CA93BF100D43D53 /* FeedRecordMemoView.swift in Sources */,
+				C92FA47C2CAD8CAC00AD9502 /* FeedRecordTestView.swift in Sources */,
 				C96BC6B82C9BD53400C5B5AE /* Musical_NotesApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -69,6 +69,7 @@ struct MNotesCarousel<Content: View, T: Identifiable>: View {
             )
         }
         .animation(.easeInOut, value: offset == 0)
+        .customOnChange(count: list.count, currentIndex: $currentIndex)
     }
 }
 

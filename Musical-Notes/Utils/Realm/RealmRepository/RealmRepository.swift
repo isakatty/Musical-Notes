@@ -96,4 +96,8 @@ final class RealmRepository {
             print("delete Error")
         }
     }
+    
+    func fetchSpecificMusic(music: MNotesMusic) -> MNotesMusic? {
+        return realm.object(ofType: MNotesMusic.self, forPrimaryKey: music.id)
+    }
 }

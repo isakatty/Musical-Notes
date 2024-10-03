@@ -62,6 +62,7 @@ struct MusicSearchView: View {
         .padding(.horizontal)
         .searchable(text: $viewModel.searchTxt)
         .onSubmit(of: .search) {
+            viewModel.musics = []
             Task {
                 await viewModel.searchMusic(viewModel.searchTxt, offset: searchOffSet)
             }

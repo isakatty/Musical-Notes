@@ -71,7 +71,7 @@ struct CalendarRecordsView: View {
             .customFont(font: .medium, fontSize: 17)
             Spacer(minLength: 0)
             Rectangle()
-                .fill(.black)
+                .fill(.ivoryBlue)
                 .frame(width: 1)
         }
     }
