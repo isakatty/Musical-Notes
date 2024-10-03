@@ -35,7 +35,7 @@ struct LessonCardView: View {
         .frame(height: 100)
         .overlay(
             RoundedRectangle(cornerRadius: 10)
-                .stroke(Color.ivoryBlue, lineWidth: 0.6)
+                .stroke(Color.lightsGray, lineWidth: 0.6)
         )
     }
 }

@@ -18,6 +18,7 @@
 		C909A5292CA158BA007E6A61 /* LessonTimeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C909A5282CA158BA007E6A61 /* LessonTimeView.swift */; };
 		C909A52B2CA1853F007E6A61 /* LessonMemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C909A52A2CA1853F007E6A61 /* LessonMemoView.swift */; };
 		C909A52D2CA19229007E6A61 /* LessonTimeCircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C909A52C2CA19229007E6A61 /* LessonTimeCircleView.swift */; };
+		C923F8162CAEE5AC009D70F5 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C923F8152CAEE5AC009D70F5 /* Launch Screen.storyboard */; };
 		C92FA47A2CAD3DE200AD9502 /* CustomPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C92FA4792CAD3DE200AD9502 /* CustomPickerView.swift */; };
 		C92FA47C2CAD8CAC00AD9502 /* FeedRecordTestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C92FA47B2CAD8CAC00AD9502 /* FeedRecordTestView.swift */; };
 		C95535D02CAE5C8C00DDCE4D /* FeedRecordDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C95535CF2CAE5C8C00DDCE4D /* FeedRecordDetailView.swift */; };
@@ -115,6 +116,7 @@
 		C909A5282CA158BA007E6A61 /* LessonTimeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonTimeView.swift; sourceTree = "<group>"; };
 		C909A52A2CA1853F007E6A61 /* LessonMemoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonMemoView.swift; sourceTree = "<group>"; };
 		C909A52C2CA19229007E6A61 /* LessonTimeCircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonTimeCircleView.swift; sourceTree = "<group>"; };
+		C923F8152CAEE5AC009D70F5 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		C92FA4792CAD3DE200AD9502 /* CustomPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPickerView.swift; sourceTree = "<group>"; };
 		C92FA47B2CAD8CAC00AD9502 /* FeedRecordTestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedRecordTestView.swift; sourceTree = "<group>"; };
 		C95535CF2CAE5C8C00DDCE4D /* FeedRecordDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedRecordDetailView.swift; sourceTree = "<group>"; };
@@ -382,6 +384,7 @@
 			children = (
 				C96BC6B72C9BD53400C5B5AE /* Musical_NotesApp.swift */,
 				C96BC6B92C9BD53400C5B5AE /* ContentView.swift */,
+				C923F8152CAEE5AC009D70F5 /* Launch Screen.storyboard */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -684,6 +687,7 @@
 				C989B8712C9D08C3004FD90D /* Pretendard-Thin.otf in Resources */,
 				C989B8722C9D08C3004FD90D /* Pretendard-SemiBold.otf in Resources */,
 				C989B8752C9D08C3004FD90D /* Pretendard-Light.otf in Resources */,
+				C923F8162CAEE5AC009D70F5 /* Launch Screen.storyboard in Resources */,
 				C989B8732C9D08C3004FD90D /* Pretendard-Black.otf in Resources */,
 				C989B86E2C9D08C3004FD90D /* Pretendard-Regular.otf in Resources */,
 				C989B86F2C9D08C3004FD90D /* Pretendard-ExtraLight.otf in Resources */,
@@ -895,6 +899,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Musical-Notes/Resources/Preview Content\"";
@@ -902,9 +907,11 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Musical-Notes/Resources/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = Lomuq;
+				INFOPLIST_KEY_NSAppleMusicUsageDescription = "음악 검색을 위해 미디어 권한이 필요합니다.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen.storyboard";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
@@ -931,6 +938,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Musical-Notes/Resources/Preview Content\"";
@@ -938,9 +946,11 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Musical-Notes/Resources/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = Lomuq;
+				INFOPLIST_KEY_NSAppleMusicUsageDescription = "음악 검색을 위해 미디어 권한이 필요합니다.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen.storyboard";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UIUserInterfaceStyle = Light;

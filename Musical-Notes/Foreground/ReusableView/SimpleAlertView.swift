@@ -27,7 +27,7 @@ struct SimpleAlertView: View {
             }
             .frame(maxWidth: .infinity, alignment: .trailing)
             
-            Text("앱이름")
+            Text("Lomuq")
                 .customFont(font: .medium, fontSize: 17)
                 .padding(.bottom, 10)
             
