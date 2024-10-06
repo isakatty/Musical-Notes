@@ -31,6 +31,9 @@ final class MusicSearchViewModel: ObservableObject, MusicRepositoryDelegate {
     }
     
     func searchMusic(_ txt: String, offset: Int = 0) async {
+        isLoading = true
+        defer { isLoading = false }
+        
         let result = await repository.fetchMusic(txt, offset: offset)
         musics.append(contentsOf: result.songs)
         hasNextBatch = result.hasNextBatch

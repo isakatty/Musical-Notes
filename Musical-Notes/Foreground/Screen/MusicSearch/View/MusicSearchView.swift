@@ -11,14 +11,16 @@ struct MusicSearchView: View {
     @StateObject var viewModel = MusicSearchViewModel()
     @ObservedObject var parentVM: AddMemoViewModel
     @Environment(\.dismiss) private var dismiss
-    @Environment(\.scenePhase) var scenePhase
     
     @State private var searchOffSet: Int = 0
     
     var body: some View {
         ScrollView {
             LazyVStack {
-                if viewModel.musics.isEmpty {
+                if viewModel.isLoading {
+                    ProgressView("음악 검색 중!")
+                        .padding()
+                } else if viewModel.musics.isEmpty {
                     Text("음악을 검색해주세요")
                         .customFont()
                 } else {
@@ -42,7 +44,6 @@ struct MusicSearchView: View {
                             parentVM.selectedMusics.append(music)
                             dismiss()
                         }
-                        
                     }
                 }
                 if viewModel.hasNextBatch {
@@ -58,7 +59,6 @@ struct MusicSearchView: View {
         }
         .scrollIndicators(.hidden)
         .frame(maxWidth: .infinity)
-        .listStyle(.plain)
         .padding(.horizontal)
         .searchable(text: $viewModel.searchTxt)
         .onSubmit(of: .search) {
