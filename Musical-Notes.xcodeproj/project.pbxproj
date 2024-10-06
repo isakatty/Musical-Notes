@@ -77,6 +77,7 @@
 		C9CB20292C9C00A6005DECF7 /* FSCalendar in Frameworks */ = {isa = PBXBuildFile; productRef = C9CB20282C9C00A6005DECF7 /* FSCalendar */; };
 		C9CB202B2C9C0149005DECF7 /* FSCalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9CB202A2C9C0149005DECF7 /* FSCalendarView.swift */; };
 		C9CB202F2C9C1DEB005DECF7 /* CalendarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9CB202E2C9C1DEB005DECF7 /* CalendarViewModel.swift */; };
+		C9DB76A72CB2C7EC00226DAB /* MusicSearchBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9DB76A62CB2C7EC00226DAB /* MusicSearchBarView.swift */; };
 		C9FF72D02CA3D51C00ACF94F /* View+.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9FF72CF2CA3D51C00ACF94F /* View+.swift */; };
 		C9FF72D52CA3ED2800ACF94F /* MusicSearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9FF72D42CA3ED2800ACF94F /* MusicSearchViewModel.swift */; };
 		C9FF72D82CA3ED4D00ACF94F /* MusicRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9FF72D72CA3ED4D00ACF94F /* MusicRepository.swift */; };
@@ -174,6 +175,7 @@
 		C9CB20232C9BFEAA005DECF7 /* LazyNavigationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LazyNavigationView.swift; sourceTree = "<group>"; };
 		C9CB202A2C9C0149005DECF7 /* FSCalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FSCalendarView.swift; sourceTree = "<group>"; };
 		C9CB202E2C9C1DEB005DECF7 /* CalendarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewModel.swift; sourceTree = "<group>"; };
+		C9DB76A62CB2C7EC00226DAB /* MusicSearchBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicSearchBarView.swift; sourceTree = "<group>"; };
 		C9FF72CF2CA3D51C00ACF94F /* View+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+.swift"; sourceTree = "<group>"; };
 		C9FF72D42CA3ED2800ACF94F /* MusicSearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicSearchViewModel.swift; sourceTree = "<group>"; };
 		C9FF72D72CA3ED4D00ACF94F /* MusicRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicRepository.swift; sourceTree = "<group>"; };
@@ -402,6 +404,7 @@
 			children = (
 				C98690342CA1AAFF00418A61 /* MusicSearchView.swift */,
 				C9AC16652CA2A32200251F38 /* MusicSearchCompoView.swift */,
+				C9DB76A62CB2C7EC00226DAB /* MusicSearchBarView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -709,6 +712,7 @@
 				C904FA4C2C9C4AEE00D1C2DB /* ButtonActionModifier.swift in Sources */,
 				C960F5812CA5B50E0068177B /* EncourageMemoView.swift in Sources */,
 				C9FF72DF2CA4376900ACF94F /* DotCategoryModifier.swift in Sources */,
+				C9DB76A72CB2C7EC00226DAB /* MusicSearchBarView.swift in Sources */,
 				C9CB20172C9BF7DB005DECF7 /* MyPageView.swift in Sources */,
 				C9FF72F62CA474D300ACF94F /* MNotesCarousel.swift in Sources */,
 				C9C5F91E2CAA97B800C25556 /* OneBtnAlertView.swift in Sources */,
