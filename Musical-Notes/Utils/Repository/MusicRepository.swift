@@ -22,34 +22,41 @@ final class MusicRepository {
     
     func fetchMusic(_ txt: String, offset: Int = 0) async -> MusicSearchResult {
         if isMusicAuthorized {
-            var request = MusicCatalogSearchRequest(term: txt, types: [Song.self])
-            request.limit = 25
-            request.offset = offset
+            let searchURL = URL(string: "https://api.music.apple.com/v1/catalog/kr/search?term=\(txt)&limit=25&offset=\(offset)&types=songs")
             
-            let result = try? await request.response()
-            
-            guard let result else {
-                print("result 없음")
+            guard let searchURL else {
+                print("Search URL 오류", #function)
                 return MusicSearchResult(songs: [], hasNextBatch: false)
             }
             
-            let searchedSongs = result.songs.map { song in
-                let artworkURLStr = song.artwork?.url(width: 300, height: 300)?.absoluteString
-                return SearchedSong(
-                    id: song.id.rawValue,
-                    song: song.title,
-                    artist: song.artistName,
-                    artwork: artworkURLStr,
-                    duration: song.duration,
-                    releaseDate: song.releaseDate,
-                    albumTitle: song.albumTitle
-                )
+            do {
+                let request = MusicDataRequest(urlRequest: URLRequest(url: searchURL))
+                let response = try await request.response()
+                
+                let decoder = JSONDecoder()
+                let result = try decoder.decode(MusicCatalogSearchResponse.self, from: response.data)
+                let searchedSongs = result.songs.map { song in
+                    let artworkURLStr = song.artwork?.url(width: 300, height: 300)?.absoluteString
+                    return SearchedSong(
+                        id: song.id.rawValue,
+                        song: song.title,
+                        artist: song.artistName,
+                        artwork: artworkURLStr,
+                        duration: song.duration,
+                        releaseDate: song.releaseDate,
+                        albumTitle: song.albumTitle
+                    )
+                }
+                
+                let hasNextBatch = result.songs.hasNextBatch
+                
+                return MusicSearchResult(songs: searchedSongs, hasNextBatch: hasNextBatch)
+            } catch {
+                print("에러")
+                return MusicSearchResult(songs: [], hasNextBatch: false)
             }
-            
-            let hasNextBatch = result.songs.hasNextBatch
-            
-            return MusicSearchResult(songs: searchedSongs, hasNextBatch: hasNextBatch)
         } else {
+            print("권한 설정 없음.")
             return MusicSearchResult(songs: [], hasNextBatch: false)
         }
     }
