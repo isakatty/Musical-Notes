@@ -34,6 +34,10 @@
 		C96BC6BA2C9BD53400C5B5AE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96BC6B92C9BD53400C5B5AE /* ContentView.swift */; };
 		C96BC6BC2C9BD53500C5B5AE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C96BC6BB2C9BD53500C5B5AE /* Assets.xcassets */; };
 		C96BC6BF2C9BD53500C5B5AE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C96BC6BE2C9BD53500C5B5AE /* Preview Assets.xcassets */; };
+		C96FE78C2CCB89E100D605F9 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = C96FE78B2CCB89E100D605F9 /* FirebaseAnalytics */; };
+		C96FE78E2CCB89E100D605F9 /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = C96FE78D2CCB89E100D605F9 /* FirebaseCrashlytics */; };
+		C96FE7902CCB89E100D605F9 /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = C96FE78F2CCB89E100D605F9 /* FirebaseMessaging */; };
+		C96FE7922CCB8A5B00D605F9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C96FE7912CCB8A5B00D605F9 /* GoogleService-Info.plist */; };
 		C98690322CA1978B00418A61 /* AddMemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C98690312CA1978B00418A61 /* AddMemoView.swift */; };
 		C98690352CA1AAFF00418A61 /* MusicSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C98690342CA1AAFF00418A61 /* MusicSearchView.swift */; };
 		C989B86D2C9D08C3004FD90D /* Pretendard-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = C989B8642C9D08C3004FD90D /* Pretendard-Medium.otf */; };
@@ -134,6 +138,8 @@
 		C96BC6B92C9BD53400C5B5AE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		C96BC6BB2C9BD53500C5B5AE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C96BC6BE2C9BD53500C5B5AE /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		C96FE7892CCB88A600D605F9 /* Musical-Notes.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Musical-Notes.entitlements"; sourceTree = "<group>"; };
+		C96FE7912CCB8A5B00D605F9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		C98690312CA1978B00418A61 /* AddMemoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMemoView.swift; sourceTree = "<group>"; };
 		C98690342CA1AAFF00418A61 /* MusicSearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicSearchView.swift; sourceTree = "<group>"; };
 		C989B8642C9D08C3004FD90D /* Pretendard-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Medium.otf"; sourceTree = "<group>"; };
@@ -195,7 +201,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				C9AC16722CA2D1FC00251F38 /* RealmSwift in Frameworks */,
+				C96FE78E2CCB89E100D605F9 /* FirebaseCrashlytics in Frameworks */,
+				C96FE7902CCB89E100D605F9 /* FirebaseMessaging in Frameworks */,
 				C9CB20292C9C00A6005DECF7 /* FSCalendar in Frameworks */,
+				C96FE78C2CCB89E100D605F9 /* FirebaseAnalytics in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -271,6 +280,8 @@
 		C96BC6B62C9BD53400C5B5AE /* Musical-Notes */ = {
 			isa = PBXGroup;
 			children = (
+				C96FE7912CCB8A5B00D605F9 /* GoogleService-Info.plist */,
+				C96FE7892CCB88A600D605F9 /* Musical-Notes.entitlements */,
 				C989B87E2C9D15A0004FD90D /* Utils */,
 				C989B87D2C9D1581004FD90D /* Foreground */,
 				C989B87C2C9D14C6004FD90D /* Resources */,
@@ -637,6 +648,9 @@
 			packageProductDependencies = (
 				C9CB20282C9C00A6005DECF7 /* FSCalendar */,
 				C9AC16712CA2D1FC00251F38 /* RealmSwift */,
+				C96FE78B2CCB89E100D605F9 /* FirebaseAnalytics */,
+				C96FE78D2CCB89E100D605F9 /* FirebaseCrashlytics */,
+				C96FE78F2CCB89E100D605F9 /* FirebaseMessaging */,
 			);
 			productName = "Musical-Notes";
 			productReference = C96BC6B42C9BD53400C5B5AE /* Musical-Notes.app */;
@@ -669,6 +683,7 @@
 			packageReferences = (
 				C9CB20272C9C00A6005DECF7 /* XCRemoteSwiftPackageReference "FSCalendar" */,
 				C9AC16702CA2D1FC00251F38 /* XCRemoteSwiftPackageReference "realm-swift" */,
+				C96FE78A2CCB89E100D605F9 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 			);
 			productRefGroup = C96BC6B52C9BD53400C5B5AE /* Products */;
 			projectDirPath = "";
@@ -684,6 +699,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C96FE7922CCB8A5B00D605F9 /* GoogleService-Info.plist in Resources */,
 				C96BC6BF2C9BD53500C5B5AE /* Preview Assets.xcassets in Resources */,
 				C989B8702C9D08C3004FD90D /* Pretendard-Bold.otf in Resources */,
 				C989B8742C9D08C3004FD90D /* Pretendard-ExtraBold.otf in Resources */,
@@ -904,6 +920,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
+				CODE_SIGN_ENTITLEMENTS = "Musical-Notes/Musical-Notes.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Musical-Notes/Resources/Preview Content\"";
@@ -943,6 +960,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
+				CODE_SIGN_ENTITLEMENTS = "Musical-Notes/Musical-Notes.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Musical-Notes/Resources/Preview Content\"";
@@ -1000,6 +1018,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		C96FE78A2CCB89E100D605F9 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 11.4.0;
+			};
+		};
 		C9AC16702CA2D1FC00251F38 /* XCRemoteSwiftPackageReference "realm-swift" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/realm/realm-swift.git";
@@ -1019,6 +1045,21 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		C96FE78B2CCB89E100D605F9 /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C96FE78A2CCB89E100D605F9 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+		C96FE78D2CCB89E100D605F9 /* FirebaseCrashlytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C96FE78A2CCB89E100D605F9 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseCrashlytics;
+		};
+		C96FE78F2CCB89E100D605F9 /* FirebaseMessaging */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C96FE78A2CCB89E100D605F9 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseMessaging;
+		};
 		C9AC16712CA2D1FC00251F38 /* RealmSwift */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = C9AC16702CA2D1FC00251F38 /* XCRemoteSwiftPackageReference "realm-swift" */;
