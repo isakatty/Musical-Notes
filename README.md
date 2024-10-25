@@ -32,6 +32,23 @@
 - 검색
     - Apple Music API를 활용한 음악 검색
 
+### 버전 관리
+<img width="500" alt="Version" src="https://github.com/user-attachments/assets/6a16f3ef-aab5-48f9-bc98-a40f9c943aee">
+
+- `Major` : API 변경 혹은 기획 변경으로 앱의 컨셉이 변경된 경우
+- `Minor` : 기능 추가 및 유저에게 보여지는 UI의 변경이 있는 경우
+- `Patch` : 버그 및 기능 수정
+
+<details>
+<summary>버전 변화</summary>
+
+| 버전 | 변경된 내용 |
+| -- | -- |
+| v 1.0.0 | 연습 일지 작성, 음악 검색 |
+| v 1.0.1 | 음악 검색 화면에서 Search Bar 고정 |
+| v 1.1.0 | 음악 검색시 영어로 나오는 이슈 수정 |
+| v 1.2.0 | Remote Push Notification 적용 |
+</details>
 
 ## 주요 기술
 - **Realm 기반 Local DB 설계**
