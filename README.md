@@ -1,4 +1,4 @@
-# Lomuq v 1.0.0
+# Lomuq v 1.2.0
 
 
 ## 프로젝트 소개
@@ -8,7 +8,7 @@
 ## 개발 환경
 ```
 - 개발 인원 : 1명
-- 개발 기간 : 2024.09 - 2024.10 (약 1달)
+- 개발 기간 : 2024.09.19 - 2024.10.04
 - Swift 5.10
 - Xcode 15.3
 - iOS 16.0+
@@ -17,19 +17,30 @@
 
 ## 기술스택
 - SwiftUI, MVVM, MusicKit, Realm Repository
+- Remote push notification
+- Localization
 
-### 핵심 기능
+## 핵심 기능
 | 달력| 기록 | Feed | 곡과 연결된 기록 |
 | --- | --- | --- | --- |
 |<img width="100%" src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FcDGtRv%2FbtsJVJAmWSr%2FFUP6XoY0N73ypsBNbD0KZK%2Fimg.png">|<img width="100%" src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2F2j1g6%2FbtsJVhxDhvk%2FoB9NntMhUoCGGqW0NEyxFK%2Fimg.png">|<img width="90%" src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FMR15w%2FbtsJU8ADu6Q%2FrBkqh9MpKCIaoy2WydygR0%2Fimg.png">|<img width="100%" src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FbPI4gA%2FbtsJV8TT5fZ%2Fpy115xPamSKjv5CirJeKN0%2Fimg.png">|
+
+- 연습 일지 작성
+    - 메모 작성, 삭제
+    - 달력에서 바로보는 연습 일지 기록
+    - 앨범으로 보는 연습 일지 기록
+- 검색
+    - Apple Music API를 활용한 음악 검색
 
 
 ## 주요 기술
 - **Realm 기반 Local DB 설계**
     - **일대다 관계**를 LinkingObjects를 통해 데이터 모델간 연결된 DB 구성
 - **데이터 기반이 아닌 기술 기반의 MusicKit 사용**
-    - 클라이언트(앱)에서 apple music을 통해 직접 검색하지만, API 호출 형식이 아닌 기술기반의 응답값으로 결과 받음
-
+    - 클라이언트(앱)에서 apple music을 통해 직접 검색하지만, API 호출 형식이 아닌 `기술 기반의 응답`값으로 결과 받음
+    - `async`/`await`을 사용한 비동기 데이터 로딩
+    - 데이터 소스를 UI계층과 분리하기 위해 Repository Pattern을 활용해 `의존성 분리`
+        - 필요한 곳에서 해당 repository를 주입하여 사용
 ## 트러블슈팅
 ### 1. MusicKit 검색 기록이 영어로 나오는 이슈
 - 원인
@@ -41,6 +52,8 @@
         ```
         URL(string: "https://api.music.apple.com/v1/catalog/kr/search?term=\(txt)&limit=25&offset=\(offset)&types=songs") 
         ```
+    - 앱 최초 로드시, 지역을 선택하는 뷰를 통해 유저가 원하는 언어로 결과 표출
+        - 해당 정보는 UserDefaults에 저장하여 검색시 위치 정보를 url에 담아 통신
 
 ### 2. onChange 버전 분기처리
 - 원인
@@ -52,6 +65,7 @@
     <img width="712" alt="onChange" src="https://github.com/user-attachments/assets/0202e482-9091-456c-8fb4-8f6987f74eb7">
 
 - 해결
+    - 
     - iOS 버전에 따라 다른 형태의 onChange를 분기처리한 후 같은 동작을 수행할 수 있는 하나의 modifier 생성
         - count 값의 변화를 감지하여, 값이 줄어들면 currentIndex를 감소시키는 형태
     
