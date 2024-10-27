@@ -82,7 +82,6 @@
     <img width="712" alt="onChange" src="https://github.com/user-attachments/assets/0202e482-9091-456c-8fb4-8f6987f74eb7">
 
 - 해결
-    - 
     - iOS 버전에 따라 다른 형태의 onChange를 분기처리한 후 같은 동작을 수행할 수 있는 하나의 modifier 생성
         - count 값의 변화를 감지하여, 값이 줄어들면 currentIndex를 감소시키는 형태
     
