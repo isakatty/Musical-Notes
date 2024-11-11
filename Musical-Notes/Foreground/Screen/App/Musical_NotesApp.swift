@@ -47,6 +47,21 @@ class AppDelegate: NSObject, UIApplicationDelegate {
         
         return true
     }
+    func application(_ application: UIApplication,
+                     didReceiveRemoteNotification userInfo: [AnyHashable: Any],
+                     fetchCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
+        // FCM 메시지의 데이터 페이로드 처리
+        if let messageID = userInfo["gcm.message_id"] {
+            print("Message ID: \(messageID)")
+        }
+        
+        // userInfo를 통해 알림 데이터 처리
+        print("Received remote notification: \(userInfo)")
+        
+        // 데이터를 성공적으로 처리한 후 완료 핸들러 호출
+        completionHandler(.newData)
+    }
+    
 }
 extension AppDelegate: UNUserNotificationCenterDelegate {
     // APNS 등록 성공 시 호출되는 메서드
