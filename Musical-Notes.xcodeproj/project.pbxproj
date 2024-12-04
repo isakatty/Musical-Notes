@@ -281,7 +281,6 @@
 			isa = PBXGroup;
 			children = (
 				C96FE7912CCB8A5B00D605F9 /* GoogleService-Info.plist */,
-				C96FE7892CCB88A600D605F9 /* Musical-Notes.entitlements */,
 				C989B87E2C9D15A0004FD90D /* Utils */,
 				C989B87D2C9D1581004FD90D /* Foreground */,
 				C989B87C2C9D14C6004FD90D /* Resources */,
@@ -361,6 +360,7 @@
 		C989B87C2C9D14C6004FD90D /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				C96FE7892CCB88A600D605F9 /* Musical-Notes.entitlements */,
 				C989B8762C9D08EA004FD90D /* Info.plist */,
 				C989B8632C9D089F004FD90D /* Fonts */,
 				C96BC6BB2C9BD53500C5B5AE /* Assets.xcassets */,
@@ -920,7 +920,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
-				CODE_SIGN_ENTITLEMENTS = "Musical-Notes/Musical-Notes.entitlements";
+				CODE_SIGN_ENTITLEMENTS = "Musical-Notes/Resources/Musical-Notes.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Musical-Notes/Resources/Preview Content\"";
@@ -960,7 +960,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
-				CODE_SIGN_ENTITLEMENTS = "Musical-Notes/Musical-Notes.entitlements";
+				CODE_SIGN_ENTITLEMENTS = "Musical-Notes/Resources/Musical-Notes.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Musical-Notes/Resources/Preview Content\"";
