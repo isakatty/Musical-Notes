@@ -51,10 +51,7 @@ final class MusicSearchViewModel: ObservableObject, MusicRepositoryDelegate {
     func fetchMoreIfNeeded() async {
         guard hasNextBatch else { return }
         
-        let thresholdIndex = musics.index(musics.endIndex, offsetBy: -5)
-        if let currentIndex = musics.firstIndex(where: { $0.id == musics.last?.id }), currentIndex >= thresholdIndex {
-            await searchMusic(searchTxt)
-        }
+        await searchMusic(searchTxt)
     }
     
     func musicAuthorizationDidChange(isAuthorized: Bool) {

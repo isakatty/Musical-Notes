@@ -25,7 +25,8 @@ struct MusicSearchView: View {
             ScrollView {
                 LazyVStack {
                     if viewModel.isLoading && viewModel.musics.isEmpty {
-                        ProgressView("음악 검색 중!").padding()
+                        ProgressView("음악 검색 중!")
+                            .padding()
                     } else if viewModel.musics.isEmpty {
                         Text("음악을 검색해주세요").customFont()
                     } else {
@@ -51,7 +52,7 @@ struct MusicSearchView: View {
                             }
                         }
                     }
-                    if viewModel.hasNextBatch {
+                    if viewModel.hasNextBatch && !viewModel.isLoading {
                         ProgressView("데이터 로딩 중...")
                             .onAppear {
                                 Task {
