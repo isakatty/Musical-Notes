@@ -50,9 +50,11 @@ struct MNotesCarousel<Content: View, T: Identifiable>: View {
             .gesture(
                 DragGesture()
                     .updating($offset) { value, out, _ in
+                        // 유저의 드래그가 일어나는 순간에 사용
                         out = value.translation.width
                     }
                     .onEnded { value in
+                        // Drag 동작이 끝나는 시점에 index를 저장
                         let offsetX = value.translation.width
                         let progress = -offsetX / width
                         let roundIndex = progress.rounded()
