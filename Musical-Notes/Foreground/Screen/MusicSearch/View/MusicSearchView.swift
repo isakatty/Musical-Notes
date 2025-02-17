@@ -49,15 +49,15 @@ struct MusicSearchView: View {
                                 parentVM.selectedMusics.append(music)
                                 dismiss()
                             }
-                            .onAppear {
-                                Task {
-                                    await viewModel.fetchMoreIfNeeded(currentItem: item)
-                                }
-                            }
                         }
                     }
-                    if viewModel.isLoading && !viewModel.musics.isEmpty {
-                        ProgressView()
+                    if viewModel.hasNextBatch {
+                        ProgressView("데이터 로딩 중...")
+                            .onAppear {
+                                Task {
+                                    await viewModel.fetchMoreIfNeeded()
+                                }
+                            }
                     }
                 }
             }
