@@ -21,8 +21,10 @@ final class MusicRepository {
     }
     
     func fetchMusic(_ txt: String, offset: Int = 0) async -> MusicSearchResult {
+        print(offset, #function)
+        
         if isMusicAuthorized {
-            let searchURL = URL(string: "https://api.music.apple.com/v1/catalog/kr/search?term=\(txt)&limit=25&offset=\(offset)&types=songs")
+            let searchURL = MusicSearchRouter(search: txt, offset: offset).toURL
             
             guard let searchURL else {
                 print("Search URL 오류", #function)
@@ -30,7 +32,7 @@ final class MusicRepository {
             }
             
             do {
-                let request = MusicDataRequest(urlRequest: URLRequest(url: searchURL))
+                let request = MusicDataRequest(urlRequest: searchURL.toURLRequest)
                 let response = try await request.response()
                 
                 let decoder = JSONDecoder()
