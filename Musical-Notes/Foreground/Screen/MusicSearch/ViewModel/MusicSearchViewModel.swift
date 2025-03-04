@@ -16,7 +16,8 @@ protocol MusicRepositoryDelegate: AnyObject {
 final class MusicSearchViewModel: ObservableObject, MusicRepositoryDelegate {
     var repository = MusicRepository()
     
-    @Published var searchTxt: String = ""
+    private var searchTxt: String = ""
+    
     @Published var musics = [SearchedSong]()
     @Published var isAuthorized: Bool = false
     @Published var isLoading: Bool = false
@@ -30,14 +31,22 @@ final class MusicSearchViewModel: ObservableObject, MusicRepositoryDelegate {
         isAuthorized = !repository.isMusicAuthorized
     }
     
-    func searchMusic(_ txt: String, isNewSearch: Bool = false) async {
+    deinit {
+        print("= searchViewModel deinit =")
+    }
+    
+    func changedText(text: String) {
+        searchTxt = text
+    }
+    
+    func searchMusic(isNewSearch: Bool = false) async {
         if isNewSearch {
             searchOffset = 0
             musics.removeAll()
         }
         
         isLoading = true
-        let result = await repository.fetchMusic(txt, offset: searchOffset)
+        let result = await repository.fetchMusic(searchTxt, offset: searchOffset)
         isLoading = false
         
         musics.append(contentsOf: result.songs)
@@ -51,7 +60,7 @@ final class MusicSearchViewModel: ObservableObject, MusicRepositoryDelegate {
     func fetchMoreIfNeeded() async {
         guard hasNextBatch else { return }
         
-        await searchMusic(searchTxt)
+        await searchMusic()
     }
     
     func musicAuthorizationDidChange(isAuthorized: Bool) {

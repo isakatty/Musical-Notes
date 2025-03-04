@@ -38,8 +38,13 @@
 		C96FE78E2CCB89E100D605F9 /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = C96FE78D2CCB89E100D605F9 /* FirebaseCrashlytics */; };
 		C96FE7902CCB89E100D605F9 /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = C96FE78F2CCB89E100D605F9 /* FirebaseMessaging */; };
 		C96FE7922CCB8A5B00D605F9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C96FE7912CCB8A5B00D605F9 /* GoogleService-Info.plist */; };
+		C98038102D7723A800CA6A36 /* URL+.swift in Sources */ = {isa = PBXBuildFile; fileRef = C980380F2D7723A800CA6A36 /* URL+.swift */; };
+		C98038122D77304800CA6A36 /* MusicSearchRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C98038112D77304800CA6A36 /* MusicSearchRouter.swift */; };
+		C98038142D77304F00CA6A36 /* TargetType.swift in Sources */ = {isa = PBXBuildFile; fileRef = C98038132D77304F00CA6A36 /* TargetType.swift */; };
+		C98038162D77306900CA6A36 /* URLConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = C98038152D77306900CA6A36 /* URLConvertible.swift */; };
 		C98690322CA1978B00418A61 /* AddMemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C98690312CA1978B00418A61 /* AddMemoView.swift */; };
 		C98690352CA1AAFF00418A61 /* MusicSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C98690342CA1AAFF00418A61 /* MusicSearchView.swift */; };
+		C986E3832D770A060022D553 /* Scheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = C986E3822D770A060022D553 /* Scheme.swift */; };
 		C989B86D2C9D08C3004FD90D /* Pretendard-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = C989B8642C9D08C3004FD90D /* Pretendard-Medium.otf */; };
 		C989B86E2C9D08C3004FD90D /* Pretendard-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = C989B8652C9D08C3004FD90D /* Pretendard-Regular.otf */; };
 		C989B86F2C9D08C3004FD90D /* Pretendard-ExtraLight.otf in Resources */ = {isa = PBXBuildFile; fileRef = C989B8662C9D08C3004FD90D /* Pretendard-ExtraLight.otf */; };
@@ -140,8 +145,13 @@
 		C96BC6BE2C9BD53500C5B5AE /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		C96FE7892CCB88A600D605F9 /* Musical-Notes.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Musical-Notes.entitlements"; sourceTree = "<group>"; };
 		C96FE7912CCB8A5B00D605F9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		C980380F2D7723A800CA6A36 /* URL+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+.swift"; sourceTree = "<group>"; };
+		C98038112D77304800CA6A36 /* MusicSearchRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicSearchRouter.swift; sourceTree = "<group>"; };
+		C98038132D77304F00CA6A36 /* TargetType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TargetType.swift; sourceTree = "<group>"; };
+		C98038152D77306900CA6A36 /* URLConvertible.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLConvertible.swift; sourceTree = "<group>"; };
 		C98690312CA1978B00418A61 /* AddMemoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMemoView.swift; sourceTree = "<group>"; };
 		C98690342CA1AAFF00418A61 /* MusicSearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicSearchView.swift; sourceTree = "<group>"; };
+		C986E3822D770A060022D553 /* Scheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scheme.swift; sourceTree = "<group>"; };
 		C989B8642C9D08C3004FD90D /* Pretendard-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Medium.otf"; sourceTree = "<group>"; };
 		C989B8652C9D08C3004FD90D /* Pretendard-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Regular.otf"; sourceTree = "<group>"; };
 		C989B8662C9D08C3004FD90D /* Pretendard-ExtraLight.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-ExtraLight.otf"; sourceTree = "<group>"; };
@@ -227,6 +237,7 @@
 				C9FF72CF2CA3D51C00ACF94F /* View+.swift */,
 				C9FF72DB2CA3FE9000ACF94F /* TimeInterval+.swift */,
 				C960F57E2CA5745B0068177B /* Int+.swift */,
+				C980380F2D7723A800CA6A36 /* URL+.swift */,
 			);
 			path = "Extenstion+";
 			sourceTree = "<group>";
@@ -332,6 +343,17 @@
 			path = MusicSearch;
 			sourceTree = "<group>";
 		};
+		C986E3812D7709FF0022D553 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				C986E3822D770A060022D553 /* Scheme.swift */,
+				C98038112D77304800CA6A36 /* MusicSearchRouter.swift */,
+				C98038132D77304F00CA6A36 /* TargetType.swift */,
+				C98038152D77306900CA6A36 /* URLConvertible.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
 		C989B8632C9D089F004FD90D /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
@@ -383,6 +405,7 @@
 		C989B87E2C9D15A0004FD90D /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				C986E3812D7709FF0022D553 /* Network */,
 				C9FF72D62CA3ED4400ACF94F /* Repository */,
 				C9AC16732CA2D20800251F38 /* Realm */,
 				C904FA462C9C226400D1C2DB /* Extenstion+ */,
@@ -734,11 +757,13 @@
 				C9C5F91E2CAA97B800C25556 /* OneBtnAlertView.swift in Sources */,
 				C9FF72D52CA3ED2800ACF94F /* MusicSearchViewModel.swift in Sources */,
 				C960F57F2CA5745B0068177B /* Int+.swift in Sources */,
+				C986E3832D770A060022D553 /* Scheme.swift in Sources */,
 				C9FF72ED2CA45D7C00ACF94F /* FeedViewModel.swift in Sources */,
 				C9AC16772CA2D21D00251F38 /* MNotesMusic.swift in Sources */,
 				C95535D42CAE638B00DDCE4D /* TitleCategoryView.swift in Sources */,
 				C98690352CA1AAFF00418A61 /* MusicSearchView.swift in Sources */,
 				C909A5272CA15006007E6A61 /* MusicInfoDetailView.swift in Sources */,
+				C98038122D77304800CA6A36 /* MusicSearchRouter.swift in Sources */,
 				C9AC16662CA2A32200251F38 /* MusicSearchCompoView.swift in Sources */,
 				C9FF72DC2CA3FE9000ACF94F /* TimeInterval+.swift in Sources */,
 				C904FA4A2C9C44F000D1C2DB /* TopMonthView.swift in Sources */,
@@ -764,15 +789,18 @@
 				C98ED91B2CA972E700D43D53 /* FeedRecordViewModel.swift in Sources */,
 				C9CB201E2C9BFC1B005DECF7 /* NotesTabView.swift in Sources */,
 				C9CB20112C9BF739005DECF7 /* TabModel.swift in Sources */,
+				C98038102D7723A800CA6A36 /* URL+.swift in Sources */,
 				C9FF72DA2CA3F8CB00ACF94F /* SearchedSong.swift in Sources */,
 				C960F57B2CA555370068177B /* FeedMusicTitleView.swift in Sources */,
 				C9CB201B2C9BF929005DECF7 /* TabBarButtonStyle.swift in Sources */,
 				C989B87B2C9D0DB2004FD90D /* CustomFontModifier.swift in Sources */,
 				C9FF72D02CA3D51C00ACF94F /* View+.swift in Sources */,
 				C96BC6BA2C9BD53400C5B5AE /* ContentView.swift in Sources */,
+				C98038142D77304F00CA6A36 /* TargetType.swift in Sources */,
 				C98ED91F2CA9AA9700D43D53 /* CalendarRecordsView.swift in Sources */,
 				C909A52B2CA1853F007E6A61 /* LessonMemoView.swift in Sources */,
 				C989B8872C9D5383004FD90D /* LessonDetailView.swift in Sources */,
+				C98038162D77306900CA6A36 /* URLConvertible.swift in Sources */,
 				C9C5F9202CAA9A0300C25556 /* OneBtnAlertModifier.swift in Sources */,
 				C9CB20152C9BF7CE005DECF7 /* FeedView.swift in Sources */,
 				C95535D62CAE8C6F00DDCE4D /* FeedRecordListView.swift in Sources */,
