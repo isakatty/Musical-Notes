@@ -949,6 +949,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_ENTITLEMENTS = "Musical-Notes/Resources/Musical-Notes.entitlements";
+				CODE_SIGN_IDENTITY = "Apple Development: jisoo Ham (JLN8HLWVQ5)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "Apple Development: jisoo Ham (JLN8HLWVQ5)";
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
@@ -993,6 +994,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_ENTITLEMENTS = "Musical-Notes/Resources/Musical-Notes.entitlements";
+				CODE_SIGN_IDENTITY = "Apple Development: jisoo Ham (JLN8HLWVQ5)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "Apple Development: jisoo Ham (JLN8HLWVQ5)";
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
