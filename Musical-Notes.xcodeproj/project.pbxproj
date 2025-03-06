@@ -954,7 +954,7 @@
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Musical-Notes/Resources/Preview Content\"";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = T4W7695R5C;
 				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = T4W7695R5C;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -994,12 +994,12 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_ENTITLEMENTS = "Musical-Notes/Resources/Musical-Notes.entitlements";
-				CODE_SIGN_IDENTITY = "Apple Development: jisoo Ham (JLN8HLWVQ5)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "Apple Development: jisoo Ham (JLN8HLWVQ5)";
+				CODE_SIGN_IDENTITY = "Apple Distribution: jisoo Ham (T4W7695R5C)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "Apple Distribution: jisoo Ham (T4W7695R5C)";
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Musical-Notes/Resources/Preview Content\"";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = T4W7695R5C;
 				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = T4W7695R5C;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -1021,7 +1021,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.isakatty.Musical-Notes";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = "match Development com.isakatty.Musical-Notes";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = "match AppStore com.isakatty.Musical-Notes";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
