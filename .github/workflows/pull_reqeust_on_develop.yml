@@ -21,11 +21,6 @@ jobs:
     - name: Clean DerivedData
       run: |
         rm -rf ~/Library/Developer/Xcode/DerivedData
-    
-    - name: Reset and update SPM dependencies
-      run: |
-        swift package reset
-        swift package update
 
     - name: Set up GoogleService-Info.plist
       run: |
