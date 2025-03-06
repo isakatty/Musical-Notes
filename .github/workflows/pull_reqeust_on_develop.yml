@@ -26,7 +26,8 @@ jobs:
     - name: Fetch provisioning profiles using match
       env:
         MATCH_PASSWORD: ${{ secrets.MATCH_PASSWORD }}
-      run:
-        fastlane match development --type ios --readonly
+      run: |
+        bundle exec fastlane match development --type development --readonly
+        
     - name: Build
       run: xcodebuild clean build -project ./Musical-Notes.xcodeproj -scheme Musical-Notes -destination 'platform=iOS Simulator,name=iPhone 15 Pro,OS=16.0' -allowProvisioningUpdates
