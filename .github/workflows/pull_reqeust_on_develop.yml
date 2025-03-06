@@ -17,6 +17,6 @@ jobs:
     steps:
     - uses: actions/checkout@v4
     - name: Set Xcode version
-      run: sudo xcode-select -swifth /Applications.Xcode_16.app
+      run: sudo xcode-select -swift /Applications.Xcode_16.app
     - name: Build
       run: xcodebuild clean test -project Musical-Notes/Musical-Notes.xcodeproj -scheme Musical-Notes -destination 'platform=iOS Simulator,name=iPhone 15 Pro,OS=16.0'
