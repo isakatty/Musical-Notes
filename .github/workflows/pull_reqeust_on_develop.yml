@@ -16,7 +16,7 @@ jobs:
 
     steps:
     - uses: actions/checkout@v4
-    - name: Set Xcode version
+    - name: Set Xcode version 15.3
       run: sudo xcode-select -switch /Applications/Xcode_15.3.app
     - name: Build
-      run: xcodebuild clean test -project Musical-Notes/Musical-Notes.xcodeproj -scheme Musical-Notes -destination 'platform=iOS Simulator,name=iPhone 15 Pro,OS=16.0'
+      run: xcodebuild clean test -project ./Musical-Notes.xcodeproj -scheme Musical-Notes -destination 'platform=iOS Simulator,name=iPhone 15 Pro,OS=16.0'
