@@ -1,0 +1,36 @@
+# This file contains the fastlane.tools configuration
+# You can find the documentation at https://docs.fastlane.tools
+#
+# For a list of all available actions, check out
+#
+#     https://docs.fastlane.tools/actions
+#
+# For a list of all available plugins, check out
+#
+#     https://docs.fastlane.tools/plugins/available-plugins
+#
+
+# Uncomment the line if you want fastlane to automatically update itself
+# update_fastlane
+
+default_platform(:ios)
+
+platform :ios do
+  desc "Fetch provisioning profiles and certificates"
+  lane :match_provisioning_profiles do
+    match(
+      type: "development",                    # 인증서 타입
+      git_url: "https://github.com/isakatty/Private",  # 인증서를 저장한 GitHub 저장소 URL
+      username: "modynic12@gmail.com",     # Apple 개발자 계정 이메일
+      team_id: "T4W7695R5C"
+    )
+  end
+
+  desc "Push a new beta build to TestFlight"
+  lane :beta do
+    match(type: "appstore")  # App Store 배포용 프로비저닝 파일 다운로드
+    increment_build_number(xcodeproj: "Musical-Notes.xcodeproj")  # 빌드 번호 증가
+    gym(scheme: "Musical-Notes")  # 빌드 생성
+    pilot(upload: true)  # TestFlight에 업로드
+  end
+end
