@@ -22,7 +22,7 @@ jobs:
     - name: Set up GoogleService-Info.plist
       run: |
         mkdir -p MusicalNotes/MusicalNotes
-        echo "${{ secrets.GOOGLESERVICE_INFO }}" | base64 --decode > ./MusicalNotes/MusicalNotes/GoogleService-Info.plist
+        echo "${{ secrets.GOOGLESERVICE_INFO }}" | base64 --decode > ./MusicalNotes/GoogleService-Info.plist
 
         
     - name: Install dependencies
