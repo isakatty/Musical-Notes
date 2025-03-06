@@ -23,9 +23,11 @@ jobs:
       run: |
         mkdir -p Musical-Notes/Musical-Notes
         echo "${{ secrets.GOOGLESERVICE_INFO }}" | base64 --decode > Musical-Notes/Musical-Notes/GoogleService-Info.plist
-
-    - name: Verify GoogleService-Info.plist Exists
-      run: ls -R Musical-Notes/Musical-Notes
+        
+    - name: Ensure GoogleService-Info.plist is in the correct directory
+      run: |
+        mkdir -p Musical-Notes/Musical-Notes/Musical-Notes
+        mv Musical-Notes/Musical-Notes/GoogleService-Info.plist Musical-Notes/Musical-Notes/Musical-Notes/GoogleService-Info.plist
         
     - name: Install dependencies
       run: |
