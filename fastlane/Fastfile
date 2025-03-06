@@ -16,6 +16,16 @@
 default_platform(:ios)
 
 platform :ios do
+  desc "Fetch provisioning profiles and certificates"
+  lane :match_provisioning_profiles do
+    match(
+      type: "development",                    # 인증서 타입
+      git_url: "https://github.com/isakatty/Private",  # 인증서를 저장한 GitHub 저장소 URL
+      username: "modynic12@gmail.com",     # Apple 개발자 계정 이메일
+      team_id: "T4W7695R5C"
+    )
+  end
+
   desc "Push a new beta build to TestFlight"
   lane :beta do
     match(type: "appstore")  # App Store 배포용 프로비저닝 파일 다운로드
