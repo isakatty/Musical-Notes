@@ -22,10 +22,6 @@ jobs:
       run: |
         rm -rf ~/Library/Developer/Xcode/DerivedData
     
-    - name: Clean SPM Cache
-      run: |
-        rm -rf ~/Library/Caches/org.swift.package.manager
-    
     - name: Reset and update SPM dependencies
       run: |
         swift package reset
