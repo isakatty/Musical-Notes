@@ -22,7 +22,10 @@ jobs:
       run: |
         gem install bundler
         bundle install
-
+        
+    - name: Set up Git authentication
+      run: |
+        git config --global url."https://${{ secrets.GIT_TOKEN }}@github.com".insteadOf "https://github.com"
     - name: Fetch provisioning profiles using match
       env:
         MATCH_PASSWORD: ${{ secrets.MATCH_PASSWORD }}
